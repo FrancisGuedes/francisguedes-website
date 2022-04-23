@@ -1,0 +1,37 @@
+.hero-container {
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+	background-image: url(./../../assets/images/desktop/hero-background.jpg);
+  background-size: cover;
+}
+
+.hero-container-padding {
+  padding: 5rem;
+}
+
+h1 {
+  margin: 0 0;
+  font-size: 50px;
+  color: black;
+}
+
+h2{
+  color: black;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.cv-title{
+  margin-top: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  .hero-container {
+       /* 50% */
+  }
+}

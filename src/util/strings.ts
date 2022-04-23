@@ -7,14 +7,18 @@ export const functionalitiesAlias = {
 export const strings = {
   heroPage: {
     introText: {
-      firstParagraph: "Hello, I'm Francis.\nA multi-skilled Software Engineer.\nSpecialized in ",
-      secondParagraph: "\nGreat hand-stander and former professional chef.",
+      firstLine: "Hello, I'm Francis.",
+      secondLine: "A multi-skilled Software Developer.",
+      thirdLine: "Specialized in ",
+      fourthLine: "Great hand-stander and former ",
+      lastLine: "professional chef.",
       endPoint: ".",
       dynamicWords: "Front-end Back-end Mobile Development Decentralized Applications",
     },
     talk:"let's talk?",
     mail:"franciscojmguedes",
     mailDomain:"@gmail.com",
+    emailLink:"mailto:franciscojmguedes@gmail.com"
   }
 }
 
