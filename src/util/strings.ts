@@ -10,9 +10,11 @@ export const strings = {
       firstParagraph: "Hello, I'm Francis.\nA multi-skilled Software Engineer.\nSpecialized in ",
       secondParagraph: "\nGreat hand-stander and former professional chef.",
       endPoint: ".",
-      dynamicWords: "front-end back-end mobile development decentralized applications",
+      dynamicWords: "Front-end Back-end Mobile Development Decentralized Applications",
     },
-    talk:"let's talk?"
+    talk:"let's talk?",
+    mail:"franciscojmguedes",
+    mailDomain:"@gmail.com",
   }
 }
 
