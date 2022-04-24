@@ -15,7 +15,7 @@ export const strings = {
       endPoint: ".",
       dynamicWords: "Front-end Back-end Mobile Development Decentralized Applications",
     },
-    talk:"let's talk?",
+    talk:"let's talk? ",
     mail:"franciscojmguedes",
     mailDomain:"@gmail.com",
     emailLink:"mailto:franciscojmguedes@gmail.com"

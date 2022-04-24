@@ -1,8 +1,9 @@
 .hero-container {
+  display: block;
   min-height: 100%;
   width: 100%;
   height: auto;
-  position: fixed;
+  position: absolute;
 	background-image: url(./../../assets/images/desktop/hero-background.jpg);
   background-size: cover;
 }
@@ -30,8 +31,56 @@ a {
   margin-top: 0;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
+.social-media {
+  width:35px; 
+  height:35px;
+}
+
+@media screen and (max-width: 768px) { /* Specific to this particular image */
   .hero-container {
-       /* 50% */
+    
   }
+
+  .hero-container-padding {
+    padding: 8%;
+  }
+
+  h1 {
+    font-size: 7.5vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  .social-media {
+    /* width: 4vw; 
+    height: 4vw; */
+  }
+}
+
+@media screen and (max-width: 591px) {
+  .hero-container-padding {
+    margin-left: 1%;
+  }
+
+  h1 {
+    font-size: 6.5vw;
+  }
+
+  h2 {
+    font-size: 4.5vw;
+  }
+}
+
+@media screen and (max-width: 478px) { /* Specific to this particular image */
+
+  h1 {
+    font-size: 9.5vw;
+  }
+
+  h2 {
+    font-size: 5.5vw;
+  }
+
 }
