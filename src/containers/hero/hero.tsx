@@ -42,12 +42,12 @@ const Hero = () => {
               </h2>
               <br/>
               <h2>
-                <a href="https://dribbble.com/diogodotdesign"  target="_blank">
-                  <img className="social-media git" alt="Dribbble" src={githubIcon} />
+                <a href={strings.socialMedia.github}  target="_blank">
+                  <img className="social-media git" alt="Github" src={githubIcon} />
                 </a>
-                <a href="https://www.linkedin.com/in/diogodotdesign/" target="_blank">
+                <a href={strings.socialMedia.linkedin} target="_blank">
                   <img className="social-media linkedin" alt="LinkedIn" src={linkedinIcon} /></a>
-                <a href="https://www.instagram.com/usernamedodiogo/" target="_blank" >
+                <a href={strings.socialMedia.instagram} target="_blank" >
                   <img className="social-media instagram" alt="Instagram" src={instagramIcon}  />
                 </a>
               </h2>

@@ -36,11 +36,8 @@ a {
   height:35px;
 }
 
-@media screen and (max-width: 768px) { /* Specific to this particular image */
-  .hero-container {
-    
-  }
-
+@media screen and (max-width: 768px) {
+  
   .hero-container-padding {
     padding: 8%;
   }
@@ -53,13 +50,10 @@ a {
     font-size: 4vw;
   }
 
-  .social-media {
-    /* width: 4vw; 
-    height: 4vw; */
-  }
 }
 
 @media screen and (max-width: 591px) {
+
   .hero-container-padding {
     margin-left: 1%;
   }

@@ -19,6 +19,11 @@ export const strings = {
     mail:"franciscojmguedes",
     mailDomain:"@gmail.com",
     emailLink:"mailto:franciscojmguedes@gmail.com"
+  },
+  socialMedia: {
+    github: "https://github.com/FrancisGuedes",
+    linkedin: "https://www.linkedin.com/in/franciscojmguedes/",
+    instagram: "https://www.instagram.com/farawei/",
   }
 }
 
