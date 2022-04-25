@@ -11,7 +11,7 @@ export const strings = {
       secondLine: "A multi-skilled Software Developer.",
       thirdLine: "Specialized in ",
       fourthLine: "Great hand-stander and former ",
-      lastLine: "professional chef.",
+      lastLine: "professional Chef.",
       endPoint: ".",
       dynamicWords: {
         frontEnd: "Front-end",

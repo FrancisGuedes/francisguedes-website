@@ -40,29 +40,29 @@ const Hero = () => {
               <br/>
               
               <h2>{strings.heroPage.talk} 
-                <a href={strings.heroPage.emailLink}>
+                <a className="email-link" href={strings.heroPage.emailLink}>
                   {strings.heroPage.mail}
                 </a>
                 {strings.heroPage.mailDomain}
               </h2>
               <br/>
               <h2 className='cv-title'>
-                <a href="https://drive.google.com/file/d/1VIzDJ8zL--0NaKThG0sTtc1Fys73_40W/view?usp=sharing" target="_blank" rel="history">
+                <a className='cv-title-link' href="https://drive.google.com/file/d/1VIzDJ8zL--0NaKThG0sTtc1Fys73_40W/view?usp=sharing" target="_blank" rel="history">
                   {functionalitiesAlias.cv}
                 </a>
               </h2>
               <h2>
-                <a href="Playground-page" rel="history">
+                <a className='work-title-link' href="Playground-page" rel="history">
                   {functionalitiesAlias.work}
                 </a>
               </h2>
               <h2>
-                <a href="Playground-page" rel="history">
+                <a className='playground-title-link' href="Playground-page" rel="history">
                   {functionalitiesAlias.playground}
                 </a>
               </h2>
               <br/>
-              <div>
+              <h2>
                 <a href={strings.socialMedia.github}  target="_blank">
                   <img className="social-media git" alt="Github" src={githubIcon} />
                 </a>
@@ -71,7 +71,7 @@ const Hero = () => {
                 <a href={strings.socialMedia.instagram} target="_blank" >
                   <img className="social-media instagram" alt="Instagram" src={instagramIcon}  />
                 </a>
-              </div>
+              </h2>
             </div>
           </div>
       </main>

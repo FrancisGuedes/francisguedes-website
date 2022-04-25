@@ -12,6 +12,10 @@
   padding: 5rem;
 }
 
+.email-link:hover {
+  color:#fffade;
+}
+
 h1 {
   margin: 0 0;
   font-size: 45px;
@@ -31,14 +35,18 @@ a {
   margin-top: 0;
 }
 
+.cv-title-link:hover, .work-title-link:hover, .playground-title-link:hover {
+  color: #fffade;
+}
+
 .social-media {
   width: 35px; 
   height: 35px;
   margin-right: 10px;
 }
 
-.dynamic-words {
-    /* text-shadow: 1px 1px 1px #ffd42d,
+/*.dynamic-words {
+    text-shadow: 1px 1px 1px #ffd42d,
         1px 1px 1px #ffd42d,
         1px 1px 1px #ffd42d,
         1px 1px 1px #ffd42d,
@@ -52,8 +60,7 @@ a {
     1px 1px 1px rgba(16,16,16,0.2),
     1px 1px 1px rgba(16,16,16,0.2),
     1px 1px 1px rgba(16,16,16,0.4);
- */
-}
+}*/
 
 @media screen and (max-width: 768px) {
 
@@ -62,19 +69,27 @@ a {
   }
 
   h1 {
-    font-size: 6.5vw;
+    font-size: 6vw;
   }
 
   h2 {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
 
+  .cv-title-link:hover, .work-title-link:hover, .playground-title-link:hover, .email-link:hover {
+    color: black;
+  }
+    
 }
 
 @media screen and (max-width: 591px) {
 
   .hero-container-padding {
     margin-left: 1%;
+  }
+
+  h1 {
+    font-size: 6.2vw;
   }
 
   h2 {
@@ -85,11 +100,11 @@ a {
 @media screen and (max-width: 478px) { /* Specific to this particular image */
 
   h1 {
-    font-size: 8.5vw;
+    font-size: 7.5vw;
   }
 
   h2 {
-    font-size: 5vw;
+    font-size: 4.8vw;
   }
 
 }
