@@ -1,11 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Hero from './containers/hero/hero';
+import Work from './containers/work/work';
 
 function App() {
   return (
     <>
-      <Hero/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Hero/>}/>
+          <Route path="/work" element={<Work/>}/>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

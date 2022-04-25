@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import { useState, useEffect } from "react";
 import {strings, functionalitiesAlias} from '../../util/strings'
 import './hero.css';
@@ -32,7 +33,7 @@ const Hero = () => {
               <h1 className='intro-text-first-line'>{strings.heroPage.introText.firstLine}</h1>
               <h1>{strings.heroPage.introText.secondLine}</h1>
               <h1>{strings.heroPage.introText.thirdLine} 
-                <span className="dynamic-words" key={dynamicWordsValues[index]}>{dynamicWordsValues[index]}</span>{strings.heroPage.introText.endPoint}
+                <span className="dynamic-words" key={index}>{dynamicWordsValues[index]}</span>{strings.heroPage.introText.endPoint}
               <br/>
               </h1>
               <h1>{strings.heroPage.introText.fourthLine}</h1>
@@ -47,19 +48,19 @@ const Hero = () => {
               </h2>
               <br/>
               <h2 className='cv-title'>
-                <a className='cv-title-link' href="https://drive.google.com/file/d/1VIzDJ8zL--0NaKThG0sTtc1Fys73_40W/view?usp=sharing" target="_blank" rel="history">
+                <Link className='cv-title-link' to="https://drive.google.com/file/d/1VIzDJ8zL--0NaKThG0sTtc1Fys73_40W/view?usp=sharing" target="_blank" rel="history">
                   {functionalitiesAlias.cv}
-                </a>
+                </Link>
               </h2>
               <h2>
-                <a className='work-title-link' href="Playground-page" rel="history">
+                <Link className='work-title-link' to="/work" rel="history">
                   {functionalitiesAlias.work}
-                </a>
+                </Link>
               </h2>
               <h2>
-                <a className='playground-title-link' href="Playground-page" rel="history">
+                <Link className='playground-title-link' to="/" rel="history">
                   {functionalitiesAlias.playground}
-                </a>
+                </Link>
               </h2>
               <br/>
               <h2>
