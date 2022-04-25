@@ -14,7 +14,7 @@
 
 h1 {
   margin: 0 0;
-  font-size: 50px;
+  font-size: 45px;
   color: black;
 }
 
@@ -37,6 +37,24 @@ a {
   margin-right: 10px;
 }
 
+.dynamic-words {
+    /* text-shadow: 1px 1px 1px #ffd42d,
+        1px 1px 1px #ffd42d,
+        1px 1px 1px #ffd42d,
+        1px 1px 1px #ffd42d,
+        1px 1px 1px #ffd42d,
+        1px 1px 1px #ffd42d,
+        1px 1px 1px #ffd42d,
+        1px 1px 1px #ffd42d,
+        1px 1px 1px #ffd42d,
+        1px 1px 1px #ffd42d,
+    1px 1px 1px rgba(16,16,16,0.4),
+    1px 1px 1px rgba(16,16,16,0.2),
+    1px 1px 1px rgba(16,16,16,0.2),
+    1px 1px 1px rgba(16,16,16,0.4);
+ */
+}
+
 @media screen and (max-width: 768px) {
 
   .hero-container-padding {
@@ -44,7 +62,7 @@ a {
   }
 
   h1 {
-    font-size: 7.5vw;
+    font-size: 6.5vw;
   }
 
   h2 {
@@ -59,10 +77,6 @@ a {
     margin-left: 1%;
   }
 
-  h1 {
-    font-size: 6.5vw;
-  }
-
   h2 {
     font-size: 4.5vw;
   }
@@ -71,11 +85,11 @@ a {
 @media screen and (max-width: 478px) { /* Specific to this particular image */
 
   h1 {
-    font-size: 9.5vw;
+    font-size: 8.5vw;
   }
 
   h2 {
-    font-size: 5.5vw;
+    font-size: 5vw;
   }
 
 }

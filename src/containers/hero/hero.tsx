@@ -14,7 +14,6 @@ const Hero = () => {
 
   useEffect(() => {
     const intervalDelayMilliseconds = dynamicWordsValues[index].length * 105;
-    console.log("intervalDelayMilliseconds", intervalDelayMilliseconds);
     const interval = setInterval(() => {
       setIndex((prevIndex) => {
         // reset index if current index is greater than array size
@@ -33,7 +32,7 @@ const Hero = () => {
               <h1 className='intro-text-first-line'>{strings.heroPage.introText.firstLine}</h1>
               <h1>{strings.heroPage.introText.secondLine}</h1>
               <h1>{strings.heroPage.introText.thirdLine} 
-                <span key={dynamicWordsValues[index]}>{dynamicWordsValues[index]}</span>{strings.heroPage.introText.endPoint}
+                <span className="dynamic-words" key={dynamicWordsValues[index]}>{dynamicWordsValues[index]}</span>{strings.heroPage.introText.endPoint}
               <br/>
               </h1>
               <h1>{strings.heroPage.introText.fourthLine}</h1>
