@@ -13,7 +13,13 @@ export const strings = {
       fourthLine: "Great hand-stander and former ",
       lastLine: "professional chef.",
       endPoint: ".",
-      dynamicWords: "Front-end Back-end Mobile Development Decentralized Applications",
+      dynamicWords: {
+        frontEnd: "Front-end",
+        backEnd: "Back-end",
+        webDevelopment: "Web Development",
+        mobileDevelopment: "Mobile Development",
+        decentralizedApps: "Decentralized Applications",
+      }
     },
     talk:"let's talk? ",
     mail:"franciscojmguedes",

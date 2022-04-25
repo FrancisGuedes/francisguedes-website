@@ -1,10 +1,30 @@
+import { useState, useEffect } from "react";
 import {strings, functionalitiesAlias} from '../../util/strings'
 import './hero.css';
 import instagramIcon from "../../assets/icons/icons8-instagram.svg";
 import linkedinIcon from "../../assets/icons/icons8-linkedin.svg";
 import githubIcon from "../../assets/icons/icons8-github.svg";
 
+const dynamicWordsObj = {...strings.heroPage.introText.dynamicWords};
+
+let dynamicWordsValues = Object.values(dynamicWordsObj);
+
 const Hero = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalDelayMilliseconds = dynamicWordsValues[index].length * 105;
+    console.log("intervalDelayMilliseconds", intervalDelayMilliseconds);
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => {
+        // reset index if current index is greater than array size
+        return prevIndex + 1 < dynamicWordsValues.length ? prevIndex + 1 : 0;
+      });
+    }, intervalDelayMilliseconds);
+
+    return () => clearInterval(interval);
+  });
+
   return (
     <>
       <main className="hero-container" data-container="content">
@@ -12,7 +32,9 @@ const Hero = () => {
             <div className="content clearfix" data-elementresizer data-resize-parent>
               <h1 className='intro-text-first-line'>{strings.heroPage.introText.firstLine}</h1>
               <h1>{strings.heroPage.introText.secondLine}</h1>
-              <h1>{strings.heroPage.introText.thirdLine} <span></span>{strings.heroPage.introText.endPoint}<br/>
+              <h1>{strings.heroPage.introText.thirdLine} 
+                <span key={dynamicWordsValues[index]}>{dynamicWordsValues[index]}</span>{strings.heroPage.introText.endPoint}
+              <br/>
               </h1>
               <h1>{strings.heroPage.introText.fourthLine}</h1>
               <h1>{strings.heroPage.introText.lastLine}</h1>
@@ -41,7 +63,7 @@ const Hero = () => {
                 </a>
               </h2>
               <br/>
-              <h2>
+              <div>
                 <a href={strings.socialMedia.github}  target="_blank">
                   <img className="social-media git" alt="Github" src={githubIcon} />
                 </a>
@@ -50,7 +72,7 @@ const Hero = () => {
                 <a href={strings.socialMedia.instagram} target="_blank" >
                   <img className="social-media instagram" alt="Instagram" src={instagramIcon}  />
                 </a>
-              </h2>
+              </div>
             </div>
           </div>
       </main>

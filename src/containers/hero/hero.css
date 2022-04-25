@@ -32,12 +32,13 @@ a {
 }
 
 .social-media {
-  width:35px; 
-  height:35px;
+  width: 35px; 
+  height: 35px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 768px) {
-  
+
   .hero-container-padding {
     padding: 8%;
   }
