@@ -64,7 +64,7 @@ const Hero = () => {
               </h2>
               <br/>
               <h2>
-                <a href={strings.socialMedia.github}  target="_blank">
+                <a href={strings.socialMedia.github} target="_blank">
                   <img className="social-media git" alt="Github" src={githubIcon} />
                 </a>
                 <a href={strings.socialMedia.linkedin} target="_blank">

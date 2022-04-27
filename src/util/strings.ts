@@ -30,6 +30,20 @@ export const strings = {
     github: "https://github.com/FrancisGuedes",
     linkedin: "https://www.linkedin.com/in/franciscojmguedes/",
     instagram: "https://www.instagram.com/farawei/",
+  }, 
+  workPage: {
+    titleHide: "My Work Page",
+    title:"My Work",
+    subTitle: "Finished projects, ongoing projects and personal projects",
+    footerTitle: "Work always in progress.",
+    projects: 
+    [
+      {
+        title: "First Steps", href: "https://www.firststeps.pt", 
+      },
+      {
+        title: "Wave Portal", href: "https://waveportal-baseline-student.daeshawnballard.repl.co/"
+      }
+    ],
+    }
   }
-}
-

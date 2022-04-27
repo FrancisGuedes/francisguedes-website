@@ -10,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero/>}/>
           <Route path="/work" element={<Work/>}/>
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
     </>

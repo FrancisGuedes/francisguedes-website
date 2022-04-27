@@ -1,0 +1,36 @@
+.work-wrapper{
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: absolute;
+	background-image: url(./../../assets/images/desktop/work-background.jpg);
+  background-size: cover;
+}
+
+.work-wrapper-padding{
+  padding: 7vw;
+}
+
+.work-title, .work-sub-title, .work-footer-title {
+  color: #fbe10f;
+}
+
+.project_title {
+  display: none;
+}
+
+.work-project {
+  margin-top: 11vw;
+  text-align: center;
+}
+
+.work-project-content {
+  margin: 5vw;
+}
+
+.work-project-link {
+  font-size: 10vw;
+  font-weight: 700;
+  color: white;
+}
