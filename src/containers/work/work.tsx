@@ -3,6 +3,7 @@ import * as Router from 'react-router-dom';
 import './work.css';
 import { strings } from '../../util/strings';
 import { Link } from 'react-router-dom';
+import ArrowBack from '../../components/arrow-back/arrowBack';
 
 const projectsObj = [...strings.workPage.projects];
 
@@ -27,6 +28,7 @@ const Work = () => {
   return ( 
     <>
       <main className="work-wrapper" data-container="content">
+        <ArrowBack/>
         <div className="work-wrapper-padding">
           <div className="content_padded">
                 <div id="content" className="padded" data-id="392958">

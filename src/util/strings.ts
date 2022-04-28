@@ -45,5 +45,8 @@ export const strings = {
         title: "Wave Portal", href: "https://waveportal-baseline-student.daeshawnballard.repl.co/"
       }
     ],
-    }
+  },
+  arrowBack: {
+    title: "back"
+    },
   }
