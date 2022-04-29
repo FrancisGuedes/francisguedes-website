@@ -1,3 +1,5 @@
+import imageT from '../assets/images/work/first-steps-website.jpg'
+
 export const functionalitiesAlias = {
   cv: "résumé",
   work: "work",
@@ -41,12 +43,12 @@ export const strings = {
       {
         title: "First Steps", 
         href: "https://www.firststeps.pt",
-        imageThumb: "../assets/images/work/first-steps-website.png",
+        imageThumb: require('../assets/images/work/first-steps-website.jpg'),
       },
       {
         title: "Wave Portal", 
         href: "https://waveportal-baseline-student.daeshawnballard.repl.co/",
-        imageThumb: "../assets/images/work/dapp.png",
+        imageThumb: require("../assets/images/work/dapp.png"),
       }
     ],
   },

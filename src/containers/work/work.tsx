@@ -4,7 +4,7 @@ import './work.css';
 import { strings } from '../../util/strings';
 import { Link } from 'react-router-dom';
 import ArrowBack from '../../components/arrow-back/arrowBack';
-import imageT from '../../assets/images/work/first-steps-website.png'
+import '../../assets/images/work/first-steps-website.jpg'
 
 const projectsObj = [...strings.workPage.projects];
 
@@ -22,8 +22,7 @@ const projectsMapper = projectsObj.map( element => {
       <div className='project-thumb'>
         <img 
           className='project-thumb-image' 
-          style={{height: 200}} 
-          src={imageT}
+          src={element.imageThumb}
         />
       </div>
     </div>
