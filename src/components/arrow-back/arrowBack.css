@@ -73,3 +73,9 @@
   font-size: 11px;
   letter-spacing: 0.1em;
 }
+
+@media screen and (max-width: 768px) {
+  .corner-project-back {
+    top: 6.2vw;
+  }
+}

@@ -39,10 +39,14 @@ export const strings = {
     projects: 
     [
       {
-        title: "First Steps", href: "https://www.firststeps.pt", 
+        title: "First Steps", 
+        href: "https://www.firststeps.pt",
+        imageThumb: "../assets/images/work/first-steps-website.png",
       },
       {
-        title: "Wave Portal", href: "https://waveportal-baseline-student.daeshawnballard.repl.co/"
+        title: "Wave Portal", 
+        href: "https://waveportal-baseline-student.daeshawnballard.repl.co/",
+        imageThumb: "../assets/images/work/dapp.png",
       }
     ],
   },

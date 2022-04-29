@@ -4,6 +4,7 @@ import './work.css';
 import { strings } from '../../util/strings';
 import { Link } from 'react-router-dom';
 import ArrowBack from '../../components/arrow-back/arrowBack';
+import imageT from '../../assets/images/work/first-steps-website.png'
 
 const projectsObj = [...strings.workPage.projects];
 
@@ -16,8 +17,15 @@ const projectsMapper = projectsObj.map( element => {
         key={element.title} 
         target="_blank"
       >
-        <span>{element.title}</span>
+        <span className="project-title">{element.title}</span>
       </a>
+      <div className='project-thumb'>
+        <img 
+          className='project-thumb-image' 
+          style={{height: 200}} 
+          src={imageT}
+        />
+      </div>
     </div>
   )
 })
@@ -36,7 +44,7 @@ const Work = () => {
                     {strings.workPage.titleHide}
                   </div>
 
-                  <div className="work-container" data-elementresizer data-resize-parent>
+                  <div className="work-container" data-active="on" data-elementresizer data-resize-parent>
                     <section>
                       <h1 className="work-title">
                         {strings.workPage.title}</h1>
@@ -48,7 +56,7 @@ const Work = () => {
                       <br/>
                     </section>
                     <section className="work-projects-scroll">
-                      <div className="work-project">
+                      <div className="work-project" data-active="on">
                           {projectsMapper}
                       </div>
                     </section>

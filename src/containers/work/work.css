@@ -9,7 +9,11 @@
 }
 
 .work-wrapper-padding{
-  padding: 7vw;
+  padding: 5vw;
+}
+
+.work-container {
+  z-index: -1;
 }
 
 .work-title, .work-sub-title, .work-footer-title {
@@ -21,16 +25,118 @@
 }
 
 .work-project {
-  margin-top: 9vw;
   text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.work-project:first-child {
+  margin-top: 40px;
 }
 
 .work-project-content {
   margin: 5vw;
+  pointer-events: none;
+  padding: 3.25rem 3.3vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  width: auto;
+  height: auto;
+  margin-top: -30px;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .work-project-link {
-  font-size: 10vw;
+  font-size: 8.5vw;
   font-weight: 700;
   color: white;
+}
+
+.work-container .work-project .project-thumb {
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) translateY(3rem);
+  transition: 0.4s cubic-bezier(0.52, 0.01, 0.16, 1);
+}
+
+.project-thumb {
+  margin: 0 auto;
+}
+
+.project-thumb {
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.project-thumb .project-thumb-image {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.work-container .work-project .project-thumb:hover {
+  opacity: 1;
+}
+
+.work-project-content .work-project-link:hover + .project-thumb {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%) translateY(0);
+  transition: 0.42s cubic-bezier(0.52, 0.01, 0.16, 1) .01s;
+}
+
+
+.work-project-content .work-project-link {
+    display: inline-block;
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.62s opacity cubic-bezier(0.52, 0.01, 0.16, 1) .01s;
+  }
+  
+  
+  /* Para quando fizer hover num el, o outros ficarem opacity
+
+  .work-projects-scroll .work-project-content .work-project-link {
+    opacity: .2;
+    transition: 0.5s cubic-bezier(0.52, 0.01, 0.16, 1);
+  }
+  */
+  
+  .work-projects-scroll .work-project-content .work-project-link:hover, .work-project-content .work-project-link:hover{
+    opacity: 1;
+  }
+  
+
+@media (max-width: 1024px){
+  .project-thumb {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work-project-content {
+    margin-top: -7%;
+  }
+  
+  .project-title {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+.work-project-content {
+    padding: 2rem 30px;
+  }
 }
