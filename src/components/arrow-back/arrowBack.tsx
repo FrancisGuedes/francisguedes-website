@@ -10,6 +10,10 @@ const ArrowBack = () => {
           <span className='arrow-tip'></span>
           <span className='arrow-length'></span>
         </span>
+        <span className='arrow'>
+          <span className='arrow-tip'></span>
+          <span className='arrow-length'></span>
+        </span>
         <span className='text-back'>{strings.arrowBack.title}</span>
       </Link>
     </>

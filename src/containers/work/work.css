@@ -134,7 +134,7 @@
   }
 
   .work-project-content:last-child {
-    margin-bottom: -7%;
+    margin-bottom: 1%;
   }
 
   h2 {
@@ -148,7 +148,7 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
     .project-title {
       font-size: 40px;
     }

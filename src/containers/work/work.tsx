@@ -1,16 +1,14 @@
-import * as React from 'react';
-import * as Router from 'react-router-dom';
-import './work.css';
-import { strings } from '../../util/strings';
-import { Link } from 'react-router-dom';
 import ArrowBack from '../../components/arrow-back/arrowBack';
+import { strings } from '../../util/strings';
+
+import './work.css';
 import '../../assets/images/work/first-steps-website.jpg'
 
 const projectsObj = [...strings.workPage.projects];
 
-const projectsMapper = projectsObj.map( element => {
+const projectsMapper = projectsObj.map( (element, index) => {
   return (
-    <div key={element.title} className="work-project-content">
+    <div key={index} className="work-project-content">
       <a 
         className="work-project-link"
         href={element.href}
@@ -22,7 +20,7 @@ const projectsMapper = projectsObj.map( element => {
       <div className='project-thumb'>
         <img 
           className='project-thumb-image' 
-          src={element.imageThumb}
+          src={element.imagePath}
         />
       </div>
     </div>
@@ -30,6 +28,8 @@ const projectsMapper = projectsObj.map( element => {
 })
 
 console.log(projectsMapper)
+
+
 
 const Work = () => {
   return ( 
