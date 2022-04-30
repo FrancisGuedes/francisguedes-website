@@ -1,10 +1,10 @@
-import {Link} from 'react-router-dom'
 import { useState, useEffect } from "react";
-import {strings, functionalitiesAlias} from '../../util/strings'
+import {strings} from '../../util/strings'
+import SocialMedia from '../../components/social-media/socialMedia';
+import Navbar from '../../components/navbar/navbar';
 import './hero.css';
-import instagramIcon from "../../assets/icons/icons8-instagram.svg";
-import linkedinIcon from "../../assets/icons/icons8-linkedin.svg";
-import githubIcon from "../../assets/icons/icons8-github.svg";
+
+import useWhiteColor from '../../util/hooks/useWhiteColor';
 
 const dynamicWordsObj = {...strings.heroPage.introText.dynamicWords};
 
@@ -12,6 +12,7 @@ let dynamicWordsValues = Object.values(dynamicWordsObj);
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
+  const { color, generateColor } = useWhiteColor.useGenerateRandomColor();
 
   useEffect(() => {
     const intervalDelayMilliseconds = dynamicWordsValues[index].length * 105;
@@ -25,6 +26,8 @@ const Hero = () => {
     return () => clearInterval(interval);
   });
 
+  console.log("useWhiteColor: ", useWhiteColor.useGenerateRandomColor())
+  console.log("useGreyBody: ", useWhiteColor.useGreyBody())
   return (
     <>
       <main className="hero-container" data-container="content">
@@ -46,33 +49,22 @@ const Hero = () => {
                 </a>
                 {strings.heroPage.mailDomain}
               </h2>
+              {/* <button
+                style={{
+                  padding: "20px",
+                  borderRadius: "10px",
+                  backgroundImage: 
+                    "linear-gradient(to top, #a8edea 0%, #fed6e3 100%)",
+                  fontSize: "larger",
+                }}
+                onClick={generateColor}
+              >
+                Generate random color
+              </button> */}
               <br/>
-              <h2 className='cv-title'>
-                <Link className='cv-title-link' to="https://drive.google.com/file/d/1VIzDJ8zL--0NaKThG0sTtc1Fys73_40W/view?usp=sharing" target="_blank" rel="history">
-                  {functionalitiesAlias.cv}
-                </Link>
-              </h2>
-              <h2>
-                <Link className='work-title-link' to="/work" rel="history">
-                  {functionalitiesAlias.work}
-                </Link>
-              </h2>
-              <h2>
-                <Link className='playground-title-link' to="/" rel="history">
-                  {functionalitiesAlias.playground}
-                </Link>
-              </h2>
+              <Navbar/>
               <br/>
-              <h2>
-                <a href={strings.socialMedia.github} target="_blank">
-                  <img className="social-media git" alt="Github" src={githubIcon} />
-                </a>
-                <a href={strings.socialMedia.linkedin} target="_blank">
-                  <img className="social-media linkedin" alt="LinkedIn" src={linkedinIcon} /></a>
-                <a href={strings.socialMedia.instagram} target="_blank" >
-                  <img className="social-media instagram" alt="Instagram" src={instagramIcon}  />
-                </a>
-              </h2>
+              <SocialMedia isBackGroundYellow={true}/>
             </div>
           </div>
       </main>

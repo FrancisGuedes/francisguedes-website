@@ -1,0 +1,13 @@
+.cv-title{
+  margin-top: 0;
+}
+
+.cv-title-link:hover, .work-title-link:hover, .playground-title-link:hover {
+  color: #fffade;
+}
+
+@media screen and (max-width: 768px) {
+  .cv-title-link:hover, .work-title-link:hover, .playground-title-link:hover, .email-link:hover {
+    color: black;
+  }
+}

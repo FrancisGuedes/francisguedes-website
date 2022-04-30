@@ -1,3 +1,7 @@
+body {
+  background-color: '#5210ac';
+}
+
 .work-wrapper{
   display: block;
   min-height: 100%;
@@ -137,7 +141,7 @@
     margin-bottom: 1%;
   }
 
-  h2 {
+  h2.work-sub-title {
     font-size: 12px;
   }
 }

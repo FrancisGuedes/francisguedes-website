@@ -3,6 +3,7 @@ import { strings } from '../../util/strings';
 
 import './work.css';
 import '../../assets/images/work/first-steps-website.jpg'
+import SocialMedia from '../../components/social-media/socialMedia';
 
 const projectsObj = [...strings.workPage.projects];
 
@@ -32,6 +33,7 @@ console.log(projectsMapper)
 
 
 const Work = () => {
+
   return ( 
     <>
       <main className="work-wrapper" data-container="content">
@@ -72,7 +74,7 @@ const Work = () => {
                     </h1>
                     <br/>
                     <br/>
-                    {/* colocar social media */}
+                    <SocialMedia isBackGroundYellow={false}/>
                     <br/>
               </div>
             </div>
