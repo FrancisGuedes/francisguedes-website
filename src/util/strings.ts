@@ -1,7 +1,9 @@
 export const functionalitiesAlias = {
-  cv: "résumé",
-  work: "work",
-  playground: "playground",
+  navbar: {
+    cv: "résumé",
+    work: "work",
+    playground: "playground"
+  }
 }
 
 export const strings = {

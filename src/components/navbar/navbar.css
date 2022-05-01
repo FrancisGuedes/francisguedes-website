@@ -1,10 +1,20 @@
+.navbar-wrapper {
+  -webkit-transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.5s;
+  -moz-transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.5s;
+  transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.5s;
+}
+
+.navbar-wrapper > * {
+  width: 100%;
+}
+
 .cv-title{
   margin-top: 0;
 }
 
-.cv-title-link:hover, .work-title-link:hover, .playground-title-link:hover {
+/* .cv-title-link:hover, .work-title-link:hover, .playground-title-link:hover {
   color: #fffade;
-}
+} */
 
 @media screen and (max-width: 768px) {
   .cv-title-link:hover, .work-title-link:hover, .playground-title-link:hover, .email-link:hover {

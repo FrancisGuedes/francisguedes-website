@@ -4,11 +4,11 @@ function useGreyBody() {
   useEffect(() => {
     document.body.style.backgroundColor = '#ffd42d'
 
-    console.log("document.body.style.backgroundColor:", document.body.style.backgroundColor)
+    //console.log("document.body.style.backgroundColor:", document.body.style.backgroundColor)
 
     return () => {
       document.body.style.backgroundColor = '#fff'
-      console.log("document.body.style.backgroundColor return", document.body.style.backgroundColor)
+      //console.log("document.body.style.backgroundColor return", document.body.style.backgroundColor)
     }
   })
 }

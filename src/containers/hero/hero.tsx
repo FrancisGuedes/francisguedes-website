@@ -5,6 +5,7 @@ import Navbar from '../../components/navbar/navbar';
 import './hero.css';
 
 import useWhiteColor from '../../util/hooks/useWhiteColor';
+import Wiggle from "../../components/wiggle/wiggle";
 
 const dynamicWordsObj = {...strings.heroPage.introText.dynamicWords};
 
@@ -12,7 +13,6 @@ let dynamicWordsValues = Object.values(dynamicWordsObj);
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
-  const { color, generateColor } = useWhiteColor.useGenerateRandomColor();
 
   useEffect(() => {
     const intervalDelayMilliseconds = dynamicWordsValues[index].length * 105;
@@ -26,8 +26,6 @@ const Hero = () => {
     return () => clearInterval(interval);
   });
 
-  console.log("useWhiteColor: ", useWhiteColor.useGenerateRandomColor())
-  console.log("useGreyBody: ", useWhiteColor.useGreyBody())
   return (
     <>
       <main className="hero-container" data-container="content">
