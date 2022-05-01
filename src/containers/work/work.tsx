@@ -1,9 +1,11 @@
-import ArrowBack from '../../components/arrow-back/arrowBack';
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { strings } from '../../util/strings';
+import { colors } from '../../util/colors';
+import ArrowBack from '../../components/arrow-back/arrowBack';
+import SocialMedia from '../../components/social-media/socialMedia';
 
 import './work.css';
-import '../../assets/images/work/first-steps-website.jpg'
-import SocialMedia from '../../components/social-media/socialMedia';
 
 const projectsObj = [...strings.workPage.projects];
 
@@ -30,13 +32,22 @@ const projectsMapper = projectsObj.map( (element, index) => {
 
 console.log(projectsMapper)
 
-
-
 const Work = () => {
+
+  useEffect(() => {
+    document.body.style.background = colors.background.yellow;
+  });
 
   return ( 
     <>
-      <main className="work-wrapper" data-container="content">
+    <motion.main 
+        layout
+        className="work-wrapper" 
+        data-container="content"
+        initial={{width: 0, backgroundColor:"black"}} 
+        animate={{width: "100%", transition: {duration: 0, type: "tweeny"}}}
+        exit={{x: window.innerWidth, transition: {delay: 0.4, duration: 0.5}}}
+      >
         <ArrowBack/>
         <div className="work-wrapper-padding">
           <div className="content_padded">
@@ -80,7 +91,8 @@ const Work = () => {
             </div>
           </div>
         </div>
-    </main>
+      
+    </motion.main> 
   </>
   );
 }

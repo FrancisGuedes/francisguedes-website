@@ -7,7 +7,6 @@ import './navbar.css';
 const functionalitiesAliasObj = {...functionalitiesAlias.navbar};
 
 const Navbar = () => {
-
   return ( 
     <>
       <div className="navbar-wrapper">

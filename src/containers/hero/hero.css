@@ -1,4 +1,4 @@
-body {
+html, main, body {
   background-color: '#ffd42d';
 }
 
@@ -18,10 +18,6 @@ body {
   -moz-transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.5s;
   transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.5s;
 }
-
-/* .email-link:hover {
-  color:#fffade;
-} */
 
 h1 {
   margin: 0 0;
