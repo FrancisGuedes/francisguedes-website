@@ -35,9 +35,9 @@ console.log(projectsMapper)
 
 const Work = () => {
 
-  useEffect(() => {
-    //document.body.style.background = colors.background.yellow;
-  });
+  /* useEffect(() => {
+    document.body.style.background = colors.background.yellow;
+  }); */
 
   return ( 
     <>
