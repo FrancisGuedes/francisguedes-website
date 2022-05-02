@@ -9,6 +9,7 @@ import { Transition, VariantsWork } from '../../util/animations/slidePageVariabl
 import './work.css';
 
 const projectsObj = [...strings.workPage.projects];
+const text = {...strings.workPage};
 
 const projectsMapper = projectsObj.map( (element, index) => {
   return (
@@ -56,16 +57,16 @@ const Work = () => {
           <div className="content_padded">
                 <div id="content" className="padded" data-id="392958">
                   <div className="project_title">
-                    {strings.workPage.titleHide}
+                    {text.titleHide}
                   </div>
 
                   <div className="work-container" data-active="on" data-elementresizer data-resize-parent>
                     <section>
                       <h1 className="work-title">
-                        {strings.workPage.title}</h1>
+                        {text.title}</h1>
                       <br/>
                       <h2 className="work-sub-title">
-                        {strings.workPage.subTitle}
+                        {text.subTitle}
                       <br/>
                       </h2>
                       <br/>
@@ -84,7 +85,7 @@ const Work = () => {
                     </h2>
                     <br/>
                     <h1 className="work-footer-title">
-                      {strings.workPage.footerTitle}
+                      {text.footerTitle}
                     </h1>
                     <br/>
                     <br/>
