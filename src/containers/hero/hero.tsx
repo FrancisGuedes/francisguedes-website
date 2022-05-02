@@ -29,7 +29,7 @@ const Hero = () => {
   });
 
   useEffect(() => {
-    document.body.style.background = colors.background.purple;
+    //document.body.style.background = colors.background.purple;
   });
 
   return (
@@ -38,9 +38,10 @@ const Hero = () => {
         layout
         className="hero-container" 
         data-container="content"
-        initial={{width: 0, backgroundColor:"black"}} 
-        animate={{width: "100%", transition: {duration: 0, type: "tweeny"}}}
-        exit={{x: -window.innerWidth, transition: {delay: 0.4, duration: 0.5}}}
+        initial={{x: "-100%"}} 
+        animate={{x: 0, transition: {duration: 1}}}
+        exit={{x: "-100%", transition: { duration: 1.05}}}
+        transition={{type: "spring", delay: 0.4, mass: 0.2, duration: 1}}
       >
             <div className="hero-container-padding">  
               <div className="content clearfix" data-elementresizer data-resize-parent>

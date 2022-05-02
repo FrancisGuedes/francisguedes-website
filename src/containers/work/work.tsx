@@ -35,7 +35,7 @@ console.log(projectsMapper)
 const Work = () => {
 
   useEffect(() => {
-    document.body.style.background = colors.background.yellow;
+    //document.body.style.background = colors.background.yellow;
   });
 
   return ( 
@@ -44,9 +44,10 @@ const Work = () => {
         layout
         className="work-wrapper" 
         data-container="content"
-        initial={{width: 0, backgroundColor:"black"}} 
-        animate={{width: "100%", transition: {duration: 0, type: "tweeny"}}}
-        exit={{x: window.innerWidth, transition: {delay: 0.4, duration: 0.5}}}
+        initial={{x: "100%"}} 
+        animate={{x: 0, transition: { duration: 1}}}
+        exit={{x: "100%", transition: { duration: 1.05}}}
+        transition={{type: "spring", delay: 0.4, mass: 0.2, duration: 2}}
       >
         <ArrowBack/>
         <div className="work-wrapper-padding">
