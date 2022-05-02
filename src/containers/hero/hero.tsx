@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import {strings} from '../../util/strings'
 import { motion } from 'framer-motion';
+import { VariantsHero, Transition } from '../../util/animations/slidePageVariables'
 import './hero.css';
 
 import useWhiteColor from '../../util/hooks/useWhiteColor';
 import SocialMedia from '../../components/social-media/socialMedia';
 import Navbar from '../../components/navbar/navbar';
-import Wiggle from "../../components/wiggle/wiggle";
-import { colors } from "../../util/colors";
 
 const dynamicWordsObj = {...strings.heroPage.introText.dynamicWords};
 
@@ -38,10 +37,11 @@ const Hero = () => {
         layout
         className="hero-container" 
         data-container="content"
-        initial={{x: "-100%"}} 
-        animate={{x: 0, transition: {duration: 1}}}
-        exit={{x: "-100%", transition: { duration: 1.05}}}
-        transition={{type: "spring", delay: 0.4, mass: 0.2, duration: 1}}
+        initial='initial'
+        animate='in'
+        exit='out'
+        transition={Transition}
+        variants={VariantsHero}
       >
             <div className="hero-container-padding">  
               <div className="content clearfix" data-elementresizer data-resize-parent>

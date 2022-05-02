@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { strings } from '../../util/strings';
-import { colors } from '../../util/colors';
 import ArrowBack from '../../components/arrow-back/arrowBack';
 import SocialMedia from '../../components/social-media/socialMedia';
 
+import { colors } from '../../util/colors';
+import { Transition, VariantsWork } from '../../util/animations/slidePageVariables';
 import './work.css';
 
 const projectsObj = [...strings.workPage.projects];
@@ -44,10 +45,11 @@ const Work = () => {
         layout
         className="work-wrapper" 
         data-container="content"
-        initial={{x: "100%"}} 
-        animate={{x: 0, transition: { duration: 1}}}
-        exit={{x: "100%", transition: { duration: 1.05}}}
-        transition={{type: "spring", delay: 0.4, mass: 0.2, duration: 2}}
+        initial='initial'
+        animate='in'
+        exit='out'
+        transition={Transition}
+        variants={VariantsWork}
       >
         <ArrowBack/>
         <div className="work-wrapper-padding">
