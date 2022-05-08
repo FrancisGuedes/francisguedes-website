@@ -17,18 +17,18 @@ import SocialMedia from '../../components/social-media/socialMedia';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Playground = () => {
-  const [switchStatus, setStatus] = useState<boolean[]>([]);
+  const [toggleArrowStatus, setStatus] = useState<boolean[]>([]);
   const [isClicked, setIsClicked] = useState(false);
 
   const text = {...strings.playgroundPage};
   const projectsObj = [...strings.playgroundPage.category];
 
   useEffect(() => {
-    initializeSwithStatus();
+    initializeToggleArrowStatus();
   }, []);
 
-  const initializeSwithStatus = () => {
-    let tempArr: boolean[] = [...switchStatus];
+  const initializeToggleArrowStatus = () => {
+    let tempArr: boolean[] = [...toggleArrowStatus];
     projectsObj.map(() => {
       tempArr.push(false);
     },
@@ -38,21 +38,19 @@ const Playground = () => {
   const projectsMapper = projectsObj.map( (element, index) => {
     //console.log("el title: ", element.title);
     //console.log("el car: ", element.carousel);
-    console.log("el index: ", element.index);
-    console.log("index: ", index);
 
     return (
       <>
       <h2 
-        className={switchStatus[index] && isClicked ? 'playground-category-title' : 'playground-category-title-clicked'}
-        key={index}
+        className={toggleArrowStatus[index] && isClicked ? 'playground-category-title' : 'playground-category-title-clicked'}
         >
         {element.title}
         <a 
+          key={index} 
           type='button'
-          className='playground-category-btn' 
+          className='playground-category-btn'
           onClick={() => {
-            let switchStat = [...switchStatus];
+            let switchStat = [...toggleArrowStatus];
             switchStat[index] = !switchStat[index];
             setStatus(switchStat);
             setIsClicked(prev => !prev);
@@ -60,9 +58,9 @@ const Playground = () => {
         >
           <FontAwesomeIcon
               key={element.index}
-              className={switchStatus[index] && isClicked  ?  "playground-category-arrow-up" : ".playground-category-arrow-down"}
+              className={toggleArrowStatus[index] && isClicked  ?  "playground-category-arrow-up" : ".playground-category-arrow-down"}
               title="ArrowUp" 
-              icon={switchStatus[index] && isClicked ? faArrowUp : faArrowDown}
+              icon={toggleArrowStatus[index] && isClicked ? faArrowUp : faArrowDown}
             />
         </a>
       </h2>
