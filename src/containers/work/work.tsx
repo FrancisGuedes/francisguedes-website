@@ -5,7 +5,7 @@ import ArrowBack from '../../components/arrow-back/arrowBack';
 import SocialMedia from '../../components/social-media/socialMedia';
 
 import { colors } from '../../util/colors';
-import { Transition, VariantsWork } from '../../util/animations/slidePageVariables';
+import { Transition, Variants } from '../../util/animations/slidePageVariables';
 import './work.css';
 
 const projectsObj = [...strings.workPage.projects];
@@ -50,7 +50,7 @@ const Work = () => {
         animate='in'
         exit='out'
         transition={Transition}
-        variants={VariantsWork}
+        variants={Variants}
       >
         <ArrowBack/>
         <div className="work-wrapper-padding">
@@ -91,7 +91,7 @@ const Work = () => {
                     <br/>
                     <SocialMedia isBackGroundYellow={false}/>
                     <br/>
-              </div>
+                  </div>
             </div>
           </div>
         </div>

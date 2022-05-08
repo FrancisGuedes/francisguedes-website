@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Hero from './containers/hero/hero';
 import Work from './containers/work/work';
+import Playground from './containers/playground/playground';
 
 function App() {
   const location = useLocation();
@@ -12,6 +13,7 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Hero/>}/>
             <Route path="/work" element={<Work/>}/>
+            <Route path="/playground" element={<Playground/>}/>
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
       </AnimatePresence>

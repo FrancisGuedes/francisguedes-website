@@ -1,0 +1,26 @@
+.playground-wrapper{
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: absolute;
+	background-image: url(./../../assets/images/desktop/playground-background.jpg);
+  background-size: cover;
+}
+
+.playground-wrapper-padding{
+  padding: 5vw;
+}
+
+.playground-container {
+  z-index: 2;
+}
+
+.playground-title, .playground-sub-title, .playground-footer-title {
+  color: #fff55a;
+}
+
+.project_title {
+  display: none;
+}
+

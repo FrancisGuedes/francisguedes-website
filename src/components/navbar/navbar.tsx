@@ -23,7 +23,7 @@ const Navbar = () => {
           </Link>
         </h2>
         <h2 className='playground-title navbar-title'>
-          <Link data-new-state="playground" className='playground-title-link wiggle-link' to="/" rel="history">
+          <Link data-new-state="playground" className='playground-title-link wiggle-link' to="/playground" rel="history">
             {functionalitiesAliasObj.playground}
             <Wiggle/>
           </Link>

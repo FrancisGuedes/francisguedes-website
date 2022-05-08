@@ -1,8 +1,9 @@
 import './arrowBack.css';
-import { strings } from '../../util/strings';
+import { functionalitiesAlias } from '../../util/strings';
 import { Link } from 'react-router-dom';
 
 const ArrowBack = () => {
+  const text = {...functionalitiesAlias.arrowBack}
   return ( 
     <>
       <Link to="/" className='project-back lone-arrow corner-project-back'>
@@ -14,7 +15,7 @@ const ArrowBack = () => {
           <span className='arrow-tip'></span>
           <span className='arrow-length'></span>
         </span>
-        <span className='text-back'>{strings.arrowBack.title}</span>
+        <span className='text-back'>{text.title}</span>
       </Link>
     </>
   );

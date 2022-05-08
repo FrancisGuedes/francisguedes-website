@@ -12,7 +12,7 @@ export const VariantsHero = {
   }
 };
 
-export const VariantsWork = {
+export const Variants = {
   initial: {
     x: "100%"
   },

@@ -3,7 +3,10 @@ export const functionalitiesAlias = {
     cv: "résumé",
     work: "work",
     playground: "playground"
-  }
+  },
+  arrowBack: {
+    title: "back"
+  },
 }
 
 export const strings = {
@@ -35,8 +38,8 @@ export const strings = {
   }, 
   workPage: {
     titleHide: "My Work Page",
-    title:"My Work",
-    subTitle: "Finished projects, ongoing projects and personal projects",
+    title:"My Work.",
+    subTitle: "Finished projects, ongoing projects and personal projects.",
     footerTitle: "Work always in progress.",
     projects: 
     [
@@ -52,7 +55,97 @@ export const strings = {
       }
     ],
   },
-  arrowBack: {
-    title: "back"
-    },
-  }
+  playgroundPage: {
+    titleHide: "My Playground Page",
+    title:"My Playground.",
+    subTitle: "Welcome to my playground, here you can find a little bit of me.",
+    category: 
+    [
+      {
+        title: 'Bboying. Wait. What.',
+        carousel: 
+        [
+          {
+            description: "Bboying. Wait. What.", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          },
+          {
+            description: "Bboying. Wait. What.", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          },
+          {
+            description: "Bboying. Wait. What.", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          }
+        ]
+      },
+      {
+        title: 'UNDA.',
+        carousel: 
+        [
+          {
+            description: "", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          },
+          {
+            description: "", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          },
+          {
+            description: "", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          },
+        ]
+        
+      },
+      {
+        title: 'Sexy Desserts.',
+        carousel: 
+        [
+          {
+            description: "", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          },
+          {
+            description: "", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          },
+          {
+            description: "", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          },
+        ]
+      },
+      {
+        title: 'Fooling Around With Design.',
+        carousel: 
+        [
+          {
+            description: "", 
+            href: "",
+            imagePath: require("../assets/images/playground/quote.png"),
+          },
+          {
+            description: "", 
+            href: "",
+            imagePath: require("../assets/images/playground/quote.png"),
+          },
+          {
+            description: "", 
+            href: "",
+            imagePath: require("../assets/images/playground/quote.png"),
+          },
+        ]
+      }
+    ],
+  },
+}
