@@ -62,27 +62,29 @@ export const strings = {
     category: 
     [
       {
-        title: 'Bboying. Wait. What.',
+        index: 0,
+        title: 'Breaking. Wait. What.',
         carousel: 
         [
           {
-            description: "Bboying. Wait. What.", 
+            description: "", 
             href: "",
             imagePath: require('../assets/images/playground/unda.jpg'),
           },
           {
-            description: "Bboying. Wait. What.", 
+            description: "", 
             href: "",
             imagePath: require('../assets/images/playground/unda.jpg'),
           },
           {
-            description: "Bboying. Wait. What.", 
+            description: "", 
             href: "",
             imagePath: require('../assets/images/playground/unda.jpg'),
           }
         ]
       },
       {
+        index: 1,
         title: 'UNDA.',
         carousel: 
         [
@@ -105,6 +107,7 @@ export const strings = {
         
       },
       {
+        index: 2,
         title: 'Sexy Desserts.',
         carousel: 
         [
@@ -126,6 +129,7 @@ export const strings = {
         ]
       },
       {
+        index: 3,
         title: 'Fooling Around With Design.',
         carousel: 
         [
