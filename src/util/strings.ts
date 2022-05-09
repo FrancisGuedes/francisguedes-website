@@ -67,17 +67,17 @@ export const strings = {
         carousel: 
         [
           {
-            description: "", 
+            description: "Breaking", 
             href: "",
             imagePath: require('../assets/images/playground/unda.jpg'),
           },
           {
-            description: "", 
+            description: "Breaking", 
             href: "",
             imagePath: require('../assets/images/playground/unda.jpg'),
           },
           {
-            description: "", 
+            description: "Breaking", 
             href: "",
             imagePath: require('../assets/images/playground/unda.jpg'),
           }
@@ -89,17 +89,17 @@ export const strings = {
         carousel: 
         [
           {
-            description: "", 
+            description: "UNDA", 
             href: "",
             imagePath: require('../assets/images/playground/unda.jpg'),
           },
           {
-            description: "", 
-            href: "",
+            description: "UNDA", 
+            href: "UNDA",
             imagePath: require('../assets/images/playground/unda.jpg'),
           },
           {
-            description: "", 
+            description: "UNDA", 
             href: "",
             imagePath: require('../assets/images/playground/unda.jpg'),
           },
@@ -112,17 +112,17 @@ export const strings = {
         carousel: 
         [
           {
-            description: "", 
+            description: "Desserts", 
             href: "",
             imagePath: require('../assets/images/playground/unda.jpg'),
           },
           {
-            description: "", 
+            description: "Desserts", 
             href: "",
             imagePath: require('../assets/images/playground/unda.jpg'),
           },
           {
-            description: "", 
+            description: "Desserts", 
             href: "",
             imagePath: require('../assets/images/playground/unda.jpg'),
           },
@@ -134,17 +134,17 @@ export const strings = {
         carousel: 
         [
           {
-            description: "", 
+            description: "Design", 
             href: "",
             imagePath: require("../assets/images/playground/quote.png"),
           },
           {
-            description: "", 
+            description: "Design", 
             href: "",
             imagePath: require("../assets/images/playground/quote.png"),
           },
           {
-            description: "", 
+            description: "Design", 
             href: "",
             imagePath: require("../assets/images/playground/quote.png"),
           },
