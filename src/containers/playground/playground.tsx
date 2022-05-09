@@ -15,6 +15,7 @@ import { Transition, Variants } from '../../util/animations/slidePageVariables';
 import './playground.css';
 import SocialMedia from '../../components/social-media/socialMedia';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import HrLine from '../../components/hr-line/hrLine';
 
 const Playground = () => {
   const [toggleArrowStatus, setStatus] = useState<boolean[]>([]);
@@ -111,7 +112,7 @@ const Playground = () => {
               {carouselMapper}
           </Swiper>
         ) : (
-          <div className='hr hr-white'></div>
+          <HrLine />
         )
       }       
       </>
@@ -144,8 +145,7 @@ const Playground = () => {
                         {text.subTitle}
                       </h2>
                       <h2>
-                        {/* TODO make a hr component */}
-                        <div className='hr hr-white'></div>
+                        <HrLine />
                       </h2>
                     </section>
                     <section className="playground-projects-scroll">
