@@ -32,18 +32,37 @@
   cursor: pointer;
 }
 
-h2.playground-category-title {
+h2.playground-category-title-clicked {
   padding: 50px 0;
   color: #fff55a;
   font-size: 5vw;
   font-weight: 700;
 }
 
-h2.playground-category-title-clicked {
+h2.playground-category-title {
   color: #fffade;
   padding: 50px 0;
   font-size: 5vw;
   font-weight: 700;
+}
+
+span.playground-category-subtitle-clicked {
+  color: #fff55a;
+  font-weight: 500;
+
+  font-size: 35%;
+  position: relative;
+  display: block;
+}
+
+span.playground-category-subtitle {
+  color: #fffade;
+  font-weight: 500;
+
+  
+  font-size: 35%;
+  position: relative;
+  display: block;
 }
 
 .playground-category-arrow-down {

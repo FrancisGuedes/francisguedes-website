@@ -76,9 +76,11 @@ const Playground = () => {
 
     return (
       <>
+      
       <h2 
-        className={toggleArrowStatus[index] && isClicked ? 'playground-category-title' : 'playground-category-title-clicked'}
-        >
+        className={toggleArrowStatus[index] && isClicked ? 'playground-category-title-clicked' : 'playground-category-title'}
+        ><span className={toggleArrowStatus[index] && isClicked ? 'playground-category-subtitle-clicked' : 'playground-category-subtitle'}>
+        {element.subtitle}</span>
         {element.title}
         <a 
           key={index} 

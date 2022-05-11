@@ -64,6 +64,7 @@ export const strings = {
       {
         index: 0,
         title: 'Breaking. Wait. What.',
+        subtitle: "Don't try this at home.",
         carousel: 
         [
           {
@@ -86,6 +87,7 @@ export const strings = {
       {
         index: 1,
         title: 'UNDA.',
+        subtitle: "Volunteer.",
         carousel: 
         [
           {
@@ -108,7 +110,8 @@ export const strings = {
       },
       {
         index: 2,
-        title: 'Sexy Desserts.',
+        title: 'Desserts.',
+        subtitle: "Once upon a time.",
         carousel: 
         [
           {
@@ -130,7 +133,8 @@ export const strings = {
       },
       {
         index: 3,
-        title: 'Fooling Around With Design.',
+        title: 'Attempts With Design.',
+        subtitle: "Fooling around.",
         carousel: 
         [
           {
