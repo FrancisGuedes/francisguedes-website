@@ -19,7 +19,7 @@ import HrLine from '../../components/hr-line/hrLine';
 
 const Playground = () => {
   const [toggleArrowStatus, setStatus] = useState<boolean[]>([]);
-  const [toggleCategoryStatus, setToggleCategoryStatus] = useState<boolean[]>([]);
+  const [toggleCarouselStatus, setToggleCarouselStatus] = useState<boolean[]>([]);
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -28,7 +28,7 @@ const Playground = () => {
 
   useEffect(() => {
     initializeToggleArrowStatus();
-    initializeToggleCategoryStatus();
+    initializetoggleCarouselStatus();
   }, []);
 
   const initializeToggleArrowStatus = () => {
@@ -39,27 +39,33 @@ const Playground = () => {
     setStatus(tempArr))
   };
 
-  const initializeToggleCategoryStatus = () => {
-    let tempArr: boolean[] = [...toggleCategoryStatus];
+  const initializetoggleCarouselStatus = () => {
+    let tempArr: boolean[] = [...toggleCarouselStatus];
     categoryObj.map(() => {
       tempArr.push(false);
     },
-    setToggleCategoryStatus(tempArr))
+    setToggleCarouselStatus(tempArr))
   };
 
   const toggleArrow = (index: number) => {
     let switchStat = [...toggleArrowStatus];
     switchStat[index] = !switchStat[index];
     setStatus(switchStat);
+  }
+
+  const arrowOnHandleClick = () => {
     setIsClicked(prev => !prev);
   }
 
-  const toggleCategory = (index: number) => {
-    let switchStat = [...toggleCategoryStatus];
+  const toggleCarousel = (index: number) => {
+    let switchStat = [...toggleCarouselStatus];
     switchStat[index] = !switchStat[index];
-    setToggleCategoryStatus(switchStat);
-    setIsCategoryOpen(isOpen => !isOpen);
+    setToggleCarouselStatus(switchStat);
   };
+
+  const carouselOnHandleClick = () => {
+    setIsCategoryOpen(isOpen => !isOpen);
+  }
   
   const categoryContentMapper = categoryObj.map( (element, index) => {
     
@@ -76,30 +82,31 @@ const Playground = () => {
 
     return (
       <>
-      
       <h2 
-        className={toggleArrowStatus[index] && isClicked ? 'playground-category-title-clicked' : 'playground-category-title'}
-        ><span className={toggleArrowStatus[index] && isClicked ? 'playground-category-subtitle-clicked' : 'playground-category-subtitle'}>
-        {element.subtitle}</span>
-        {element.title}
+        className={toggleArrowStatus[index] ? 'playground-category-title-clicked' : 'playground-category-title'}
+        >
+          <span className={toggleArrowStatus[index] ? 'playground-category-subtitle-clicked' : 'playground-category-subtitle'}>
+            {element.subtitle}
+          </span>
+          {element.title}
         <a 
           key={index} 
           type='button'
           className='playground-category-btn'
           onClick={() => {
             toggleArrow(index);
-            toggleCategory(index);
+            toggleCarousel(index);
           }}
         >
           <FontAwesomeIcon
               key={element.index}
-              className={toggleArrowStatus[index] && isClicked  ?  "playground-category-arrow-up" : ".playground-category-arrow-down"}
+              className={toggleArrowStatus[index] ? "playground-category-arrow-up" : ".playground-category-arrow-down"}
               title="ArrowUp" 
-              icon={toggleArrowStatus[index] && isClicked ? faArrowUp : faArrowDown}
+              icon={toggleArrowStatus[index] ? faArrowUp : faArrowDown}
             />
         </a>
       </h2>
-      { toggleCategoryStatus[index] && isCategoryOpen ? 
+      { toggleCarouselStatus[index] ? 
         (
           <Swiper
             slidesPerView={4}
@@ -116,7 +123,7 @@ const Playground = () => {
         ) : (
           <HrLine />
         )
-      }       
+      }
       </>
     )
   });
