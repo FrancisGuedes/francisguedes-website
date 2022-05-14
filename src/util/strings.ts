@@ -58,7 +58,7 @@ export const strings = {
   playgroundPage: {
     titleHide: "My Playground Page",
     title:"My Playground.",
-    subTitle: "Welcome to my playground, here you can find a little bit of me.",
+    subTitle: "Welcome, here you can find a little bit of me.",
     category: 
     [
       {
@@ -67,6 +67,21 @@ export const strings = {
         subtitle: "Don't try this at home.",
         carousel: 
         [
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/unda.jpg'),
+          },
           {
             description: "Breaking", 
             href: "",

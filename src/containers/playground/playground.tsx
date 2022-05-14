@@ -8,7 +8,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y, EffectCards } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 import { Transition, Variants } from '../../util/animations/slidePageVariables';
@@ -69,12 +68,15 @@ const Playground = () => {
   
   const categoryContentMapper = categoryObj.map( (element, index) => {
     
-    const carouselMapper = element.carousel.map(item => {
+    const carouselMapper = element.carousel.map( (item, index) => {
       console.log("el carousel map:", item)
       return (
         <>
-          <SwiperSlide>
-            <img src={item.imagePath} />
+          <SwiperSlide key={index}>
+            <img 
+              className='carousel-img'
+              src={item.imagePath} 
+            />
           </SwiperSlide>
         </>
       )
@@ -96,6 +98,7 @@ const Playground = () => {
           onClick={() => {
             toggleArrow(index);
             toggleCarousel(index);
+            arrowOnHandleClick();
           }}
         >
           <FontAwesomeIcon
@@ -109,14 +112,32 @@ const Playground = () => {
       { toggleCarouselStatus[index] ? 
         (
           <Swiper
-            slidesPerView={4}
-            spaceBetween={30}
+            slidesPerView={5}
+            spaceBetween={10}
             centeredSlides={true}
             pagination={{
               clickable: true,
             }}
+            breakpoints={{
+              "@0.00": {
+                slidesPerView: 1.5,
+                spaceBetween: 25,
+              },
+              "@0.75": {
+                slidesPerView: 2.5,
+                spaceBetween: 40,
+              },
+              "@0.90": {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              "@1.00": {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            }}
             modules={[Pagination]}
-            className="mySwiper"
+            className={isClicked ? "mySwiper" : ''}
             >
               {carouselMapper}
           </Swiper>
@@ -132,8 +153,7 @@ const Playground = () => {
     <>
     <motion.main 
         layout
-        className="playground-wrapper" 
-        data-container="content"
+        className={isClicked ? "playground-wrapper-clicked" : "playground-wrapper"} 
         initial='initial'
         animate='in'
         exit='out'
@@ -145,7 +165,7 @@ const Playground = () => {
               <div className="project_title">
                 {text.titleHide}
               </div>
-              <div className="playground-container" data-active="on" data-elementresizer data-resize-parent>
+              <div className="playground-container">
                     <section>
                       <h1 className="playground-title">
                         {text.title}</h1>
