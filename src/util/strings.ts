@@ -70,32 +70,32 @@ export const strings = {
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
           },
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
           },
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
           },
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
           },
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
           },
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
           }
         ]
       },
@@ -108,17 +108,17 @@ export const strings = {
           {
             description: "UNDA", 
             href: "",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
           },
           {
             description: "UNDA", 
             href: "UNDA",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
           },
           {
             description: "UNDA", 
             href: "",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
           },
         ]
         
@@ -132,17 +132,17 @@ export const strings = {
           {
             description: "Desserts", 
             href: "",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/desserts/maxibom.jpg'),
           },
           {
             description: "Desserts", 
             href: "",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/desserts/maxibom.jpg'),
           },
           {
             description: "Desserts", 
             href: "",
-            imagePath: require('../assets/images/playground/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/desserts/maxibom.jpg'),
           },
         ]
       },
@@ -155,17 +155,27 @@ export const strings = {
           {
             description: "Design", 
             href: "",
-            imagePath: require("../assets/images/playground/quote.png"),
+            imagePath: require("../assets/images/playground/carousel/design/quote-1.png"),
           },
           {
             description: "Design", 
             href: "",
-            imagePath: require("../assets/images/playground/quote.png"),
+            imagePath: require("../assets/images/playground/carousel/design/quote-2.png"),
           },
           {
             description: "Design", 
             href: "",
-            imagePath: require("../assets/images/playground/quote.png"),
+            imagePath: require("../assets/images/playground/carousel/design/logo-f.png"),
+          },
+          {
+            description: "Design", 
+            href: "",
+            imagePath: require("../assets/images/playground/carousel/design/when.png"),
+          },
+          {
+            description: "Design", 
+            href: "",
+            imagePath: require("../assets/images/playground/carousel/design/logo-fg.png"),
           },
         ]
       }

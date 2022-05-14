@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y, EffectCards } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 import { Transition, Variants } from '../../util/animations/slidePageVariables';
 import './playground.css';
