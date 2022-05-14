@@ -19,17 +19,20 @@ import HrLine from '../../components/hr-line/hrLine';
 const Playground = () => {
   const [toggleArrowStatus, setStatus] = useState<boolean[]>([]);
   const [toggleCarouselStatus, setToggleCarouselStatus] = useState<boolean[]>([]);
-  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
+  const [toggleRotationArrowStatus, setToggleRotationArrowStatus] = useState<boolean[]>([]);
   const [isClicked, setIsClicked] = useState(false);
-
+  const [rotateArrow, setRotateArrow] = useState(false);
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
+  
   const text = {...strings.playgroundPage};
   const categoryObj = [...strings.playgroundPage.category];
-
+  
   useEffect(() => {
     initializeToggleArrowStatus();
     initializetoggleCarouselStatus();
+    initializeRotationArrowStatus();
   }, []);
-
+  
   const initializeToggleArrowStatus = () => {
     let tempArr: boolean[] = [...toggleArrowStatus];
     categoryObj.map(() => {
@@ -37,7 +40,7 @@ const Playground = () => {
     },
     setStatus(tempArr))
   };
-
+  
   const initializetoggleCarouselStatus = () => {
     let tempArr: boolean[] = [...toggleCarouselStatus];
     categoryObj.map(() => {
@@ -46,25 +49,43 @@ const Playground = () => {
     setToggleCarouselStatus(tempArr))
   };
 
+  const initializeRotationArrowStatus = () => {
+    let tempArr: boolean[] = [...toggleRotationArrowStatus];
+    categoryObj.map(() => {
+      tempArr.push(false);
+    },
+    setToggleRotationArrowStatus(tempArr))
+  };
+  
   const toggleArrow = (index: number) => {
     let switchStat = [...toggleArrowStatus];
     switchStat[index] = !switchStat[index];
     setStatus(switchStat);
   }
-
+  
   const arrowOnHandleClick = () => {
     setIsClicked(prev => !prev);
   }
-
+  
   const toggleCarousel = (index: number) => {
     let switchStat = [...toggleCarouselStatus];
     switchStat[index] = !switchStat[index];
     setToggleCarouselStatus(switchStat);
   };
-
+  
   const carouselOnHandleClick = () => {
     setIsCategoryOpen(isOpen => !isOpen);
   }
+
+  const toggleRotationArrow = (index: number) => {
+    let switchStat = [...toggleRotationArrowStatus];
+    switchStat[index] = !switchStat[index];
+    setToggleRotationArrowStatus(switchStat);
+  };
+
+  const handleRotate = () => setRotateArrow(isRotateArrow => !isRotateArrow);
+
+  const rotate = (index: number) => toggleRotationArrowStatus[index] ? "rotate(-180deg)" : "rotate(0deg)";
   
   const categoryContentMapper = categoryObj.map( (element, index) => {
     
@@ -103,9 +124,13 @@ const Playground = () => {
         >
           <FontAwesomeIcon
               key={element.index}
-              className={toggleArrowStatus[index] ? "playground-category-arrow-up" : ".playground-category-arrow-down"}
+              className="playground-category-arrow"
+              style={{transform: rotate(index), transition: "all 0.2s linear"}}
               title="ArrowUp" 
-              icon={toggleArrowStatus[index] ? faArrowUp : faArrowDown}
+              icon={faArrowDown}
+              onClick={() => {
+                toggleRotationArrow(index)
+              }}
             />
         </a>
       </h2>
@@ -137,7 +162,6 @@ const Playground = () => {
               },
             }}
             modules={[Pagination]}
-            className={isClicked ? "mySwiper" : ''}
             >
               {carouselMapper}
           </Swiper>
