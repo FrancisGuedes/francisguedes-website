@@ -1,15 +1,13 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import ArrowBack from '../../components/arrow-back/arrowBack';
 import { strings } from '../../util/strings';
-
 import { Transition, Variants } from '../../util/animations/slidePageVariables';
-import './playground.css';
+import ArrowBack from '../../components/arrow-back/arrowBack';
 import SocialMedia from '../../components/social-media/socialMedia';
-
 import HrLine from '../../components/hr-line/hrLine';
 import Carousel from '../../components/carousel/carousel';
-import { useCallback, useEffect, useState } from 'react';
+
+import './playground.css';
 
 const Playground = () => {
   const [isClicked, setIsClicked] = useState(false);

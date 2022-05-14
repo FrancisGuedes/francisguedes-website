@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { strings } from '../../util/strings';
 import HrLine from '../../components/hr-line/hrLine';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
+import './carousel.css';
 
 const Carousel = ({ isArrowClicked }: any) => {
   const [toggleArrowStatus, setStatus] = useState<boolean[]>([]);
