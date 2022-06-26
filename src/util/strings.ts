@@ -63,39 +63,99 @@ export const strings = {
     [
       {
         index: 0,
-        title: 'Breaking. Wait. What.',
+        title: 'Breaking.',
         subtitle: "Don't try this at home.",
         carousel: 
         [
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/breaking/fs-2022-1.jpg'),
           },
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/breaking/iminente-2019.jpg'),
           },
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/breaking/fs-2022-2.jpg'),
           },
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/breaking/fs-2022-3.jpg'),
           },
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/breaking/iminente-2020-1.jpg'),
           },
           {
             description: "Breaking", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/breaking/iminente-2020-2.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/iminente-2020-3.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/iminente-2021-1.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/iminente-2021-2.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/iminente-2021-3.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/iminente-2021-4.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/madeira-2022.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/park-central-amadora.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/popup-2021.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/ribeira-2018-1.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/ribeira-2018-2.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/slazaro-2022-1.jpg'),
+          },
+          {
+            description: "Breaking", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/breaking/slazaro-2022-2.jpg'),
           }
         ]
       },
@@ -108,24 +168,44 @@ export const strings = {
           {
             description: "UNDA", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/unda-2.jpg'),
           },
           {
             description: "UNDA", 
             href: "UNDA",
-            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/fs-2021-2.jpg'),
           },
           {
             description: "UNDA", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/unda/unda.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/fs-2021-1.jpg'),
+          },
+          {
+            description: "UNDA", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/unda/unda-4.jpg'),
+          },
+          {
+            description: "UNDA", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/unda/unda-1.jpg'),
+          },
+          {
+            description: "UNDA", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/unda/fs-2021-3.jpg'),
+          },
+          {
+            description: "UNDA", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/unda/unda-3.jpg'),
           },
         ]
         
       },
       {
         index: 2,
-        title: 'Desserts.',
+        title: 'Deliciousness.',
         subtitle: "Once upon a time.",
         carousel: 
         [
@@ -137,16 +217,121 @@ export const strings = {
           {
             description: "Desserts", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/desserts/maxibom.jpg'),
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6424.jpg'),
           },
           {
             description: "Desserts", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/desserts/maxibom.jpg'),
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6431.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6436.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6419.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6420.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6421.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6422.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_4799.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6423.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6416.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6425.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6426.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6427.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6428.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6429.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6430.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6417.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6432.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6433.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6434.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6435.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6418.jpg'),
+          },
+          {
+            description: "Desserts", 
+            href: "",
+            imagePath: require('../assets/images/playground/carousel/desserts/IMG_6437.jpg'),
           },
         ]
       },
-      {
+      /* {
         index: 3,
         title: 'Attempts With Design.',
         subtitle: "Fooling around.",
@@ -178,7 +363,7 @@ export const strings = {
             imagePath: require("../assets/images/playground/carousel/design/logo-fg.png"),
           },
         ]
-      }
+      } */
     ],
   },
 }

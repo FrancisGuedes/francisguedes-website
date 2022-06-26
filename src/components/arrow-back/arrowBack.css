@@ -3,7 +3,7 @@
   height: 20px;
 }
 .corner-project-back {
-  position: fixed;
+  position: absolute;
   top: 3vw;
   right: 3vw;
   z-index: 4;
