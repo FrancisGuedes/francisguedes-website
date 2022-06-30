@@ -147,11 +147,11 @@
   }
   
   .navbar-wrapper .navbar-title:nth-child(2) .wiggle {
-    width: 5vw;
+    width: 4.5vw;
   }
   
   .navbar-wrapper .navbar-title:nth-child(3) .wiggle {
-    width: 10vw;
+    width: 10.5vw;
   }
 }
 

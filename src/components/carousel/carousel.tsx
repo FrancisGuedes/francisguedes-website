@@ -135,6 +135,8 @@ const Carousel = ({ isArrowClicked }: any) => {
           <Swiper
             slidesPerView={5}
             spaceBetween={10}
+            loop={true}
+            loopFillGroupWithBlank={true}
             pagination={{
               clickable: true,
             }}
