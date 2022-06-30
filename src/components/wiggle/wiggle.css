@@ -50,15 +50,15 @@
 }
 
 .navbar-wrapper .navbar-title:nth-child(1) .wiggle {
-  width: 7%;
+  width: 6.5vw;
 }
 
 .navbar-wrapper .navbar-title:nth-child(2) .wiggle {
-  width: 5%;
+  width: 4.5vw;
 }
 
 .navbar-wrapper .navbar-title:nth-child(3) .wiggle {
-  width: 11%;
+  width: 10vw;
 }
 
 /* WIGGLE FOR EMAIL */
@@ -111,6 +111,48 @@
 
 .navbar-wrapper .wiggle::before {
   background: url(./../../assets/icons/wiggle-white.svg) repeat-x center center/7px 3px;
+}
+
+@media screen and (max-width: 2600px) {
+  .navbar-wrapper .navbar-title:nth-child(1) .wiggle {
+    width: 4vw;
+  }
+  
+  .navbar-wrapper .navbar-title:nth-child(2) .wiggle {
+    width: 2.5vw;
+  }
+  
+  .navbar-wrapper .navbar-title:nth-child(3) .wiggle {
+    width: 6vw;
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .navbar-wrapper .navbar-title:nth-child(1) .wiggle {
+    width: 5.5vw;
+  }
+  
+  .navbar-wrapper .navbar-title:nth-child(2) .wiggle {
+    width: 4vw;
+  }
+  
+  .navbar-wrapper .navbar-title:nth-child(3) .wiggle {
+    width: 8vw;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .navbar-wrapper .navbar-title:nth-child(1) .wiggle {
+    width: 7vw;
+  }
+  
+  .navbar-wrapper .navbar-title:nth-child(2) .wiggle {
+    width: 5vw;
+  }
+  
+  .navbar-wrapper .navbar-title:nth-child(3) .wiggle {
+    width: 10vw;
+  }
 }
 
 @media screen and (max-width: 800px) {
