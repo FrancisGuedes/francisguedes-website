@@ -195,11 +195,6 @@ export const strings = {
             href: "",
             imagePath: require('../assets/images/playground/carousel/unda/fs-2021-3.jpg'),
           },
-          {
-            description: "UNDA", 
-            href: "",
-            imagePath: require('../assets/images/playground/carousel/unda/unda-3.jpg'),
-          },
         ]
         
       },
