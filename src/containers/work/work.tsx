@@ -26,13 +26,14 @@ const projectsMapper = projectsObj.map( (element, index) => {
         <img 
           className='project-thumb-image' 
           src={element.imagePath}
+          alt={element.alt}
         />
       </div>
     </div>
   )
 })
 
-console.log(projectsMapper)
+//console.log(projectsMapper)
 
 const Work = () => {
 

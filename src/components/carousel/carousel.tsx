@@ -90,7 +90,8 @@ const Carousel = ({ isArrowClicked }: any) => {
           <SwiperSlide key={index}>
             <img 
               className='carousel-img'
-              src={item.imagePath} 
+              src={item.imagePath}
+              alt={item.alt} 
             />
           </SwiperSlide>
         </>
