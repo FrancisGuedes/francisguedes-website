@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import Hero from './containers/hero/hero';
 import Work from './containers/work/work';
 import Playground from './containers/playground/playground';
+import NotFound from './containers/errors/notFound';
 
 function App() {
   const location = useLocation();
@@ -14,7 +15,7 @@ function App() {
             <Route path="/" element={<Hero/>}/>
             <Route path="/work" element={<Work/>}/>
             <Route path="/playground" element={<Playground/>}/>
-            {/* <Route path="*" element={<NotFound />} /> */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
       </AnimatePresence>
     </>

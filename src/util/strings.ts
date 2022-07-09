@@ -420,4 +420,24 @@ export const strings = {
       } */
     ],
   },
+  notFoundPage: {
+    button_name: "Toggle me!",
+  }
 }
+
+export const http_errors = {
+  notFound: {
+    code: '404',
+    message: "Oh no, the good old not found page."
+  },
+  internalError: {
+    code: '500',
+    message: 'Whoops! Something went wrong!'
+  },
+  otherError: {
+    code: 'Error!',
+    message: 'Please come back later.'
+  }
+}
+
+

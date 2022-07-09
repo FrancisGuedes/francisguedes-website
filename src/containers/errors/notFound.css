@@ -1,0 +1,47 @@
+.not-found-wrapper{
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: absolute;
+	background-color: #1544c0;
+}
+
+.not-found-wrapper-padding{
+  padding: 5vw;
+}
+
+.error-title > * {
+  color: white;
+  text-align: center;
+}
+
+.error-title{
+  /* margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.error-title-code{
+  font-size: 20vw;
+}
+
+.button-wrapper-not-found{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14%;
+  text-align: center;
+  margin: auto;
+}
+
+.not-found-button{
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 100%;
+  line-height: 200%;
+  cursor: pointer;
+}
