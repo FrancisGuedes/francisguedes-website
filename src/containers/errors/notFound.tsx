@@ -52,13 +52,9 @@ const NotFound = () => {
               </h2>
             </div>
             <div className='button-wrapper-not-found'>
-              {/* <a type='button' className='not-found-button' onClick={() => setEndX(randomX())}>     
-                {label.button_name}
-              </a> */}
               <Button 
                 labelName={labelText}
                 onClick={() => setEndX(randomX())}
-                className='not-found-button'
               />
             </div>
           </div>

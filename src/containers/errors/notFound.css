@@ -8,7 +8,7 @@
 }
 
 .not-found-wrapper-padding{
-  padding: 5vw;
+  padding: 10rem;
 }
 
 .error-title > * {
@@ -37,11 +37,40 @@
   margin: auto;
 }
 
-.not-found-button{
-  color: white;
-  border: 2px solid white;
-  border-radius: 20px;
-  width: 100%;
-  line-height: 200%;
-  cursor: pointer;
+@media screen and (max-width: 1000px) {
+
+  .not-found-wrapper-padding {
+    padding: 15% 8%;
+  }
+
+  .button-wrapper-not-found {
+    width: 23%;
+  }
+    
+}
+
+@media screen and (max-width: 800px) {
+
+  .not-found-wrapper-padding {
+    padding: 10%;
+  }
+
+  .button-wrapper-not-found {
+    width: 33%;
+  }
+    
+}
+
+@media screen and (max-width: 591px) {
+
+  .not-found-wrapper-padding {
+    padding: 20% 8%;
+  }
+}
+
+@media screen and (max-width: 491px) {
+
+  .not-found-wrapper-padding {
+    padding: 50% 1%;
+  }
 }

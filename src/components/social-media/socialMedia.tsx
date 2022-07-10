@@ -8,9 +8,7 @@ interface SocialMediaProps {
   isBackGroundYellow?: boolean;
 }
 
-const SocialMedia = ( props: SocialMediaProps ) => {
-  const isBackGroundYellow = props.isBackGroundYellow;
-
+const SocialMedia = ( {isBackGroundYellow}: SocialMediaProps ) => {
   return ( 
     <>
       <h2>
