@@ -54,11 +54,11 @@
 }
 
 .navbar-wrapper .navbar-title:nth-child(2) .wiggle {
-  width: 4.5vw;
+  width: var(--wiggleLength);
 }
 
 .navbar-wrapper .navbar-title:nth-child(3) .wiggle {
-  width: 10vw;
+  width: var(--wiggleLength);
 }
 
 /* WIGGLE FOR EMAIL */
@@ -113,7 +113,7 @@
   background: url(./../../assets/icons/wiggle-white.svg) repeat-x center center/7px 3px;
 }
 
-@media screen and (max-width: 2600px) {
+/* @media screen and (max-width: 2600px) {
   .navbar-wrapper .navbar-title:nth-child(1) .wiggle {
     width: 4vw;
   }
@@ -153,7 +153,7 @@
   .navbar-wrapper .navbar-title:nth-child(3) .wiggle {
     width: 10.5vw;
   }
-}
+} */
 
 @media screen and (max-width: 800px) {
   .wiggle{
