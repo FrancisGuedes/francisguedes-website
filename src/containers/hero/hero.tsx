@@ -10,7 +10,7 @@ import Navbar from '../../components/navbar/navbar';
 
 const dynamicWordsObj = {...strings.heroPage.introText.dynamicWords};
 
-let dynamicWordsValues = Object.values(dynamicWordsObj);
+let dynamicWordsValues: string[] = Object.values(dynamicWordsObj);
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -48,8 +48,12 @@ const Hero = () => {
       >
         <div className="hero-container-padding">  
           <div className="content clearfix" data-elementresizer data-resize-parent>
-            <h1 className='intro-text-first-line'>{introText.firstLine}</h1>
-            <h1>{introText.secondLine}</h1>
+            <h1 className='intro-text-first-line'>
+              {introText.firstLine}
+            </h1>
+            <h1>
+              {introText.secondLine}
+            </h1>
             <h1>
               {introText.thirdLine} 
               <span 
@@ -60,8 +64,12 @@ const Hero = () => {
               {introText.endPoint}
               <br/>
             </h1>
-            <h1>{introText.fourthLine}</h1>
-            <h1>{introText.lastLine}</h1>
+            <h1>
+              {introText.fourthLine}
+            </h1>
+            <h1>
+              {introText.lastLine}
+            </h1>
             <br/>
             
             <h2>{contact.talk} 
