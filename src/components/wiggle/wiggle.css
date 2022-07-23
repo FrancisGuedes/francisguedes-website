@@ -30,7 +30,7 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-
+/* TODO a width deste span class wiggle ta gigante */
 .wiggle {
   display: block;
   bottom: 18px;
@@ -41,7 +41,7 @@
   -moz-transform: translateX(-7%);
   -ms-transform: translateX(-7%);
   -o-transform: translateX(-7%);
-  transform: translateX(-7%);
+  transform: translateX(17%);
   -webkit-transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
   -moz-transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
   transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
@@ -50,15 +50,15 @@
 }
 
 .navbar-wrapper .navbar-title:nth-child(1) .wiggle {
-  width: 6.5vw;
+  width: var(--wiggleLength1);
 }
 
 .navbar-wrapper .navbar-title:nth-child(2) .wiggle {
-  width: var(--wiggleLength);
+  width: var(--wiggleLength2);
 }
 
 .navbar-wrapper .navbar-title:nth-child(3) .wiggle {
-  width: var(--wiggleLength);
+  width: var(--wiggleLength3);
 }
 
 /* WIGGLE FOR EMAIL */
@@ -93,13 +93,13 @@
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
+  left: 9%;
   width: 100%;
   height: 100%;
-  -webkit-transform: translateX(105%);
-  -moz-transform: translateX(105%);
-  -ms-transform: translateX(105%);
-  -o-transform: translateX(105%);
+  -webkit-transform: translateX(-115%);
+  -moz-transform: translateX(-115%);
+  -ms-transform: translateX(-115%);
+  -o-transform: translateX(-115%);
   transform: translateX(-115%);
   -webkit-transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
   -moz-transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);

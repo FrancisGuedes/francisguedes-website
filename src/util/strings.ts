@@ -1,8 +1,8 @@
 export const functionalitiesAlias = {
   navbar: {
-    cv: "résumé",
-    work: "work",
-    playground: "playground"
+    cv: "who.",
+    work: "work.",
+    playground: "playing."
   },
   arrowBack: {
     title: "back"

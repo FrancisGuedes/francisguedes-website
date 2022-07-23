@@ -1,23 +1,38 @@
 import './wiggle.css';
-
-//TODO Adicionar logica para a width do wiggle sobre o length de cada titulo pois esta no css
+import { useState, useEffect } from 'react';
+import { convertPXToVW, getTextWidthInPixels } from '../../util/utility';
 interface wiggleProps {
-  wordText: string;
+  wordText?: string;
+  htmlClassName?: any;
+  labelTextProps?: any;
 } 
-/* const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d'); */
-const Wiggle = ({wordText}: wiggleProps) => {
-  const canvas = document.createElement('canvas');
-  const context:any = canvas.getContext('2d');
-  let text = context.measureText(wordText);
-  console.log('text.width', text.width);
-  console.log('measureText:', context.measureText(text).width);
-  context.font = getComputedStyle(document.body).font;
-  //context.measureText(text).width;
+const Wiggle = ({wordText, htmlClassName, labelTextProps}: wiggleProps) => {
+  // TODO 1 refactorizar: logica não está generalista.
+  const [wiggleWidthList, setWiggleWidthList] = useState<number[]>([]);
 
-  console.log("context.font",context.font);
-  //document.documentElement.style.setProperty('--text', `'${text.width}'`);
-  document.documentElement.style.setProperty('--wiggleLength', text.width + 'px');
+  useEffect(() => {
+    getCssWiggleWidthForObjectProps(labelTextProps);
+  }, [])
+
+  const getCssWiggleWidthForObjectProps = (props: object): void => {
+    const labelTextObject: object = {...props};
+
+    let labelTextValues: string[] = Object.values(labelTextObject);
+
+    let labelTextItem: number[] = labelTextValues.map(value => 
+    getTextWidthInPixels(value))
+  
+    let labelTextValue: number[] = labelTextItem.map(value => convertPXToVW(value));
+    setWiggleWidthList(labelTextValue);
+
+    document.documentElement.style.setProperty('--wiggleLength1', labelTextValue[0] + 'vw');
+    document.documentElement.style.setProperty('--wiggleLength2', labelTextValue[1] + 'vw');
+    document.documentElement.style.setProperty('--wiggleLength3', labelTextValue[2] + 'vw');
+
+    /* return labelTextValue.forEach((value: any, index: any) => {
+      document.documentElement.style.setProperty(`--wiggleLength${index+1}`, value[index] + 'vw');
+    }) */
+  }
 
   return ( 
     <>
