@@ -11,10 +11,10 @@ const Wiggle = ({wordText, htmlClassName, labelTextProps}: wiggleProps) => {
   const [wiggleWidthList, setWiggleWidthList] = useState<number[]>([]);
 
   useEffect(() => {
-    getCssWiggleWidthForObjectProps(labelTextProps);
+    cssWiggleWidthForObjectProps(labelTextProps);
   }, [])
 
-  const getCssWiggleWidthForObjectProps = (props: object): void => {
+  const cssWiggleWidthForObjectProps = (props: object): void => {
     const labelTextObject: object = {...props};
 
     let labelTextValues: string[] = Object.values(labelTextObject);

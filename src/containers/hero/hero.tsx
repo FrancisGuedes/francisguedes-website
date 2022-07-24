@@ -28,7 +28,7 @@ const Hero = () => {
     }, intervalDelayMilliseconds);
 
     return () => clearInterval(interval);
-  });
+  }, [index]);
 
   /* useEffect(() => {
     document.body.style.background = colors.background.purple;
@@ -93,7 +93,7 @@ const Hero = () => {
             <br/>
             <Navbar/>
             <br/>
-            <SocialMedia isBackGroundYellow={true}/>
+            <SocialMedia isBackGroundYellow/>
           </div>
         </div>
         
