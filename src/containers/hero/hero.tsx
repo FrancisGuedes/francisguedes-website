@@ -8,12 +8,12 @@ import useWhiteColor from '../../util/hooks/useWhiteColor';
 import SocialMedia from '../../components/social-media/socialMedia';
 import Navbar from '../../components/navbar/navbar';
 
-const dynamicWordsObj = {...strings.heroPage.introText.dynamicWords};
-
-let dynamicWordsValues: string[] = Object.values(dynamicWordsObj);
-
 const Hero = () => {
   const [index, setIndex] = useState(0);
+
+  const dynamicWordsObj = {...strings.heroPage.introText.dynamicWords};
+
+  let dynamicWordsValues: string[] = Object.values(dynamicWordsObj);
 
   const contact = {...strings.heroPage}
   const introText = {...strings.heroPage.introText}
