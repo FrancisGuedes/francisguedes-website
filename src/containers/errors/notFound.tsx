@@ -42,20 +42,23 @@ const NotFound = () => {
       >
         <ArrowBack/>
           <div className='not-found-wrapper-padding'>
-            <div className='error-title'>
-              <div className='error-title-code' ref={boxRef}>
-                {errors.notFound.code}
-              </div>
-              <br/>
+            <div className='error-text-title'>
+              
+              <h1 className='error-title-code' ref={boxRef}>
+                {errors.notFound.code.concat('. ').repeat(9)}
+              </h1>
               <h2 className='error-title-message'>
                 {errors.notFound.message}
               </h2>
             </div>
             <div className='button-wrapper-not-found'>
-              <Button 
+              {/* <Button 
                 labelName={labelText}
                 onClick={() => setEndX(randomX())}
-              />
+              /> */}
+            </div>
+            <div className="not-found-image-wrapper">
+              <picture className='not-found-image'/>
             </div>
           </div>
       </motion.main>

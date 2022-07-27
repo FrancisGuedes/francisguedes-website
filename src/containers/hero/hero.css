@@ -55,6 +55,34 @@ a {
     1px 1px 1px rgba(16,16,16,0.4);
 }*/
 
+@media screen and (max-width: 2600px) {
+
+  .hero-container-padding {
+    padding: 3%;
+  }
+
+  h1 {
+    font-size: 3.1vw;
+  }
+
+  h2 {
+    font-size: 1.4vw;
+  }
+    
+}
+
+@media screen and (max-width: 2000px) {
+
+  .hero-container-padding {
+    padding: 4.5%;
+  }
+
+  h1 {
+    font-size: 3.3vw;
+  }
+    
+}
+
 @media screen and (max-width: 1500px) {
 
   .hero-container-padding {
