@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Francis Website",
+  "name": "FrancisGuedes - Software Developer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/?source=pwa",
+  "background_color": "#ffd42d",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "scope": "/",
+  "theme_color": "#ffd42d",
+  "description": "Francis Website provides a great idea of what kind of services his skills can provide you. From Front-End to Back-End web apps to apps, to descentralized applications. Also he's a little box of surprises, check out what a human being is possible of."
 }
