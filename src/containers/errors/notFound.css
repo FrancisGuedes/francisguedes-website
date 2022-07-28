@@ -20,7 +20,7 @@
 }
 
 .error-title-code{
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 .error-title-message{
@@ -58,19 +58,23 @@
 @media screen and (max-width: 1000px) {
 
   .not-found-wrapper-padding {
-    padding: 15% 8%;
+    padding: 15% 2%;
   }
 
   .button-wrapper-not-found {
     width: 23%;
   }
+
+  .error-title-message {
+    font-size: 2vw;
+}
     
 }
 
 @media screen and (max-width: 800px) {
 
   .not-found-wrapper-padding {
-    padding: 10%;
+    padding: 12% 1%;
   }
 
   .button-wrapper-not-found {
