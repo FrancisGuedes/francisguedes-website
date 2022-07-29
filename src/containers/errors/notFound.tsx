@@ -8,6 +8,7 @@ import ArrowBack from '../../components/arrow-back/arrowBack';
 import './notFound.css';
 import Button from '../../components/button/button';
 import { ObjectLiteralElement } from 'typescript';
+import EndlessText from '../../components/endless-text/endlessText';
 
 const NotFound = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -45,7 +46,8 @@ const NotFound = () => {
             <div className='error-text-title'>
               
               <h1 className='error-title-code' ref={boxRef}>
-                {errors.notFound.code.concat('. ').repeat(9)}
+                {/* {errors.notFound.code.concat('. ').repeat(9)} */}
+                <EndlessText/>
               </h1>
               <h2 className='error-title-message'>
                 {errors.notFound.message}
