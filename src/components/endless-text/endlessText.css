@@ -2,7 +2,6 @@
   overflow: hidden;
 }
 
-/*remove p*/
 .endless-text-contents {
   width:100%;
   padding-top: 20px;
@@ -12,7 +11,6 @@
 
 .endless-text {
   display:inline-block;
-  /* Apply animation to this element */
   -webkit-animation: scrolling-left1 20s linear infinite;
   animation: scrolling-left1 20s linear infinite;
   animation-fill-mode: forwards;
@@ -20,7 +18,6 @@
 
 .endless-text-clone {
   display:inline-block;
-  /* Apply animation to this element */
   -webkit-animation: scrolling-left2 20s linear infinite;
   animation: scrolling-left2 20s linear infinite ;
   animation-delay: 10s;
@@ -28,7 +25,6 @@
   animation-fill-mode: forwards;
 }
 
-/* scrolling-left is continuous/repeatly text */
 @keyframes scrolling-left1 {
   0% {
       transform: translateX(100%);
