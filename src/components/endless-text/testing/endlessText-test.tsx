@@ -1,5 +1,5 @@
 import './endlessText.css';
-import { http_errors } from '../../util/strings';
+import { http_errors } from '../../../util/strings';
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from "gsap";
 
