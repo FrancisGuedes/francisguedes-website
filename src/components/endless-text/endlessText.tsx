@@ -10,7 +10,7 @@ const EndlessText = () => {
   const textTween: any = useRef(null);
   textTween.current = gsap.timeline();
   let label = [notFoundLabels.code.concat('. ').repeat(9)]
-debugger
+
   useEffect(() => {
     resizeHandler();
     window.addEventListener("resize", resizeHandler);
@@ -30,6 +30,7 @@ debugger
       repeat: -1,
       duration: 9,
       rotation: 0.1,
+      yoyo: true,
       modifiers: {
         x: (x) => {
           // width of the view where the text loop ends: 1 means all the way trough
