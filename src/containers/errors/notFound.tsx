@@ -4,11 +4,10 @@ import { gsap } from "gsap";
 import { http_errors, strings } from '../../util/strings';
 import { Transition, Variants } from '../../util/animations/slidePageVariables';
 import ArrowBack from '../../components/arrow-back/arrowBack';
+import EndlessText from '../../components/endless-text/endlessText';
 
 import './notFound.css';
 import Button from '../../components/button/button';
-import { ObjectLiteralElement } from 'typescript';
-import EndlessText from '../../components/endless-text/endlessText';
 
 const NotFound = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -18,7 +17,7 @@ const NotFound = () => {
   const label = {...strings.notFoundPage}
   const labelText: string = label.button_name
   
-  const randomX = gsap.utils.random(-200, 200, 1, true);
+  const randomX = gsap.utils.random(-500, 500, 1, true);
 
   const boxRef: any = useRef();
 
@@ -46,8 +45,7 @@ const NotFound = () => {
             <div className='error-text-title'>
               
               <h1 className='error-title-code' ref={boxRef}>
-                {/* {errors.notFound.code.concat('. ').repeat(9)} */}
-                <EndlessText/>
+                <EndlessText messageLabel={errors.notFound.code}/>
               </h1>
               <h2 className='error-title-message'>
                 {errors.notFound.message}

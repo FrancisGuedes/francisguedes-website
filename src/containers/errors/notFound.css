@@ -55,44 +55,99 @@
   background-size: contain;
 }
 
+@media screen and (max-width: 1200px) {
+  .not-found-wrapper-padding {
+    padding: 15% 0;
+  }
+
+  .error-title-code {
+    font-size: 7vw;
+  }
+
+  .error-title-message {
+    font-size: 2vw;
+  }
+
+  .not-found-image-wrapper {
+    margin: 10% auto auto auto;
+    width: 30vw;
+    height: 20vw;
+  }
+}
+
 @media screen and (max-width: 1000px) {
 
   .not-found-wrapper-padding {
-    padding: 15% 2%;
+    padding: 15% 0;
   }
 
   .button-wrapper-not-found {
     width: 23%;
   }
 
+  .error-title-code {
+    font-size: 8vw;
+  }
+
   .error-title-message {
-    font-size: 2vw;
-}
-    
+    font-size: 2.5vw;
+  }
+
+  .not-found-image-wrapper {
+    margin: 10% auto auto auto;
+    width: 35vw;
+    height: 25vw;
+  }
 }
 
 @media screen and (max-width: 800px) {
 
   .not-found-wrapper-padding {
-    padding: 12% 1%;
+    padding: 22% 0;
   }
 
   .button-wrapper-not-found {
     width: 33%;
   }
-    
+
+  .not-found-image-wrapper {
+    margin: 11% auto auto auto;
+    width: 40vw;
+    height: 30vw;
+  }
+
+  .error-title-code {
+    font-size: 7vw;
+  }
+
+  .error-title-message {
+    font-size: 2.9vw;
+  }
 }
 
 @media screen and (max-width: 591px) {
 
   .not-found-wrapper-padding {
-    padding: 20% 8%;
+    padding: 30% 0;
+  }
+
+  .not-found-image-wrapper {
+    margin: 15% auto auto auto;
+    width: 65vw;
+    height: 35vw;
+  }
+
+  .error-title-code {
+    font-size: 14vw;
+  }
+
+  .error-title-message {
+    font-size: 4vw;
   }
 }
 
 @media screen and (max-width: 491px) {
-
   .not-found-wrapper-padding {
-    padding: 50% 1%;
+    padding: 50% 0;
   }
 }
