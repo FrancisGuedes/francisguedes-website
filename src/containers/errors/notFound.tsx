@@ -4,10 +4,10 @@ import { gsap } from "gsap";
 import { http_errors, strings } from '../../util/strings';
 import { Transition, Variants } from '../../util/animations/slidePageVariables';
 import ArrowBack from '../../components/arrow-back/arrowBack';
+import EndlessText from '../../components/endless-text/endlessText';
 
 import './notFound.css';
 import Button from '../../components/button/button';
-import { ObjectLiteralElement } from 'typescript';
 
 const NotFound = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -17,7 +17,7 @@ const NotFound = () => {
   const label = {...strings.notFoundPage}
   const labelText: string = label.button_name
   
-  const randomX = gsap.utils.random(-200, 200, 1, true);
+  const randomX = gsap.utils.random(-500, 500, 1, true);
 
   const boxRef: any = useRef();
 
@@ -42,20 +42,23 @@ const NotFound = () => {
       >
         <ArrowBack/>
           <div className='not-found-wrapper-padding'>
-            <div className='error-title'>
-              <div className='error-title-code' ref={boxRef}>
-                {errors.notFound.code}
-              </div>
-              <br/>
+            <div className='error-text-title'>
+              
+              <h1 className='error-title-code' ref={boxRef}>
+                <EndlessText messageLabel={errors.notFound.code}/>
+              </h1>
               <h2 className='error-title-message'>
                 {errors.notFound.message}
               </h2>
             </div>
             <div className='button-wrapper-not-found'>
-              <Button 
+              {/* <Button 
                 labelName={labelText}
                 onClick={() => setEndX(randomX())}
-              />
+              /> */}
+            </div>
+            <div className="not-found-image-wrapper">
+              <picture className='not-found-image'/>
             </div>
           </div>
       </motion.main>

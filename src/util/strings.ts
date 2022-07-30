@@ -28,7 +28,7 @@ export const strings = {
     },
     talk:"let's talk? ",
     mail:"franciscojmguedes",
-    mailDomain:"@gmail.com",
+    mailDomain:"@gmail.com.",
     emailLink:"mailto:franciscojmguedes@gmail.com"
   },
   socialMedia: {
@@ -49,12 +49,12 @@ export const strings = {
         imagePath: require('../assets/images/work/first-steps-website.jpg'),
         alt: "Website of a digital event within the urban culture / hiphop. Six fundamentals in form of workshops and competition in Lisbon. It happened on the 20th of November of 2021."
       },
-      {
+      /* {
         title: "Wave Portal", 
         href: "https://waveportal-baseline-student.daeshawnballard.repl.co/",
         imagePath: require("../assets/images/work/dapp.png"),
         alt: "A small website where anyone with a crytpo wallet can log in and send a hello in form of a wave emoji."
-      }
+      } */
     ],
   },
   playgroundPage: {
@@ -432,7 +432,7 @@ export const http_errors = {
   },
   internalError: {
     code: '500',
-    message: 'Whoops! Something went wrong!'
+    message: "Well this is embarrasing, our server is down. We'll be back soon."
   },
   otherError: {
     code: 'Error!',
