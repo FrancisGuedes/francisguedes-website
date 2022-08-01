@@ -23,7 +23,7 @@ export const strings = {
         backEnd: "Back-end",
         webDevelopment: "Web Development",
         mobileDevelopment: "Mobile Development",
-        // decentralizedApps: "Decentralized Applications",
+        //decentralizedApps: "Decentralized Applications",
       }
     },
     talk:"let's talk? ",
