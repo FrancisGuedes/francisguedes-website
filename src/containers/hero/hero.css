@@ -115,14 +115,14 @@ a {
     
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
 
   .hero-container-padding {
     padding: 8%;
   }
 
   h1 {
-    font-size: 6vw;
+    font-size: 6.9vw;
   }
 
   h2 {
@@ -138,11 +138,15 @@ a {
   }
 
   h1 {
-    font-size: 6.2vw;
+    font-size: 6.9vw;
   }
 
   h2 {
-    font-size: 4.5vw;
+    font-size: 4vw;
+  }
+
+  .hero-container-padding {
+    padding: 5.5%;
   }
 }
 
