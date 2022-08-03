@@ -31,6 +31,7 @@
 .project-back .arrow-tip {
   border-right: 3px solid #212121;
 }
+
 .lone-arrow .arrow-tip {
   position: absolute;
   left: 0;
@@ -56,7 +57,7 @@
 
 .lone-arrow span.text-back {
   color: white;
-  right: 200%;
+  right: 150%;
   top: 50%;
   position: absolute;
   white-space: nowrap;
@@ -103,7 +104,45 @@
 
 @media screen and (max-width: 768px) {
   .corner-project-back {
-    top: 22px;
-    right: 30px;
+    top: 2.5%;
+    right: 3%;
   }
+
+  .lone-arrow span.text-back {
+    right: 140%;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .text-back {
+    font-size: 12px;
+  }
+
+  .lone-arrow span.arrow:nth-child(2) span {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  
+  .lone-arrow:hover span.arrow:nth-child(1) span {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  
+  .lone-arrow:hover span.arrow:nth-child(2) span {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+
 }
