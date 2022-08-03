@@ -75,8 +75,8 @@ const Hero = () => {
             <h2>{contact.talk} 
               <a className="email-link" href={contact.emailLink}>
                 {contact.mail}
+                {contact.mailDomain}
               </a>
-              {contact.mailDomain}
             </h2>
             {/* <button
               style={{
