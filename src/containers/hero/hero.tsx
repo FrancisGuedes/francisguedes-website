@@ -7,6 +7,8 @@ import './hero.css';
 import useWhiteColor from '../../util/hooks/useWhiteColor';
 import SocialMedia from '../../components/social-media/socialMedia';
 import Navbar from '../../components/navbar/navbar';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -51,33 +53,37 @@ const Hero = () => {
             <h1 className='intro-text-first-line'>
               {introText.firstLine}
             </h1>
-            <h1>
+            <h1 className='intro-text-second-line'>
               {introText.secondLine}
             </h1>
-            <h1>
-              {introText.thirdLine} 
+            <h1 className='intro-text-third-line'>
+              {introText.thirdLine}
               <span 
                 className="dynamic-words" 
-                key={index}>
-                  {dynamicWordsValues[index]}
+                key={index}
+              >
+                {dynamicWordsValues[index]}
               </span>
-              {introText.endPoint}
-              <br/>
+              <span className='intro-text-end-point'>
+                {introText.endPoint}
+              </span>
             </h1>
-            <h1>
+          <div className='intro-text-sub-title'>
+            <h2 className='intro-text-fourth-line'>
               {introText.fourthLine}
-            </h1>
-            <h1>
-              {introText.lastLine}
-            </h1>
-            <br/>
-            
-            <h2>{contact.talk} 
+            </h2>
+            <h2 className='intro-text-contact-talk'>
+              {contact.talk} 
               <a className="email-link" href={contact.emailLink}>
-                {contact.mail}
-                {contact.mailDomain}
+              <FontAwesomeIcon 
+                icon={faArrowCircleRight}
+                className="go-to-email-icon"
+                title="Email"
+                color="black"
+              />
               </a>
             </h2>
+          </div>
             {/* <button
               style={{
                 padding: "20px",

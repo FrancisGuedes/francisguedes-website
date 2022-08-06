@@ -1,8 +1,8 @@
 export const functionalitiesAlias = {
   navbar: {
-    cv: "who.",
+    cv: "who?",
     work: "work.",
-    playground: "playing."
+    playground: "playing!"
   },
   arrowBack: {
     title: "back"
@@ -15,8 +15,7 @@ export const strings = {
       firstLine: "Hello, I'm Francis.",
       secondLine: "A multi-skilled Software Developer.",
       thirdLine: "Specialized in ",
-      fourthLine: "Great hand-stander and former ",
-      lastLine: "professional Chef.",
+      fourthLine: "Great hand-stander and former professional Chef!",
       endPoint: ".",
       dynamicWords: {
         frontEnd: "Front-end",
@@ -26,7 +25,7 @@ export const strings = {
         //decentralizedApps: "Decentralized Applications",
       }
     },
-    talk:"let's talk? ",
+    talk:"Let's talk? ",
     mail:"franciscojmguedes",
     mailDomain:"@gmail.com.",
     emailLink:"mailto:franciscojmguedes@gmail.com"
