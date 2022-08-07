@@ -48,7 +48,8 @@ const Hero = () => {
         transition={Transition}
         variants={VariantsHero}
       >
-        <div className="hero-container-padding">  
+        <Navbar/> 
+        <div className="hero-container-padding">
           <div className="content clearfix" data-elementresizer data-resize-parent>
             <h1 className='intro-text-first-line'>
               {introText.firstLine}
@@ -97,9 +98,12 @@ const Hero = () => {
               Generate random color
             </button> */}
             <br/>
-            <Navbar/>
+            
             <br/>
-            <SocialMedia isBackGroundYellow/>
+            <SocialMedia 
+              isBackGroundYellow 
+              isForMobile={false}
+            />
           </div>
         </div>
         

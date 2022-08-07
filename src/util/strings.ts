@@ -1,5 +1,6 @@
 export const functionalitiesAlias = {
   navbar: {
+    intro: "intro",
     cv: "who?",
     work: "work.",
     playground: "playing!"
@@ -25,6 +26,7 @@ export const strings = {
         //decentralizedApps: "Decentralized Applications",
       }
     },
+    talkMenuMobile: "Get in touch.",
     talk:"Let's talk? ",
     mail:"franciscojmguedes",
     mailDomain:"@gmail.com.",
