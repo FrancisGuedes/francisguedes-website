@@ -98,6 +98,23 @@ a {
   margin-left: 0.5vw;
 }
 
+.semi-circle-wrapper {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  float: right;
+  top: -50%;
+}
+
+.semi-circle {
+  width: 100%;
+  height: 100%;
+  background-color: #9657f0;
+  clip-path: circle(50% at 0%);
+  transform: rotate(180deg);
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+}
+
 @media screen and (min-width: 2001px) {
 
   .hero-container-padding {
