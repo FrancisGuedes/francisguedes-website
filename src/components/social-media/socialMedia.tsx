@@ -14,7 +14,7 @@ const SocialMedia = ( {isBackGroundYellow, isForMobile}: SocialMediaProps ) => {
   const contact = {...strings.heroPage}
   return ( 
     <>
-      <h2>
+      <h2 className={isForMobile ? "" : "wrapper"}>
         <a href={contact.emailLink}>
           <FontAwesomeIcon
             className={isForMobile ? "social-media-mobile email" : "social-media email-not-visible"}
