@@ -12,6 +12,14 @@ export const colors = {
     pink2: '#e4677e',
     pink3:'#feacbb'
   },
+  new_background: {
+    Amarelo: '#ffda43',
+    Lilas: '#9657f0',
+    Rosa: '#ffcccb',
+    Ciano: '#4bdcd7',
+    Azul: '#4779dd',
+    Laranja: '#f99f62',
+  },
   fade: '#fffade',
   lettersForBlue: '#96ffca',
   lettersForOrange: '#fff55a',
