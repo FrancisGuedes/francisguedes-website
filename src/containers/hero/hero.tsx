@@ -98,15 +98,15 @@ const Hero = () => {
               Generate random color
             </button> */}
             <br/>
-            
-            <br/>
-            <SocialMedia 
+          </div>
+        </div>
+        <div className="semi-circle-wrapper">
+          <div className="semi-circle"/>
+        </div>
+        <SocialMedia 
               isBackGroundYellow 
               isForMobile={false}
             />
-          </div>
-        </div>
-        
       </motion.main>
     </>
   );
