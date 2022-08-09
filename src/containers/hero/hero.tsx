@@ -11,11 +11,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
 import SemiCircle from "../../components/semi-circle/semiCircle";
+import { colors } from "../../util/colors";
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
 
   const dynamicWordsObj = {...strings.heroPage.introText.dynamicWords};
+  const backgroundColor = {...colors.new_background}
 
   let dynamicWordsValues: string[] = Object.values(dynamicWordsObj);
 
@@ -102,7 +104,7 @@ const Hero = () => {
             <br/>
           </div>
         </div>
-        <SemiCircle />
+        <SemiCircle colorSemiCircle={backgroundColor.purple}/>
         <SocialMedia 
               isBackGroundYellow 
               isForMobile={false}
