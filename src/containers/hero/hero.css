@@ -103,7 +103,7 @@ a {
   width: 100px;
   position: relative;
   float: right;
-  top: -50%;
+  top: -52%;
 }
 
 .semi-circle {
@@ -112,7 +112,9 @@ a {
   background-color: #9657f0;
   clip-path: circle(50% at 0%);
   transform: rotate(180deg);
-  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  /* box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3); */
+  box-shadow: rgb(76 70 82) 2px 2px 20px 1px inset, rgb(150 87 240) 20px 19px 20px 20px inset;
+  /* box-shadow: rgb(76 70 82) -20px 0px 20px 1px inset, rgb(150 87 240) 20px 19px 20px 20px inset; */
 }
 
 @media screen and (min-width: 2001px) {
