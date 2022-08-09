@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {strings} from '../../util/strings'
+import { strings } from '../../util/strings'
 import { motion } from 'framer-motion';
 import { VariantsHero, Transition } from '../../util/animations/slidePageVariables'
 import './hero.css';
@@ -9,6 +9,8 @@ import SocialMedia from '../../components/social-media/socialMedia';
 import Navbar from '../../components/navbar/navbar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
+import SemiCircle from "../../components/semi-circle/semiCircle";
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -100,9 +102,7 @@ const Hero = () => {
             <br/>
           </div>
         </div>
-        <div className="semi-circle-wrapper">
-          <div className="semi-circle"/>
-        </div>
+        <SemiCircle />
         <SocialMedia 
               isBackGroundYellow 
               isForMobile={false}
