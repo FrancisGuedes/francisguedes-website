@@ -358,7 +358,13 @@
     -o-transform: scaleY(1);
     transform: scaleY(1);
     z-index: -1;
+  }
 }
+
+@media screen and (max-width: 478px){
+  .navigation-padding {
+    padding: 6% 6.5%;
+  }
 }
 
 @media screen and (max-width: 300px){
