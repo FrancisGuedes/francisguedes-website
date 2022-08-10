@@ -55,36 +55,36 @@ const Hero = () => {
     };
   }, []);
 
+  const renderSpanDynamicWords = () => {
+    return (
+      <>
+        <span 
+          className="dynamic-words" 
+          key={index}
+        >
+          {dynamicWordsValues[index]}
+        </span>
+        <span className='intro-text-end-point'>
+          {introText.endPoint}
+        </span>
+      </>
+    )
+  }
+
   const renderThirdLine = () => {
     if(windowWidth <= windowWidthTablet) {
       return (
         <>
           {introText.thirdLine}
           <br/>
-          <span 
-            className="dynamic-words" 
-            key={index}
-          >
-            {dynamicWordsValues[index]}
-          </span>
-          <span className='intro-text-end-point'>
-            {introText.endPoint}
-          </span>
+          {renderSpanDynamicWords()}
         </>
       )
     } else {
         return (
           <>
             {introText.thirdLine}
-            <span 
-              className="dynamic-words" 
-              key={index}
-            >
-              {dynamicWordsValues[index]}
-            </span>
-            <span className='intro-text-end-point'>
-              {introText.endPoint}
-            </span>
+            {renderSpanDynamicWords()}
           </>
         )
     }
