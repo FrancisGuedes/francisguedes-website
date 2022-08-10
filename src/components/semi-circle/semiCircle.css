@@ -21,3 +21,35 @@
   height: 100px;
   position: absolute;
 }
+
+@media screen and (max-width: 769px) {
+  .semi-circle-wrapper {
+    width: 10%;
+    height: 10%;
+    top: -50%;
+  }
+
+  .work-title-link.circle {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .semi-circle-wrapper {
+    width: 8%;
+    height: 8%;
+    top: -45%;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .semi-circle-wrapper {
+    width: 7%;
+    height: 7%;
+  }
+  
+  .intro-text-fourth-line {
+    margin-top: 20px;
+  }
+}

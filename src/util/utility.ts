@@ -12,3 +12,8 @@ export function getTextWidthInPixels(wordText: string): number {
 export function convertPXToVW(px: number): number {
   return +(px * (100 / document.documentElement.clientWidth)).toFixed(1)*2.5;
 }
+
+export function getWindowSize() {
+  const {innerWidth, innerHeight} = window;
+  return {innerWidth, innerHeight};
+}

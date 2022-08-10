@@ -12,17 +12,22 @@ import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
 import SemiCircle from "../../components/semi-circle/semiCircle";
 import { colors } from "../../util/colors";
+import { getWindowSize } from "../../util/utility";
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+  //const isMobile = useMediaQuery('(min-width: 768px)');
 
   const dynamicWordsObj = {...strings.heroPage.introText.dynamicWords};
   const backgroundColor = {...colors.new_background}
+  const contact = {...strings.heroPage}
+  const introText = {...strings.heroPage.introText}
+  const windowWidthTablet = 769;
 
   let dynamicWordsValues: string[] = Object.values(dynamicWordsObj);
 
-  const contact = {...strings.heroPage}
-  const introText = {...strings.heroPage.introText}
+  const windowWidth: number = windowSize.innerWidth;
 
   useEffect(() => {
     const intervalDelayMilliseconds = dynamicWordsValues[index].length * 105;
@@ -39,6 +44,51 @@ const Hero = () => {
   /* useEffect(() => {
     document.body.style.background = colors.background.purple;
   }); */
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+    window.addEventListener('resize', handleWindowResize);
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
+  const renderThirdLine = () => {
+    if(windowWidth <= windowWidthTablet) {
+      return (
+        <>
+          {introText.thirdLine}
+          <br/>
+          <span 
+            className="dynamic-words" 
+            key={index}
+          >
+            {dynamicWordsValues[index]}
+          </span>
+          <span className='intro-text-end-point'>
+            {introText.endPoint}
+          </span>
+        </>
+      )
+    } else {
+        return (
+          <>
+            {introText.thirdLine}
+            <span 
+              className="dynamic-words" 
+              key={index}
+            >
+              {dynamicWordsValues[index]}
+            </span>
+            <span className='intro-text-end-point'>
+              {introText.endPoint}
+            </span>
+          </>
+        )
+    }
+  }
 
   return (
     <>
@@ -58,21 +108,21 @@ const Hero = () => {
             <h1 className='intro-text-first-line'>
               {introText.firstLine}
             </h1>
-            <h1 className='intro-text-second-line'>
-              {introText.secondLine}
-            </h1>
-            <h1 className='intro-text-third-line'>
-              {introText.thirdLine}
-              <span 
-                className="dynamic-words" 
-                key={index}
-              >
-                {dynamicWordsValues[index]}
-              </span>
-              <span className='intro-text-end-point'>
-                {introText.endPoint}
-              </span>
-            </h1>
+            { windowWidth <= windowWidthTablet ? (
+                <h1 className='intro-text-second-line'>
+                  {introText.secondLine}&nbsp;{renderThirdLine()}
+                </h1>
+              ) : (
+                <>
+                  <h1 className='intro-text-second-line'>
+                    {introText.secondLine}
+                  </h1>
+                  <h1 className='intro-text-third-line'>
+                    {renderThirdLine()}
+                  </h1>
+                </>
+              )
+            }
           <div className='intro-text-sub-title'>
             <h2 className='intro-text-fourth-line'>
               {introText.fourthLine}

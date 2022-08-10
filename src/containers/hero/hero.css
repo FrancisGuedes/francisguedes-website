@@ -149,7 +149,7 @@ a {
   }
 
   h1 {
-    font-size: 3.5vw;
+    font-size: 4.5vw;
   }
 
   h2 {
@@ -165,11 +165,11 @@ a {
   }
 
   h1 {
-    font-size: 6.9vw;
+    font-size: 5vw;
   }
 
   h2 {
-    font-size: 3.2vw;
+    font-size: 3vw;
   }
 
   .intro-text-first-line, .intro-text-second-line, .intro-text-third-line {
@@ -186,11 +186,11 @@ a {
 @media screen and (max-width: 600px) {
 
   h1 {
-    font-size: 7.1vw;
+    font-size: 6vw;
   }
 
   h2 {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
 
   .hero-container-padding {
@@ -211,11 +211,11 @@ a {
 @media screen and (max-width: 478px) {
 
   h1 {
-    font-size: 8vw;
+    font-size: 6.5vw;
   }
 
   h2 {
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
 
   /* .intro-text-first-line, .intro-text-second-line, .intro-text-third-line {

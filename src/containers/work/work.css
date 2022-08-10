@@ -5,8 +5,9 @@
   width: 100%;
   height: auto;
   position: absolute;
-	background-image: url(./../../assets/images/desktop/work-background.jpg);
-  background-size: cover;
+	/* background-image: url(./../../assets/images/desktop/work-background.jpg);
+  background-size: cover; */
+  background-color: #9657f0;
 }
 
 .work-wrapper-padding{
@@ -18,7 +19,7 @@
 }
 
 .work-title, .work-sub-title, .work-footer-title {
-  color: #fbe10f;
+  color: #ffda43;
 }
 
 .project_title {
