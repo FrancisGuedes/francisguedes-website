@@ -122,7 +122,12 @@
   .work-projects-scroll .work-project-content .work-project-link:hover, .work-project-content .work-project-link:hover{
     opacity: 1;
   }
-  
+
+@media screen and (min-width: 1801px) {
+  .work-wrapper-padding {
+    padding: 5% 15% 5% 15%;
+  } 
+}
 
 @media (max-width: 1024px){
   .project-thumb {

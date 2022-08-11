@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { functionalitiesAlias, strings } from '../../util/strings';
@@ -27,7 +28,7 @@ const Navbar = () => {
         >
           <picture className='logo-home'/>
         </Link>
-        <span className="toggle-menu-wrapper">
+        <motion.span exit={{ opacity: 0 }} className="toggle-menu-wrapper">
           <button
             className="mobile-menu-button"
             onClick={() => {
@@ -77,7 +78,7 @@ const Navbar = () => {
               <div className='separator-line separator-line-minus-16-deg'/>
             </div>
           </div>
-        </span>
+        </motion.span>
         <nav className='main-navbar-wrapper'>
           <ul className="main-navbar-content">
             <li className='cv-title navbar-title'>
