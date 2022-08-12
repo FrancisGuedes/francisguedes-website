@@ -12,6 +12,8 @@
 .hero-container-padding {
   padding: 5rem;
   height: 70%;
+  top: 10%;
+  position: relative;
   /* -webkit-transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.5s;
   -moz-transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.5s;
   transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.5s;  */

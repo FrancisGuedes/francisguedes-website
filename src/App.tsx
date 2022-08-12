@@ -5,18 +5,20 @@ import Hero from './containers/hero/hero';
 import Work from './containers/work/work';
 import Playground from './containers/playground/playground';
 import NotFound from './containers/errors/notFound';
+import Navbar from './components/navbar/navbar';
 
 function App() {
   const location = useLocation();
   return (
     <>
       <AnimatePresence initial={false}>
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Hero/>}/>
-            <Route path="/work" element={<Work/>}/>
-            <Route path="/playground" element={<Playground/>}/>
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+        <Navbar/>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Hero/>}/>
+          <Route path="/work" element={<Work/>}/>
+          <Route path="/playground" element={<Playground/>}/>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </AnimatePresence>
     </>
   );

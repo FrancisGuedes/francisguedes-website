@@ -1,21 +1,17 @@
 main.playground-wrapper{
-  display: block;
   min-height: 100%;
   width: 100%;
   height: auto;
   position: absolute;
-	background-image: url(./../../assets/images/desktop/playground-background.jpg);
-  background-size: cover;
+	background-color: #f99f62;
 }
 
 main.playground-wrapper-clicked {
-  display: block;
   min-height: 100%;
   width: 100%;
   height: auto;
   position: absolute;
-	background-image: url(./../../assets/images/desktop/playground-background.jpg);
-  background-size: cover;
+	background-color: #f99f62;
   transform: scale(1)!important;
 }
 

@@ -102,7 +102,6 @@ const Hero = () => {
         transition={Transition}
         variants={VariantsHero}
       >
-        <Navbar/> 
         <div className="hero-container-padding">
           <div className="content clearfix" data-elementresizer data-resize-parent>
             <h1 className='intro-text-first-line'>
@@ -123,22 +122,22 @@ const Hero = () => {
                 </>
               )
             }
-          <div className='intro-text-sub-title'>
-            <h2 className='intro-text-fourth-line'>
-              {introText.fourthLine}
-            </h2>
-            <h2 className='intro-text-contact-talk'>
-              {contact.talk} 
-              <a className="email-link" href={contact.emailLink}>
-              <FontAwesomeIcon 
-                icon={faArrowCircleRight}
-                className="go-to-email-icon"
-                title="Email"
-                color="black"
-              />
-              </a>
-            </h2>
-          </div>
+            <div className='intro-text-sub-title'>
+              <h2 className='intro-text-fourth-line'>
+                {introText.fourthLine}
+              </h2>
+              <h2 className='intro-text-contact-talk'>
+                {contact.talk} 
+                <a className="email-link" href={contact.emailLink}>
+                <FontAwesomeIcon 
+                  icon={faArrowCircleRight}
+                  className="go-to-email-icon"
+                  title="Email"
+                  color="black"
+                />
+                </a>
+              </h2>
+            </div>
             {/* <button
               style={{
                 padding: "20px",
@@ -152,9 +151,9 @@ const Hero = () => {
               Generate random color
             </button> */}
             <br/>
+            <SemiCircle colorSemiCircle={backgroundColor.purple}/>
           </div>
         </div>
-        <SemiCircle colorSemiCircle={backgroundColor.purple}/>
         <SocialMedia 
               isBackGroundYellow 
               isForMobile={false}
