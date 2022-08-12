@@ -1,6 +1,8 @@
 import './wiggle.css';
 import { useState, useEffect } from 'react';
 import { convertPXToVW, getTextWidthInPixels } from '../../util/utility';
+import { useLocation } from 'react-router-dom';
+
 interface wiggleProps {
   wordText?: string;
   htmlClassName?: any;
@@ -9,10 +11,14 @@ interface wiggleProps {
 const Wiggle = ({wordText, htmlClassName, labelTextProps}: wiggleProps) => {
   // TODO 1 refactorizar: logica não está generalista.
   const [wiggleWidthList, setWiggleWidthList] = useState<number[]>([]);
+  const location = useLocation();
+
+  const urlHomeLocation = "/"
 
   useEffect(() => {
     cssWiggleWidthForObjectProps(labelTextProps);
-  }, [])
+    renderWiggleSvgColors();
+  }, [location])
 
   const cssWiggleWidthForObjectProps = (props: object): void => {
     const labelTextObject: object = {...props};
@@ -34,9 +40,19 @@ const Wiggle = ({wordText, htmlClassName, labelTextProps}: wiggleProps) => {
     }) */
   }
 
+  const renderWiggleSvgColors = () => {
+    const svgUrlWhite = process.env.PUBLIC_URL +  '/wiggle-white.svg';
+    const svgUrlYellow = process.env.PUBLIC_URL +  '/wiggle-yellow.svg';
+
+    window.location.pathname === urlHomeLocation ? document.documentElement.style.setProperty('--wiggleSvg', `url('${svgUrlWhite}')`) : document.documentElement.style.setProperty('--wiggleSvg', `url('${svgUrlYellow}')`);
+  }
+
   return ( 
     <>
-      <span id='canvas' className="wiggle"></span>
+      <span
+        id='canvas' 
+        className="wiggle"
+      ></span>
     </>
   );
 }

@@ -30,7 +30,7 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-/* TODO a width deste span class wiggle ta gigante */
+
 .wiggle {
   display: block;
   bottom: 18px;
@@ -61,26 +61,6 @@
   width: var(--wiggleLength3);
 }
 
-/* WIGGLE FOR EMAIL */
-/* .email-link .wiggle {
-  width: 18%;
-  transform: translateX(-7%);
-}
-
-.email-link .wiggle::before {
-  transform: translateX(-105%);
-}
-
-.email-link:hover .wiggle, .email-link:hover .wiggle::before {
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(50%);
-} */
-/* END WIGGLE FOR EMAIL */
-
-
 .wiggle-link:hover .wiggle, .wiggle-link:hover .wiggle::before {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -104,56 +84,14 @@
   -webkit-transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
   -moz-transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
   transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
-  background: url(./../../assets/icons/wiggle-white.svg) repeat-x center center/7px 3px;
+  background: var(--wiggleSvg) repeat-x center center/7px 3px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
 .navbar-wrapper .wiggle::before {
-  background: url(./../../assets/icons/wiggle-white.svg) repeat-x center center/7px 3px;
+  background: var(--wiggleSvg);
 }
-
-/* @media screen and (max-width: 2600px) {
-  .navbar-wrapper .navbar-title:nth-child(1) .wiggle {
-    width: 4vw;
-  }
-  
-  .navbar-wrapper .navbar-title:nth-child(2) .wiggle {
-    width: 2.5vw;
-  }
-  
-  .navbar-wrapper .navbar-title:nth-child(3) .wiggle {
-    width: 6vw;
-  }
-}
-
-@media screen and (max-width: 1900px) {
-  .navbar-wrapper .navbar-title:nth-child(1) .wiggle {
-    width: 5.5vw;
-  }
-  
-  .navbar-wrapper .navbar-title:nth-child(2) .wiggle {
-    width: 4vw;
-  }
-  
-  .navbar-wrapper .navbar-title:nth-child(3) .wiggle {
-    width: 8vw;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .navbar-wrapper .navbar-title:nth-child(1) .wiggle {
-    width: 7vw;
-  }
-  
-  .navbar-wrapper .navbar-title:nth-child(2) .wiggle {
-    width: 4.5vw;
-  }
-  
-  .navbar-wrapper .navbar-title:nth-child(3) .wiggle {
-    width: 10.5vw;
-  }
-} */
 
 @media screen and (max-width: 800px) {
   .wiggle{

@@ -11,15 +11,11 @@ import './navbar.css';
 const Navbar = () => {
   const [fontColor, setFontColor] = useState("");
   const location = useLocation();
-  const urlHomeLocation = "/"
-  
-  useEffect(() => {
-    if (window.location.pathname === urlHomeLocation) {
-      setFontColor(colors.black);
 
-    } else {
-      setFontColor(colors.white)
-    }
+  const urlHomeLocation = "/"
+
+  useEffect(() => {
+    window.location.pathname === urlHomeLocation ? setFontColor(colors.black) : setFontColor(colors.white);
   }, [location]);
 
   const labelText = {...functionalitiesAlias.navbar};
@@ -117,7 +113,6 @@ const Navbar = () => {
                 data-new-state="work" 
                 className='work-title-link wiggle-link' 
                 to="/work" 
-                // onClick={() => setFontColor("#FFFFFF")}
                 >
                   {labelText.work}
                   <Wiggle 
