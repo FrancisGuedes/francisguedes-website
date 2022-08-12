@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { colors } from '../../util/colors';
 import { functionalitiesAlias, strings } from '../../util/strings';
 import SocialMedia from '../social-media/socialMedia';
 import Wiggle from '../wiggle/wiggle';
@@ -8,6 +9,19 @@ import Wiggle from '../wiggle/wiggle';
 import './navbar.css';
 
 const Navbar = () => {
+  const [fontColor, setFontColor] = useState("");
+  const location = useLocation();
+  const urlHomeLocation = "/"
+  
+  useEffect(() => {
+    if (window.location.pathname === urlHomeLocation) {
+      setFontColor(colors.black);
+
+    } else {
+      setFontColor(colors.white)
+    }
+  }, [location]);
+
   const labelText = {...functionalitiesAlias.navbar};
   const contact = {...strings.heroPage}
   const labelTextObject = { 
@@ -26,7 +40,7 @@ const Navbar = () => {
           rel="canonical"
           className='logo-home-wrapper'
         >
-          <picture className='logo-home'/>
+          <picture className={window.location.pathname === urlHomeLocation ? 'logo-home' : 'logo-home white'}/>
         </Link>
         <motion.span exit={{ opacity: 0 }} className="toggle-menu-wrapper">
           <button
@@ -82,26 +96,46 @@ const Navbar = () => {
         <nav className='main-navbar-wrapper'>
           <ul className="main-navbar-content">
             <li className='cv-title navbar-title'>
-              <Link rel="canonical" data-new-state="cv" className='cv-title-link wiggle-link' to="https://drive.google.com/file/d/1VIzDJ8zL--0NaKThG0sTtc1Fys73_40W/view?usp=sharing" target="_blank" >
-                {labelText.cv}
-                <Wiggle 
-                  labelTextProps={labelTextObject}
+              <Link 
+                style={{ color: fontColor }}
+                rel="canonical" 
+                data-new-state="cv" 
+                className='cv-title-link wiggle-link' 
+                to="https://drive.google.com/file/d/1VIzDJ8zL--0NaKThG0sTtc1Fys73_40W/view?usp=sharing" 
+                target="_blank"
+                >
+                  {labelText.cv}
+                  <Wiggle 
+                    labelTextProps={labelTextObject}
                 />
               </Link>
             </li>
             <li className='work-title navbar-title'>
-              <Link rel="canonical" data-new-state="work" className='work-title-link wiggle-link' to="/work">
-                {labelText.work}
-                <Wiggle 
-                  labelTextProps={labelTextObject}
+              <Link 
+                style={{ color: fontColor }}
+                rel="canonical" 
+                data-new-state="work" 
+                className='work-title-link wiggle-link' 
+                to="/work" 
+                // onClick={() => setFontColor("#FFFFFF")}
+                >
+                  {labelText.work}
+                  <Wiggle 
+                    labelTextProps={labelTextObject}
                 />
               </Link>
             </li>
             <li className='playground-title navbar-title'>
-              <Link data-new-state="playground" className='playground-title-link wiggle-link' to="/playground" rel="canonical">
-                {labelText.playground}
-                <Wiggle 
-                  labelTextProps={labelTextObject}
+              <Link
+                style={{ color: fontColor }}
+                data-new-state="playground" 
+                className='playground-title-link wiggle-link' 
+                to="/playground" 
+                rel="canonical"
+                >
+                  {labelText.playground}
+                  <Wiggle 
+                    labelTextProps={labelTextObject}
                 />
               </Link>
             </li>

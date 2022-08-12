@@ -28,6 +28,10 @@
   overflow: hidden;
 }
 
+.white {
+  background-image: url(./../../assets/logo/logo-home-white.png);
+}
+
 .main-navbar-wrapper {
   -webkit-transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.5s;
   -moz-transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.5s;
