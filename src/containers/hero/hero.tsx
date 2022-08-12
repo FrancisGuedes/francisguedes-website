@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {strings} from '../../util/strings'
+import { strings } from '../../util/strings'
 import { motion } from 'framer-motion';
 import { VariantsHero, Transition } from '../../util/animations/slidePageVariables'
 import './hero.css';
@@ -7,16 +7,27 @@ import './hero.css';
 import useWhiteColor from '../../util/hooks/useWhiteColor';
 import SocialMedia from '../../components/social-media/socialMedia';
 import Navbar from '../../components/navbar/navbar';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
+import SemiCircle from "../../components/semi-circle/semiCircle";
+import { colors } from "../../util/colors";
+import { getWindowSize } from "../../util/utility";
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+  //const isMobile = useMediaQuery('(min-width: 768px)');
 
   const dynamicWordsObj = {...strings.heroPage.introText.dynamicWords};
+  const backgroundColor = {...colors.new_background}
+  const contact = {...strings.heroPage}
+  const introText = {...strings.heroPage.introText}
+  const windowWidthTablet = 769;
 
   let dynamicWordsValues: string[] = Object.values(dynamicWordsObj);
 
-  const contact = {...strings.heroPage}
-  const introText = {...strings.heroPage.introText}
+  const windowWidth: number = windowSize.innerWidth;
 
   useEffect(() => {
     const intervalDelayMilliseconds = dynamicWordsValues[index].length * 105;
@@ -34,6 +45,51 @@ const Hero = () => {
     document.body.style.background = colors.background.purple;
   }); */
 
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+    window.addEventListener('resize', handleWindowResize);
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
+  const renderSpanDynamicWords = () => {
+    return (
+      <>
+        <span 
+          className="dynamic-words" 
+          key={index}
+        >
+          {dynamicWordsValues[index]}
+        </span>
+        <span className='intro-text-end-point'>
+          {introText.endPoint}
+        </span>
+      </>
+    )
+  }
+
+  const renderThirdLine = () => {
+    if(windowWidth <= windowWidthTablet) {
+      return (
+        <>
+          {introText.thirdLine}
+          <br/>
+          {renderSpanDynamicWords()}
+        </>
+      )
+    } else {
+        return (
+          <>
+            {introText.thirdLine}
+            {renderSpanDynamicWords()}
+          </>
+        )
+    }
+  }
+
   return (
     <>
       <motion.main 
@@ -46,38 +102,43 @@ const Hero = () => {
         transition={Transition}
         variants={VariantsHero}
       >
-        <div className="hero-container-padding">  
+        <Navbar/> 
+        <div className="hero-container-padding">
           <div className="content clearfix" data-elementresizer data-resize-parent>
             <h1 className='intro-text-first-line'>
               {introText.firstLine}
             </h1>
-            <h1>
-              {introText.secondLine}
-            </h1>
-            <h1>
-              {introText.thirdLine} 
-              <span 
-                className="dynamic-words" 
-                key={index}>
-                  {dynamicWordsValues[index]}
-              </span>
-              {introText.endPoint}
-              <br/>
-            </h1>
-            <h1>
+            { windowWidth <= windowWidthTablet ? (
+                <h1 className='intro-text-second-line'>
+                  {introText.secondLine}&nbsp;{renderThirdLine()}
+                </h1>
+              ) : (
+                <>
+                  <h1 className='intro-text-second-line'>
+                    {introText.secondLine}
+                  </h1>
+                  <h1 className='intro-text-third-line'>
+                    {renderThirdLine()}
+                  </h1>
+                </>
+              )
+            }
+          <div className='intro-text-sub-title'>
+            <h2 className='intro-text-fourth-line'>
               {introText.fourthLine}
-            </h1>
-            <h1>
-              {introText.lastLine}
-            </h1>
-            <br/>
-            
-            <h2>{contact.talk} 
-              <a className="email-link" href={contact.emailLink}>
-                {contact.mail}
-              </a>
-              {contact.mailDomain}
             </h2>
+            <h2 className='intro-text-contact-talk'>
+              {contact.talk} 
+              <a className="email-link" href={contact.emailLink}>
+              <FontAwesomeIcon 
+                icon={faArrowCircleRight}
+                className="go-to-email-icon"
+                title="Email"
+                color="black"
+              />
+              </a>
+            </h2>
+          </div>
             {/* <button
               style={{
                 padding: "20px",
@@ -91,12 +152,13 @@ const Hero = () => {
               Generate random color
             </button> */}
             <br/>
-            <Navbar/>
-            <br/>
-            <SocialMedia isBackGroundYellow/>
           </div>
         </div>
-        
+        <SemiCircle colorSemiCircle={backgroundColor.purple}/>
+        <SocialMedia 
+              isBackGroundYellow 
+              isForMobile={false}
+            />
       </motion.main>
     </>
   );

@@ -1,5 +1,23 @@
+.wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5% 3.5%;
+  margin: 0;
+}
+
 .social-media {
   width: 35px; 
   height: 35px;
   margin-right: 15px;
+}
+
+.social-media-mobile {
+  width: 30px;
+  height: 17px;
+  margin-right: 15px;
+}
+
+.email-not-visible {
+  display: none;
 }

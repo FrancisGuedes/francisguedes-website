@@ -35,6 +35,11 @@ main.playground-wrapper-clicked {
   display: none;
 }
 
+@media screen and (min-width: 1801px) {
+  .playground-wrapper-padding {
+    padding: 5% 15% 5% 15%;
+  } 
+}
 
 @media screen and (max-width: 591px) {
 

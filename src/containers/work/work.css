@@ -5,8 +5,9 @@
   width: 100%;
   height: auto;
   position: absolute;
-	background-image: url(./../../assets/images/desktop/work-background.jpg);
-  background-size: cover;
+	/* background-image: url(./../../assets/images/desktop/work-background.jpg);
+  background-size: cover; */
+  background-color: #9657f0;
 }
 
 .work-wrapper-padding{
@@ -18,7 +19,7 @@
 }
 
 .work-title, .work-sub-title, .work-footer-title {
-  color: #fbe10f;
+  color: #ffda43;
 }
 
 .project_title {
@@ -121,7 +122,12 @@
   .work-projects-scroll .work-project-content .work-project-link:hover, .work-project-content .work-project-link:hover{
     opacity: 1;
   }
-  
+
+@media screen and (min-width: 1801px) {
+  .work-wrapper-padding {
+    padding: 5% 15% 5% 15%;
+  } 
+}
 
 @media (max-width: 1024px){
   .project-thumb {
