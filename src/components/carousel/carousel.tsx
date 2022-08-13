@@ -138,6 +138,7 @@ const Carousel = ({ isArrowClicked }: any) => {
             spaceBetween={10}
             loop={true}
             pagination={true}
+            loopFillGroupWithBlank={true}
             navigation={true}
             modules={[Pagination, Navigation, Mousewheel, Keyboard]}
             breakpoints={{
