@@ -41,11 +41,11 @@ const Navbar = () => {
           <div className={mobileNavOpen ? "mobile-menu-open" : "mobile-menu-not-visible"}>
             <div>
               <ul>
-                <li className='intro-title navbar-title'>
+                {/* <li className='intro-title navbar-title'>
                   <Link rel="canonical" data-new-state="cv" className='cv-title-link' to="/">
                     {labelText.intro}
                   </Link>
-                </li>
+                </li> */}
                 <li className='cv-title navbar-title'>
                   <Link rel="canonical" data-new-state="cv" className='cv-title-link' to="https://drive.google.com/file/d/1VIzDJ8zL--0NaKThG0sTtc1Fys73_40W/view?usp=sharing" target="_blank" >
                     {labelText.cv}
