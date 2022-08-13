@@ -4,8 +4,7 @@ main.playground-wrapper{
   width: 100%;
   height: auto;
   position: absolute;
-	background-image: url(./../../assets/images/desktop/playground-background.jpg);
-  background-size: cover;
+	background-color:#f99f62;
 }
 
 main.playground-wrapper-clicked {
@@ -14,8 +13,7 @@ main.playground-wrapper-clicked {
   width: 100%;
   height: auto;
   position: absolute;
-	background-image: url(./../../assets/images/desktop/playground-background.jpg);
-  background-size: cover;
+	background-color:#f99f62;
   transform: scale(1)!important;
 }
 
@@ -52,5 +50,17 @@ main.playground-wrapper-clicked {
 
   h1.playground-title {
     font-size: 7.5vw;
+  }
+
+  h2.playground-sub-title {
+    font-size: 3.8vw;
+  }
+
+  .playground-category-btn {
+    font-size: 7vw;
+  }
+    
+  .playground-category-arrow {
+    float: none;
   }
 }
