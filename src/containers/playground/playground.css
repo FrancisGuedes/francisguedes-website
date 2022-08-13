@@ -53,4 +53,12 @@ main.playground-wrapper-clicked {
   h1.playground-title {
     font-size: 7.5vw;
   }
+
+  .playground-category-btn {
+    font-size: 7vw;
+  }
+    
+  .playground-category-arrow {
+    float: none;
+  }
 }
