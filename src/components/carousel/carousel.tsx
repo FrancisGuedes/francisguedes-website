@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y, EffectCards, FreeMode, Mousewheel, Keyboard } from 'swiper';
+import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { strings } from '../../util/strings';
@@ -137,10 +137,7 @@ const Carousel = ({ isArrowClicked }: any) => {
             slidesPerView={5}
             spaceBetween={10}
             loop={true}
-            loopFillGroupWithBlank={true}
-            pagination={{
-              clickable: true,
-            }}
+            pagination={true}
             navigation={true}
             modules={[Pagination, Navigation, Mousewheel, Keyboard]}
             breakpoints={{

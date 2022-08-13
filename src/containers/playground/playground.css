@@ -52,6 +52,10 @@ main.playground-wrapper-clicked {
     font-size: 7.5vw;
   }
 
+  h2.playground-sub-title {
+    font-size: 3.8vw;
+  }
+
   .playground-category-btn {
     font-size: 7vw;
   }
