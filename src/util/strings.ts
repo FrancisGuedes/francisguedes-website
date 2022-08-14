@@ -40,7 +40,7 @@ export const strings = {
   workPage: {
     titleHide: "My Work Page",
     title:"My Work.",
-    subTitle: "Finished projects, ongoing projects and personal projects.",
+    subTitle: "Finished, ongoing and personal projects.",
     footerTitle: "Work always in progress.",
     projects: 
     [
