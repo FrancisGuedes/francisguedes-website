@@ -5,6 +5,7 @@ main.playground-wrapper{
   height: auto;
   position: absolute;
 	background-color:#f99f62;
+  transform: scale(1)!important;
 }
 
 main.playground-wrapper-clicked {
