@@ -95,10 +95,6 @@ span.playground-category-subtitle {
   font-weight: 900;
 }
 
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
-
-}
-
 @media screen and (max-width: 591px) {
 
   h2.playground-category-title, h2.playground-category-title-clicked {
@@ -123,9 +119,5 @@ span.playground-category-subtitle {
     font-size: 7vw;
     margin-top: 0;
     margin-bottom: 0;
-  }
-
-  span.playground-category-subtitle, span.playground-category-subtitle-clicked {
-    font-size: 60%;
   }
 }
