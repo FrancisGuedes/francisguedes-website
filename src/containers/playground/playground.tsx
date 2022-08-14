@@ -22,13 +22,14 @@ const Playground = () => {
     <>
     <motion.main 
         layout
-        className={isClicked ? "playground-wrapper-clicked" : "playground-wrapper"} 
+        className='playground-bg'
         initial='initial'
         animate='in'
         exit='out'
         transition={Transition}
         variants={Variants}
       >
+      <section className={isClicked ? "playground-wrapper-clicked" : "playground-wrapper"}>
         <ArrowBack/>
           <div className="playground-wrapper-padding">
               <div className="project_title">
@@ -59,6 +60,7 @@ const Playground = () => {
                     <br/>
                   </div>
             </div>
+      </section>
       </motion.main>
       
     </>
