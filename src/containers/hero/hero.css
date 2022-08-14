@@ -238,5 +238,6 @@ a {
     
   .go-to-email-icon {
     z-index: 0;
+    height: 4vw;
   }
 }
