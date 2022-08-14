@@ -102,6 +102,12 @@ const Carousel = ({ isArrowClicked }: any) => {
       <>
       <h2 
         className={toggleArrowStatus[index] ? 'playground-category-title-clicked' : 'playground-category-title'}
+        onClick={() => {
+          toggleArrow(index);
+          toggleCarousel(index);
+          arrowOnHandleClick();
+          toggleRotationArrow(index)
+        }}
         >
           <span 
             className={toggleArrowStatus[index] ? 'playground-category-subtitle-clicked' : 'playground-category-subtitle'}
