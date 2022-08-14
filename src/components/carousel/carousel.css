@@ -11,6 +11,7 @@ h2.playground-category-title-clicked {
   color: #fff55a;
   font-size: 5vw;
   font-weight: 700;
+  cursor: pointer;
 }
 
 h2.playground-category-title {
@@ -18,6 +19,7 @@ h2.playground-category-title {
   padding: 50px 0;
   font-size: 5vw;
   font-weight: 700;
+  cursor: pointer;
 }
 
 span.playground-category-subtitle-clicked {
