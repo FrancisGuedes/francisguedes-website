@@ -147,7 +147,7 @@ const Carousel = ({ isArrowClicked }: any) => {
                 spaceBetween: 25,
               },
               "@0.75": {
-                slidesPerView: 2.5,
+                slidesPerView: 2,
                 spaceBetween: 40,
               },
               "@0.90": {
