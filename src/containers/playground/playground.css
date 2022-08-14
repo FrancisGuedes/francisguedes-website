@@ -1,4 +1,8 @@
-main.playground-wrapper{
+main.playground-bg{
+	background-color:#f99f62;
+}
+
+section.playground-wrapper{
   display: block;
   min-height: 100%;
   width: 100%;
@@ -8,7 +12,7 @@ main.playground-wrapper{
   transform: scale(1)!important;
 }
 
-main.playground-wrapper-clicked {
+section.playground-wrapper-clicked {
   display: block;
   min-height: 100%;
   width: 100%;

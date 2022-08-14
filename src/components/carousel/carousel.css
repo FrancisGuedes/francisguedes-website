@@ -20,10 +20,6 @@ h2.playground-category-title {
   font-weight: 700;
 }
 
-h2.playground-category-title, h2.playground-category-title-clicked {
-  margin-bottom: 0;
-}
-
 span.playground-category-subtitle-clicked {
   color: #fff55a;
   font-weight: 500;
@@ -125,6 +121,8 @@ span.playground-category-subtitle {
 
   h2.playground-category-title, h2.playground-category-title-clicked {
     font-size: 7vw;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   span.playground-category-subtitle, span.playground-category-subtitle-clicked {
