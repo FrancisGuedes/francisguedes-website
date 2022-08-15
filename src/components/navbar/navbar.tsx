@@ -8,6 +8,8 @@ import Wiggle from '../wiggle/wiggle';
 import './navbar.css';
 
 const Navbar = () => {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
   const labelText = {...functionalitiesAlias.navbar};
   const contact = {...strings.heroPage}
   const labelTextObject = { 
@@ -16,12 +18,11 @@ const Navbar = () => {
     labelTextPlayground: labelText.playground
   };
 
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
   return ( 
     <section className='navigation'>
       <div className='navigation-padding'>
-        <Link 
+        <Link
+          aria-label="francisgedes logo"
           to='/'
           rel="canonical"
           className='logo-home-wrapper'
@@ -31,6 +32,7 @@ const Navbar = () => {
         <motion.span exit={{ opacity: 0 }} className="toggle-menu-wrapper">
           <button
             className="mobile-menu-button"
+            aria-label="navigation menu for mobile"
             onClick={() => {
               setMobileNavOpen((mobileNavOpen) => !mobileNavOpen);
             }}

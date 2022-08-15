@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Animate, Transition } from '../../util/animations/semiCircleVariables';
 import './semiCircle.css';
 
 interface semiCircleProps {
@@ -15,16 +17,21 @@ const SemiCircle = ({ colorSemiCircle }: semiCircleProps) => {
 
   return ( 
     <>
-      <div className="semi-circle-wrapper">
+      <motion.div
+        animate={Animate}
+        transition={Transition}
+        className="semi-circle-wrapper"
+      >
         <div className="semi-circle">
-          <Link 
+          <Link
+            aria-label="easter egg"
             rel="canonical" 
             data-new-state="work" 
             className='work-title-link circle' 
             to="/work" 
           />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
