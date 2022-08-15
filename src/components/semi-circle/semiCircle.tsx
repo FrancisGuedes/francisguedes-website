@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './semiCircle.css';
@@ -15,7 +16,19 @@ const SemiCircle = ({ colorSemiCircle }: semiCircleProps) => {
 
   return ( 
     <>
-      <div className="semi-circle-wrapper">
+      <motion.div
+      animate={{
+        scale: [1, 1.1, 1.2, 1, 1],
+      }}
+      transition={{
+        duration: 5,
+        ease: "easeInOut",
+        times: [0, 0.2, 0.5, 0.8, 1],
+        repeat: Infinity,
+        repeatDelay: 1
+      }}
+        className="semi-circle-wrapper"
+      >
         <div className="semi-circle">
           <Link 
             rel="canonical" 
@@ -24,7 +37,7 @@ const SemiCircle = ({ colorSemiCircle }: semiCircleProps) => {
             to="/work" 
           />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
