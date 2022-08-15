@@ -23,7 +23,8 @@ const SemiCircle = ({ colorSemiCircle }: semiCircleProps) => {
         className="semi-circle-wrapper"
       >
         <div className="semi-circle">
-          <Link 
+          <Link
+            aria-label="easter egg"
             rel="canonical" 
             data-new-state="work" 
             className='work-title-link circle' 

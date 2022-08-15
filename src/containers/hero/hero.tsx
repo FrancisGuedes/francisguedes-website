@@ -129,13 +129,17 @@ const Hero = () => {
             </h2>
             <h2 className='intro-text-contact-talk'>
               {contact.talk} 
-              <a className="email-link" href={contact.emailLink}>
-              <FontAwesomeIcon 
-                icon={faArrowCircleRight}
-                className="go-to-email-icon"
-                title="Email"
-                color="black"
-              />
+              <a
+                aria-label="email me"
+                className="email-link" 
+                href={contact.emailLink}
+              >
+                <FontAwesomeIcon 
+                  icon={faArrowCircleRight}
+                  className="go-to-email-icon"
+                  title="Email"
+                  color="black"
+                />
               </a>
             </h2>
           </div>
