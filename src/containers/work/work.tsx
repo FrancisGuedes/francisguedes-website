@@ -14,7 +14,8 @@ const text = {...strings.workPage};
 const projectsMapper = projectsObj.map( (element, index) => {
   return (
     <div key={index} className="work-project-content">
-      <a 
+      <a
+        aria-label="project link"
         className="work-project-link"
         href={element.href}
         key={element.title} 
