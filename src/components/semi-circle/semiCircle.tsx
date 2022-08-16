@@ -1,4 +1,4 @@
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Animate, Transition } from '../../util/animations/semiCircleVariables';
@@ -12,24 +12,8 @@ const SemiCircle = ({ colorSemiCircle }: semiCircleProps) => {
   const color = colorSemiCircle;
 
   useEffect(() => {
-    startAnimation();
     document.documentElement.style.setProperty('--color', color);
   }, [])
-
-  const controls = useAnimation();
-
-  const startAnimation = () => {
-    controls.start({
-      scale: [1, 1.1, 1.2, 1, 1],
-      transition: {
-        duration: 2,
-        ease: "easeInOut",
-        times: [0, 0.2, 0.5, 0.8, 1],
-        repeat: Infinity,
-        repeatDelay: 1
-      }
-    });
-  };
 
   return ( 
     <>
