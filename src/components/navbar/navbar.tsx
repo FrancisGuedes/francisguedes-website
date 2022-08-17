@@ -10,12 +10,14 @@ import './navbar.css';
 
 const Navbar = () => {
   const [fontColor, setFontColor] = useState("");
+  const [mobileMenuColor, setMobileMenuColor] = useState("");
   const location = useLocation();
 
   const urlHomeLocation = "/"
 
   useEffect(() => {
     window.location.pathname === urlHomeLocation ? setFontColor(colors.black) : setFontColor(colors.white);
+    window.location.pathname === urlHomeLocation ? setMobileMenuColor(colors.black) : setMobileMenuColor(colors.white);
   }, [location]);
 
   const labelText = {...functionalitiesAlias.navbar};
@@ -45,8 +47,14 @@ const Navbar = () => {
               setMobileNavOpen((mobileNavOpen) => !mobileNavOpen);
             }}
           >
-            <div className={mobileNavOpen ? "bar-one-open" : "bar-one"}/>
-            <div className={mobileNavOpen ? "bar-two-open" : "bar-two"}/>
+            <div
+              style={{ background: mobileNavOpen ? '' : mobileMenuColor}}
+              className={mobileNavOpen ? "bar-one-open" : "bar-one"}
+            />
+            <div
+              style={{ background: mobileNavOpen ? '' : mobileMenuColor }}
+              className={mobileNavOpen ? "bar-two-open" : "bar-two"}
+            />
           </button>
           <div className={mobileNavOpen ? "mobile-menu-open" : "mobile-menu-not-visible"}>
             <div>
