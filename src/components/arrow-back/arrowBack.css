@@ -103,16 +103,20 @@
 }
 
 @media screen and (max-width: 768px) {
-  .corner-project-back {
+  .project-back, .lone-arrow, .corner-project-back {
+    display: none;
+  }
+
+  /* .corner-project-back {
     top: 2.5%;
     right: 3%;
   }
 
   .lone-arrow span.text-back {
     right: 140%;
-  }
+  } */
 }
-
+/* 
 @media screen and (max-width: 468px) {
   .text-back {
     font-size: 12px;
@@ -145,4 +149,4 @@
     transition-delay: 0s;
   }
 
-}
+} */
