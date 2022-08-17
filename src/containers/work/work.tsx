@@ -54,9 +54,7 @@ const Work = () => {
         variants={Variants}
       >
         <ArrowBack/>
-        <div className="work-wrapper-padding">
-          <div className="content_padded">
-                <div id="content" className="padded" data-id="392958">
+        <div className="work-wrapper-padding">                
                   <div className="project_title">
                     {text.titleHide}
                   </div>
@@ -93,8 +91,6 @@ const Work = () => {
                     <SocialMedia isBackGroundYellow={false}/>
                     <br/>
                   </div>
-            </div>
-          </div>
         </div>
       
     </motion.main> 

@@ -1,9 +1,7 @@
 
-.work-wrapper{
-  display: block;
-  min-height: 100%;
+.work-wrapper {
   width: 100%;
-  height: auto;
+  min-height: 100%;
   position: absolute;
 	/* background-image: url(./../../assets/images/desktop/work-background.jpg);
   background-size: cover; */
@@ -11,7 +9,8 @@
 }
 
 .work-wrapper-padding{
-  padding: 5vw;
+  padding: 18vh 5vw 5vh 4.5vw;
+  /* height: 70%; */
 }
 
 .work-container {
@@ -136,6 +135,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  .work-wrapper-padding {
+    padding: 16vh 5vw 5vh 6.5vw;
+    /* height: 70%; */
+  }
+
   .work-project-content:first-child {
     margin-top: -7%;
   }

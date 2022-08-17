@@ -1,7 +1,6 @@
 main.playground-wrapper{
   min-height: 100%;
   width: 100%;
-  height: auto;
   position: absolute;
 	background-color: #f99f62;
 }
@@ -9,14 +8,13 @@ main.playground-wrapper{
 main.playground-wrapper-clicked {
   min-height: 100%;
   width: 100%;
-  height: auto;
   position: absolute;
 	background-color: #f99f62;
   transform: scale(1)!important;
 }
 
 .playground-wrapper-padding{
-  padding: 5vw;
+  padding: 18vh 5vw 5vh 4.5vw;
 }
 
 .playground-container {
@@ -35,6 +33,12 @@ main.playground-wrapper-clicked {
   .playground-wrapper-padding {
     padding: 5% 15% 5% 15%;
   } 
+}
+
+@media screen and (max-width: 768px) {
+  .playground-wrapper-padding{
+    padding: 16vh 5vw 5vh 6.5vw;
+  }
 }
 
 @media screen and (max-width: 591px) {
