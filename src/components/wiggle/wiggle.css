@@ -14,11 +14,11 @@
   -moz-transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.74s;
   transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.74s;
 }
-/* .navbar-wrapper .navbar-title:nth-child(4) .wiggle-link {
+.navbar-wrapper .navbar-title:nth-child(4) .wiggle-link {
   -webkit-transition: 0.93s cubic-bezier(0.52, 0.01, 0.16, 1) 0.87s;
   -moz-transition: 0.93s cubic-bezier(0.52, 0.01, 0.16, 1) 0.87s;
   transition: 0.93s cubic-bezier(0.52, 0.01, 0.16, 1) 0.87s;
-} */
+} 
 
 .navbar-wrapper[data-state="cv"] .navbar-title:nth-child(1) .wiggle, .navbar-wrapper[data-state="cv"] .navbar-title:nth-child(1) .wiggle::before, .navbar-wrapper[data-state="work"] .navbar-title:nth-child(2) .wiggle, .navbar-wrapper[data-state="work"] .navbar-title:nth-child(2) .wiggle::before, .navbar-wrapper[data-state="playground"] .navbar-title:nth-child(3) .wiggle, .navbar-wrapper[data-state="playground"]  .navbar-title:nth-child(3) .wiggle::before, .navbar-wrapper[data-state="work"] .navbar-title:nth-child(4) .wiggle, .navbar-wrapper[data-state="work"] .navbar-title:nth-child(4) .wiggle::before {
   -webkit-transform: translateX(0);
@@ -61,6 +61,10 @@
   width: var(--wiggleLength3);
 }
 
+.navbar-wrapper .navbar-title:nth-child(4) .wiggle {
+  width: var(--wiggleLength4);
+}
+
 .wiggle-link:hover .wiggle, .wiggle-link:hover .wiggle::before {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -93,7 +97,7 @@
   background: var(--wiggleSvg);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .wiggle{
     display: none;
   }

@@ -53,7 +53,7 @@ const Work = () => {
         transition={Transition}
         variants={Variants}
       >
-        <ArrowBack/>
+        {/* <ArrowBack/> */}
         <div className="work-wrapper-padding">                
                   <div className="project_title">
                     {text.titleHide}

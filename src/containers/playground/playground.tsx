@@ -29,7 +29,7 @@ const Playground = () => {
         transition={Transition}
         variants={Variants}
       >
-        <ArrowBack/>
+        {/* <ArrowBack/> */}
           <div className="playground-wrapper-padding">
               <div className="project_title">
                 {text.titleHide}

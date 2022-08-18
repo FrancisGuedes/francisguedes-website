@@ -34,6 +34,7 @@ const Wiggle = ({wordText, htmlClassName, labelTextProps}: wiggleProps) => {
     document.documentElement.style.setProperty('--wiggleLength1', labelTextValue[0] + 'vw');
     document.documentElement.style.setProperty('--wiggleLength2', labelTextValue[1] + 'vw');
     document.documentElement.style.setProperty('--wiggleLength3', labelTextValue[2] + 'vw');
+    document.documentElement.style.setProperty('--wiggleLength4', labelTextValue[3] + 'vw');
 
     /* return labelTextValue.forEach((value: any, index: any) => {
       document.documentElement.style.setProperty(`--wiggleLength${index+1}`, value[index] + 'vw');

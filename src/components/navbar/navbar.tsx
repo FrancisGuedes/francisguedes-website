@@ -23,6 +23,7 @@ const Navbar = () => {
   const labelText = {...functionalitiesAlias.navbar};
   const contact = {...strings.heroPage}
   const labelTextObject = { 
+    labelTextIntro: labelText.intro,
     labelTextCv: labelText.cv, 
     labelTextWork: labelText.work,
     labelTextPlayground: labelText.playground
@@ -60,7 +61,7 @@ const Navbar = () => {
             <div>
               <ul>
                 <li className='intro-title navbar-title'>
-                  <Link rel="canonical" data-new-state="cv" className='cv-title-link' to="/">
+                  <Link rel="canonical" data-new-state="intro" className='intro-title-link' to="/">
                     {labelText.intro}
                   </Link>
                 </li>
@@ -99,6 +100,19 @@ const Navbar = () => {
         </motion.span>
         <nav className='main-navbar-wrapper'>
           <ul className="main-navbar-content">
+            <li className='intro-title navbar-title'>
+              <Link
+                style={{ color: fontColor }}
+                rel="canonical" 
+                data-new-state="intro" 
+                className='intro-title-link wiggle-link' 
+                to="/">
+                {labelText.intro}
+                <Wiggle 
+                  labelTextProps={labelTextObject}
+                />
+              </Link>
+            </li>
             <li className='cv-title navbar-title'>
               <Link 
                 style={{ color: fontColor }}
