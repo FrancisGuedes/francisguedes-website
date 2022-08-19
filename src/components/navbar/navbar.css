@@ -306,6 +306,102 @@
   margin-top: 16px;
 }
 
+nav .main-navbar-content .navbar-title:nth-child(1) .wiggle {
+  -webkit-transform: var(--tranformTranslateHome1);
+  -moz-transform: var(--tranformTranslateHome1);
+  -ms-transform: var(--tranformTranslateHome1);
+  -o-transform: var(--tranformTranslateHome1);
+  transform: var(--tranformTranslateHome1);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+nav .main-navbar-content .navbar-title:nth-child(1) .wiggle::before {
+  -webkit-transform: var(--tranformTranslateHome2);
+  -moz-transform: var(--tranformTranslateHome2);
+  -ms-transform: var(--tranformTranslateHome2);
+  -o-transform: var(--tranformTranslateHome2);
+  transform: var(--tranformTranslateHome2);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+nav .main-navbar-content .navbar-title:nth-child(2) .wiggle {
+  -webkit-transform: var(--tranformTranslateWho1);
+  -moz-transform: var(--tranformTranslateWho1);
+  -ms-transform: var(--tranformTranslateWho1);
+  -o-transform: var(--tranformTranslateWho1);
+  transform: var(--tranformTranslateWho1);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+nav .main-navbar-content .navbar-title:nth-child(2) .wiggle::before {
+  -webkit-transform: var(--tranformTranslateWho2);
+  -moz-transform: var(--tranformTranslateWho2);
+  -ms-transform: var(--tranformTranslateWho2);
+  -o-transform: var(--tranformTranslateWho2);
+  transform: var(--tranformTranslateWho2);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+nav .main-navbar-content .navbar-title:nth-child(3) .wiggle {
+  -webkit-transform: var(--tranformTranslateWork1);
+  -moz-transform: var(--tranformTranslateWork1);
+  -ms-transform: var(--tranformTranslateWork1);
+  -o-transform: var(--tranformTranslateWork1);
+  transform: var(--tranformTranslateWork1);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+nav .main-navbar-content .navbar-title:nth-child(3) .wiggle::before {
+  -webkit-transform: var(--tranformTranslateWork2);
+  -moz-transform: var(--tranformTranslateWork2);
+  -ms-transform: var(--tranformTranslateWork2);
+  -o-transform: var(--tranformTranslateWork2);
+  transform: var(--tranformTranslateWork2);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+nav .main-navbar-content .navbar-title:nth-child(4) .wiggle {
+  -webkit-transform: var(--tranformTranslatePlaying1);
+  -moz-transform: var(--tranformTranslatePlaying1);
+  -ms-transform: var(--tranformTranslatePlaying1);
+  -o-transform: var(--tranformTranslatePlaying1);
+  transform: var(--tranformTranslatePlaying1);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+nav .main-navbar-content .navbar-title:nth-child(4) .wiggle::before {
+  -webkit-transform: var(--tranformTranslatePlaying2);
+  -moz-transform: var(--tranformTranslatePlaying2);
+  -ms-transform: var(--tranformTranslatePlaying2);
+  -o-transform: var(--tranformTranslatePlaying2);
+  transform: var(--tranformTranslatePlaying2);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 768px) {
   .navigation-padding {
     padding: 4% 6.5%;

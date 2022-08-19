@@ -7,17 +7,24 @@ import SocialMedia from '../social-media/socialMedia';
 import Wiggle from '../wiggle/wiggle';
 
 import './navbar.css';
+import { urlHome, urlPlaying, urlWho, urlWork } from '../../api/endpoints';
 
 const Navbar = () => {
   const [fontColor, setFontColor] = useState("");
   const [mobileMenuColor, setMobileMenuColor] = useState("");
   const location = useLocation();
 
-  const urlHomeLocation = "/"
+  const urlHomeLocation = urlHome;
+  const urlWhoLocation = urlWho;
+  const urlWorkLocation = urlWork;
+  const urlPlayingLocation = urlPlaying;
 
   useEffect(() => {
     window.location.pathname === urlHomeLocation ? setFontColor(colors.black) : setFontColor(colors.white);
     window.location.pathname === urlHomeLocation ? setMobileMenuColor(colors.black) : setMobileMenuColor(colors.white);
+
+    activateWiggleForNavbar();
+    
   }, [location]);
 
   const labelText = {...functionalitiesAlias.navbar};
@@ -30,6 +37,41 @@ const Navbar = () => {
   };
 
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  function activateWiggleForNavbar() {
+    const translateX0 = 'translateX(0%)';
+    const translateX105 = 'translateX(105%)';
+    const translateXNegative105 = 'translateX(-105%)';
+
+    if(window.location.pathname === urlHomeLocation ){
+      document.documentElement.style.setProperty('--tranformTranslateHome1', translateX0)
+      document.documentElement.style.setProperty('--tranformTranslateHome2', translateX0);
+    } else {
+      document.documentElement.style.setProperty('--tranformTranslateHome1', translateXNegative105);
+      document.documentElement.style.setProperty('--tranformTranslateHome2', translateX105);
+    }
+    if(window.location.pathname === urlWhoLocation){
+      document.documentElement.style.setProperty('--tranformTranslateWho1', translateX0);
+      document.documentElement.style.setProperty('--tranformTranslateWho2', translateX0);
+    } else {
+      document.documentElement.style.setProperty('--tranformTranslateWho1', translateXNegative105);
+      document.documentElement.style.setProperty('--tranformTranslateWho2', translateX105);
+    }
+    if(window.location.pathname === urlWorkLocation){
+      document.documentElement.style.setProperty('--tranformTranslateWork1', translateX0);
+      document.documentElement.style.setProperty('--tranformTranslateWork2', translateX0);
+    } else {
+      document.documentElement.style.setProperty('--tranformTranslateWork1', translateXNegative105);
+      document.documentElement.style.setProperty('--tranformTranslateWork2', translateX105);
+    }
+    if(window.location.pathname === urlPlayingLocation){
+      document.documentElement.style.setProperty('--tranformTranslatePlaying1', translateX0);
+      document.documentElement.style.setProperty('--tranformTranslatePlaying2', translateX0);
+    } else {
+      document.documentElement.style.setProperty('--tranformTranslatePlaying1', translateXNegative105);
+      document.documentElement.style.setProperty('--tranformTranslatePlaying2', translateX105);
+    }
+  }
 
   return ( 
     <section className='navigation'>
