@@ -16,7 +16,7 @@ export type NavigationMobile = {
   to: string,
   onClick: () => void,
   label: string
-}
+};
 
 const Navbar = () => {
   const [fontColor, setFontColor] = useState<string>("");
@@ -30,11 +30,10 @@ const Navbar = () => {
   const urlPlayingLocation = urlPlaying;
 
   useEffect(() => {
-    window.location.pathname === urlHomeLocation ? setFontColor(colors.black) : setFontColor(colors.white);
-    window.location.pathname === urlHomeLocation ? setMobileMenuColor(colors.black) : setMobileMenuColor(colors.white);
-
+    activateFontColor();
+    activateMobileMenuColor();
     activateWiggleForNavbar();
-    
+    activateBackgroundColorMobileMenu();
   }, [location]);
 
   const labelText = {...functionalitiesAlias.navbar};
@@ -46,6 +45,13 @@ const Navbar = () => {
     labelTextPlayground: labelText.playground
   };
 
+  function activateFontColor(): void {
+    window.location.pathname === urlHomeLocation ? setFontColor(colors.black) : setFontColor(colors.white);
+  };
+
+  function activateMobileMenuColor(): void {
+    window.location.pathname === urlHomeLocation ? setMobileMenuColor(colors.black) : setMobileMenuColor(colors.white);
+  };
 
   function activateWiggleForNavbar(): void {
     const translateX0 = 'translateX(0%)';
@@ -80,25 +86,40 @@ const Navbar = () => {
       document.documentElement.style.setProperty('--tranformTranslatePlaying1', translateXNegative105);
       document.documentElement.style.setProperty('--tranformTranslatePlaying2', translateX105);
     }
-  }
+  };
+
+  function activateBackgroundColorMobileMenu(): void {
+    const colorMenu = {...colors.mobile_menu_background};
+    if(window.location.pathname === urlHomeLocation) {
+      document.documentElement.style.setProperty('--backgroundColor', colorMenu.yellow);
+    } else if(window.location.pathname === urlWhoLocation) {
+      document.documentElement.style.setProperty('--backgroundColor', colorMenu.pink);
+    } else if(window.location.pathname === urlWorkLocation) {
+      document.documentElement.style.setProperty('--backgroundColor', colorMenu.purple);
+    } else {
+      document.documentElement.style.setProperty('--backgroundColor', colorMenu.orange);
+    }
+  };
 
   const menuToggle = (): void => {
     setMobileNavOpen((mobileNavOpen) => !mobileNavOpen);
-  }
+  };
 
   const navigationObject: Array<NavigationMobile> = [
     {liClassName: 'intro-title navbar-title', rel: 'canonical', linkClassName: 'intro-title-link', to: urlHome, onClick: menuToggle, label: labelText.intro},
     {liClassName: 'cv-title navbar-title', rel: 'canonical', linkClassName: 'cv-title-link', to: urlWho, onClick: menuToggle, label: labelText.cv},
     {liClassName: 'work-title navbar-title', rel: 'canonical', linkClassName: 'work-title-link', to: urlWork, onClick: menuToggle, label: labelText.work},
     {liClassName: 'playground-title navbar-title', rel: 'canonical', linkClassName: 'playground-title-link', to: urlPlaying, onClick: menuToggle, label: labelText.playground},
-  ] 
+  ]; 
 
-  const navigationMapperMobile =
+  const navigationMapperMobile: Array<JSX.Element> =
       navigationObject.map( (navItem, index) => {
         return (
-          <li className={navItem.liClassName}>
+          <li 
+            key={index} 
+            className={navItem.liClassName}
+          >
             <Link
-              key={index}
               rel={navItem.rel}
               className={navItem.linkClassName} 
               to={navItem.to}

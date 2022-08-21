@@ -442,7 +442,7 @@ nav .main-navbar-content .navbar-title:nth-child(4) .wiggle::before {
   }
 
   .mobile-menu-open::before {
-    background-color: #ffd42d;
+    background-color: var(--backgroundColor);
   }
 
   .mobile-menu-open::before {
