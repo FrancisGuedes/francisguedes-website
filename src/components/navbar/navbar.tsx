@@ -9,6 +9,15 @@ import Wiggle from '../wiggle/wiggle';
 import './navbar.css';
 import { urlHome, urlPlaying, urlWho, urlWork } from '../../api/endpoints';
 
+export type NavigationMobile = {
+  liClassName: string,
+  rel: string,
+  linkClassName: string,
+  to: string,
+  onClick: () => void,
+  label: string
+}
+
 const Navbar = () => {
   const [fontColor, setFontColor] = useState<string>("");
   const [mobileMenuColor, setMobileMenuColor] = useState<string>("");
@@ -77,7 +86,7 @@ const Navbar = () => {
     setMobileNavOpen((mobileNavOpen) => !mobileNavOpen);
   }
 
-  const navigationObject = [
+  const navigationObject: Array<NavigationMobile> = [
     {liClassName: 'intro-title navbar-title', rel: 'canonical', linkClassName: 'intro-title-link', to: urlHome, onClick: menuToggle, label: labelText.intro},
     {liClassName: 'cv-title navbar-title', rel: 'canonical', linkClassName: 'cv-title-link', to: urlWho, onClick: menuToggle, label: labelText.cv},
     {liClassName: 'work-title navbar-title', rel: 'canonical', linkClassName: 'work-title-link', to: urlWork, onClick: menuToggle, label: labelText.work},
@@ -98,9 +107,8 @@ const Navbar = () => {
               {navItem.label}
             </Link>
           </li>
-      )
-    }
-  );
+        )
+      });
 
   return ( 
     <section className='navigation'>
