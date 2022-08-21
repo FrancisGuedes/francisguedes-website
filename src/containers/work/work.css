@@ -124,8 +124,17 @@
 
 @media screen and (min-width: 1801px) {
   .work-wrapper-padding {
-    padding: 5% 15% 5% 15%;
-  } 
+    padding: 14vw 15% 5vh 15%;
+  }
+  
+  .work-project:first-child {
+    margin-top: 5vw;
+  }
+  
+  .work-project-content:last-child {
+    margin-bottom: 5vw;
+  }
+  
 }
 
 @media (max-width: 1024px){

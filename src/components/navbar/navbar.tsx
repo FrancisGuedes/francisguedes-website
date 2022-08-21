@@ -38,7 +38,7 @@ const Navbar = () => {
 
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
-  function activateWiggleForNavbar() {
+  function activateWiggleForNavbar(): void {
     const translateX0 = 'translateX(0%)';
     const translateX105 = 'translateX(105%)';
     const translateXNegative105 = 'translateX(-105%)';

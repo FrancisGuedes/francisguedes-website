@@ -88,9 +88,10 @@ const Work = () => {
                     </h1>
                     <br/>
                     <br/>
-                    <SocialMedia isBackGroundYellow={false}/>
+                    
                     <br/>
                   </div>
+                  <SocialMedia isBackGroundYellow={false}/>
         </div>
       
     </motion.main> 

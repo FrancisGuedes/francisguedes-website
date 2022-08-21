@@ -100,10 +100,10 @@ a {
   margin-left: 0.5vw;
 }
 
-@media screen and (min-width: 2001px) {
+@media screen and (min-width: 1801px) {
 
   .hero-container-padding {
-    padding: 5% 10% 5% 10%;
+    padding: 5vh 15% 5vh 15%;
   }
 
   h1 {
@@ -113,10 +113,9 @@ a {
   h2 {
     font-size: 1.4vw;
   }
-    
 }
 
-@media screen and (max-width: 2000px) {
+/* @media screen and (max-width: 2000px) {
 
   .hero-container-padding {
     padding: 4.5%;
@@ -126,7 +125,7 @@ a {
     font-size: 3.3vw;
   }
     
-}
+} */
 
 @media screen and (max-width: 1500px) {
 

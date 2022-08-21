@@ -402,6 +402,28 @@ nav .main-navbar-content .navbar-title:nth-child(4) .wiggle::before {
   overflow: hidden;
 }
 
+@media screen and (min-width: 1801px) {
+  .navigation-padding {
+    padding: 2% 15%;
+  }
+
+  .main-navbar-wrapper {
+    transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.5s;
+    float: right;
+    width: 35vh;
+  }
+
+  .logo-home-wrapper {
+    width: 55px;
+    height: 55px;
+  }
+
+  .wiggle-link
+  {
+    font-size: 2vh;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .navigation-padding {
     padding: 4% 6.5%;
