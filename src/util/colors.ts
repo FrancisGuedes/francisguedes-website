@@ -25,7 +25,7 @@ export const colors = {
     purple: '#5210ac',
     blue: '#1544c0',
     orange: '#f86449',
-    pink: '#ff869c'
+    pink: '#e65b74'
   },
   fade: '#fffade',
   lettersForBlue: '#96ffca',

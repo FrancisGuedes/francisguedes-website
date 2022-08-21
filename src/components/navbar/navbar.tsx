@@ -24,6 +24,7 @@ const Navbar = () => {
   const location = useLocation();
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
+  const currentLocationUrl = window.location.pathname;
   const urlHomeLocation = urlHome;
   const urlWhoLocation = urlWho;
   const urlWorkLocation = urlWork;
@@ -46,11 +47,11 @@ const Navbar = () => {
   };
 
   function activateFontColor(): void {
-    window.location.pathname === urlHomeLocation ? setFontColor(colors.black) : setFontColor(colors.white);
+    currentLocationUrl === urlHomeLocation ? setFontColor(colors.black) : setFontColor(colors.white);
   };
 
   function activateMobileMenuColor(): void {
-    window.location.pathname === urlHomeLocation ? setMobileMenuColor(colors.black) : setMobileMenuColor(colors.white);
+    currentLocationUrl === urlHomeLocation ? setMobileMenuColor(colors.black) : setMobileMenuColor(colors.white);
   };
 
   function activateWiggleForNavbar(): void {
@@ -58,28 +59,28 @@ const Navbar = () => {
     const translateX105 = 'translateX(105%)';
     const translateXNegative105 = 'translateX(-105%)';
 
-    if(window.location.pathname === urlHomeLocation ){
+    if(currentLocationUrl === urlHomeLocation ){
       document.documentElement.style.setProperty('--tranformTranslateHome1', translateX0)
       document.documentElement.style.setProperty('--tranformTranslateHome2', translateX0);
     } else {
       document.documentElement.style.setProperty('--tranformTranslateHome1', translateXNegative105);
       document.documentElement.style.setProperty('--tranformTranslateHome2', translateX105);
     }
-    if(window.location.pathname === urlWhoLocation){
+    if(currentLocationUrl === urlWhoLocation){
       document.documentElement.style.setProperty('--tranformTranslateWho1', translateX0);
       document.documentElement.style.setProperty('--tranformTranslateWho2', translateX0);
     } else {
       document.documentElement.style.setProperty('--tranformTranslateWho1', translateXNegative105);
       document.documentElement.style.setProperty('--tranformTranslateWho2', translateX105);
     }
-    if(window.location.pathname === urlWorkLocation){
+    if(currentLocationUrl === urlWorkLocation){
       document.documentElement.style.setProperty('--tranformTranslateWork1', translateX0);
       document.documentElement.style.setProperty('--tranformTranslateWork2', translateX0);
     } else {
       document.documentElement.style.setProperty('--tranformTranslateWork1', translateXNegative105);
       document.documentElement.style.setProperty('--tranformTranslateWork2', translateX105);
     }
-    if(window.location.pathname === urlPlayingLocation){
+    if(currentLocationUrl === urlPlayingLocation){
       document.documentElement.style.setProperty('--tranformTranslatePlaying1', translateX0);
       document.documentElement.style.setProperty('--tranformTranslatePlaying2', translateX0);
     } else {
@@ -88,16 +89,24 @@ const Navbar = () => {
     }
   };
 
-  function activateBackgroundColorMobileMenu(): void {
+  const activateBackgroundColorMobileMenu = () => {
     const colorMenu = {...colors.mobile_menu_background};
-    if(window.location.pathname === urlHomeLocation) {
-      document.documentElement.style.setProperty('--backgroundColor', colorMenu.yellow);
-    } else if(window.location.pathname === urlWhoLocation) {
-      document.documentElement.style.setProperty('--backgroundColor', colorMenu.pink);
-    } else if(window.location.pathname === urlWorkLocation) {
-      document.documentElement.style.setProperty('--backgroundColor', colorMenu.purple);
-    } else {
-      document.documentElement.style.setProperty('--backgroundColor', colorMenu.orange);
+    switch(currentLocationUrl) {
+      case urlHomeLocation:
+        document.documentElement.style.setProperty('--backgroundColor', colorMenu.yellow);
+        break;
+      case urlWhoLocation:
+        document.documentElement.style.setProperty('--backgroundColor', colorMenu.blue);
+        break;
+      case urlWorkLocation:
+        document.documentElement.style.setProperty('--backgroundColor', colorMenu.purple);
+        break;
+      case urlPlayingLocation:
+        document.documentElement.style.setProperty('--backgroundColor', colorMenu.orange);
+        break;
+      default:
+        document.documentElement.style.setProperty('--backgroundColor', colorMenu.pink);
+        break;
     }
   };
 
@@ -139,7 +148,7 @@ const Navbar = () => {
           rel="canonical"
           className='logo-home-wrapper'
         >
-          <picture className={window.location.pathname === urlHomeLocation ? 'logo-home' : 'logo-home white'}/>
+          <picture className={currentLocationUrl === urlHomeLocation ? 'logo-home' : 'logo-home white'}/>
         </Link>
         <motion.span exit={{ opacity: 0 }} className="toggle-menu-wrapper">
           <button
