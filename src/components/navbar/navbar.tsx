@@ -77,6 +77,31 @@ const Navbar = () => {
     setMobileNavOpen((mobileNavOpen) => !mobileNavOpen);
   }
 
+  const navigationObject = [
+    {liClassName: 'intro-title navbar-title', rel: 'canonical', linkClassName: 'intro-title-link', to: urlHome, onClick: menuToggle, label: labelText.intro},
+    {liClassName: 'cv-title navbar-title', rel: 'canonical', linkClassName: 'cv-title-link', to: urlWho, onClick: menuToggle, label: labelText.cv},
+    {liClassName: 'work-title navbar-title', rel: 'canonical', linkClassName: 'work-title-link', to: urlWork, onClick: menuToggle, label: labelText.work},
+    {liClassName: 'playground-title navbar-title', rel: 'canonical', linkClassName: 'playground-title-link', to: urlPlaying, onClick: menuToggle, label: labelText.playground},
+  ] 
+
+  const navigationMapperMobile =
+      navigationObject.map( (navItem, index) => {
+        return (
+          <li className={navItem.liClassName}>
+            <Link
+              key={index}
+              rel={navItem.rel}
+              className={navItem.linkClassName} 
+              to={navItem.to}
+              onClick={navItem.onClick}
+              >
+              {navItem.label}
+            </Link>
+          </li>
+      )
+    }
+  );
+
   return ( 
     <section className='navigation'>
       <div className='navigation-padding'>
@@ -104,45 +129,7 @@ const Navbar = () => {
           <div className={mobileNavOpen ? "mobile-menu-open" : "mobile-menu-not-visible"}>
             <div>
               <ul>
-                <li className='intro-title navbar-title'>
-                  <Link 
-                    rel="canonical" 
-                    className='intro-title-link' 
-                    to="/"
-                    onClick={menuToggle}
-                  >
-                    {labelText.intro}
-                  </Link>
-                </li>
-                <li className='cv-title navbar-title'>
-                  <Link 
-                    rel="canonical"
-                    className='cv-title-link' 
-                    to="https://drive.google.com/file/d/1VIzDJ8zL--0NaKThG0sTtc1Fys73_40W/view?usp=sharing" target="_blank" 
-                    onClick={menuToggle}
-                    >
-                    {labelText.cv}
-                  </Link>
-                </li>
-                <li className='work-title navbar-title'>
-                  <Link 
-                    rel="canonical" 
-                    className='work-title-link' 
-                    to="/work"
-                    onClick={menuToggle}
-                  >
-                    {labelText.work}
-                  </Link>
-                </li>
-                <li className='playground-title navbar-title'>
-                  <Link
-                    className='playground-title-link' 
-                    to="/playground" rel="canonical"
-                    onClick={menuToggle}
-                    >
-                    {labelText.playground}
-                  </Link>
-                </li>
+                {navigationMapperMobile}
               </ul>
             </div>
             <div>
