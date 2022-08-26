@@ -13,7 +13,14 @@ export function convertPXToVW(px: number): number {
   return +(px * (100 / document.documentElement.clientWidth)).toFixed(1)*1.5;
 }
 
-export function getWindowSize() {
-  const {innerWidth, innerHeight} = window;
-  return {innerWidth, innerHeight};
+export namespace WindowSizeSpace {
+  export interface IWindowSize {
+  innerWidth: number, 
+  innerHeight: number
+  }
+
+  export function getWindowSize(): IWindowSize {
+    const {innerWidth, innerHeight} = window;
+    return {innerWidth, innerHeight};
+  }
 }

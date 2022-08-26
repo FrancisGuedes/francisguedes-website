@@ -18,7 +18,14 @@ export type NavigationMobile = {
   label: string
 };
 
-const Navbar = () => {
+export interface NavbarProps {
+  homeUrlClicked: () => void,
+  whoUrlClicked: () => void,
+  workUrlClicked: () => void,
+  playgroundUrlClicked: () => void,
+}
+
+const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlClicked}: NavbarProps) => {
   const [fontColor, setFontColor] = useState<string>("");
   const [mobileMenuColor, setMobileMenuColor] = useState<string>("");
   const location = useLocation();
@@ -89,7 +96,7 @@ const Navbar = () => {
     }
   };
 
-  const activateBackgroundColorMobileMenu = () => {
+  function activateBackgroundColorMobileMenu(): void {
     const colorMenu = {...colors.mobile_menu_background};
     switch(currentLocationUrl) {
       case urlHomeLocation:
@@ -114,7 +121,7 @@ const Navbar = () => {
     setMobileNavOpen((mobileNavOpen) => !mobileNavOpen);
   };
 
-  const navigationObject: Array<NavigationMobile> = [
+  const navigationObject: ReadonlyArray<NavigationMobile> = [
     {liClassName: 'intro-title navbar-title', rel: 'canonical', linkClassName: 'intro-title-link', to: urlHome, onClick: menuToggle, label: labelText.intro},
     {liClassName: 'cv-title navbar-title', rel: 'canonical', linkClassName: 'cv-title-link', to: urlWho, onClick: menuToggle, label: labelText.cv},
     {liClassName: 'work-title navbar-title', rel: 'canonical', linkClassName: 'work-title-link', to: urlWork, onClick: menuToggle, label: labelText.work},
@@ -139,7 +146,7 @@ const Navbar = () => {
           </li>
         )
       });
-
+  
   return ( 
     <section className='navigation'>
       <div className='navigation-padding'>
@@ -194,7 +201,10 @@ const Navbar = () => {
                 rel="canonical" 
                 data-new-state="intro" 
                 className='intro-title-link wiggle-link' 
-                to="/">
+                to="/"
+                onClick={homeUrlClicked}
+                state={{ previousPath: location.pathname }}
+              >
                 {labelText.intro}
                 <Wiggle 
                   labelTextProps={labelTextObject}
@@ -207,8 +217,9 @@ const Navbar = () => {
                 rel="canonical" 
                 data-new-state="cv" 
                 className='cv-title-link wiggle-link' 
-                to="https://drive.google.com/file/d/1VIzDJ8zL--0NaKThG0sTtc1Fys73_40W/view?usp=sharing" 
-                target="_blank"
+                to="/who"
+                onClick={whoUrlClicked}
+                state={{ previousPath: location.pathname }}
                 >
                   {labelText.cv}
                   <Wiggle 
@@ -222,7 +233,9 @@ const Navbar = () => {
                 rel="canonical" 
                 data-new-state="work" 
                 className='work-title-link wiggle-link' 
-                to="/work" 
+                to="/work"
+                onClick={workUrlClicked}
+                state={{ previousPath: location.pathname }}
                 >
                   {labelText.work}
                   <Wiggle 
@@ -237,6 +250,8 @@ const Navbar = () => {
                 className='playground-title-link wiggle-link' 
                 to="/playground" 
                 rel="canonical"
+                onClick={playgroundUrlClicked}
+                state={{ previousPath: location.pathname }}
                 >
                   {labelText.playground}
                   <Wiggle 

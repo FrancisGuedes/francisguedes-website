@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from "gsap";
 import { http_errors, strings } from '../../util/strings';
-import { Transition, Variants } from '../../util/animations/slidePageVariables';
+import { Transition, VariantsNotFound } from '../../util/animations/slidePageVariables';
 import ArrowBack from '../../components/arrow-back/arrowBack';
 import EndlessText from '../../components/endless-text/endlessText';
 
@@ -38,7 +38,7 @@ const NotFound = () => {
         animate='in'
         exit='out'
         transition={Transition}
-        variants={Variants}
+        variants={VariantsNotFound}
       >
         <ArrowBack/>
           <div className='not-found-wrapper-padding'>

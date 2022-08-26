@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { strings } from '../../util/strings';
-import { Transition, Variants } from '../../util/animations/slidePageVariables';
-import ArrowBack from '../../components/arrow-back/arrowBack';
+import { Transition, VariantsLeft, VariantsRight } from '../../util/animations/slidePageVariables';
 import SocialMedia from '../../components/social-media/socialMedia';
 import HrLine from '../../components/hr-line/hrLine';
 import Carousel from '../../components/carousel/carousel';
 
 import './playground.css';
 
-const Playground = () => {
+export interface PlaygroundProps {
+  isVariantsRight: boolean;
+}
+
+const Playground = ({ isVariantsRight }: PlaygroundProps) => {
   const [isClicked, setIsClicked] = useState(false);
 
   const text = {...strings.playgroundPage};
@@ -17,6 +20,8 @@ const Playground = () => {
   const isArrowClicked = () => {
     setIsClicked(isClicked => !isClicked);
   }
+
+  let isNavbarClickFromLeftToRight = isVariantsRight;
   
   return ( 
     <>
@@ -27,9 +32,8 @@ const Playground = () => {
         animate='in'
         exit='out'
         transition={Transition}
-        variants={Variants}
+        variants={isNavbarClickFromLeftToRight ? VariantsLeft : VariantsRight}
       >
-        {/* <ArrowBack/> */}
           <div className="playground-wrapper-padding">
               <div className="project_title">
                 {text.titleHide}
