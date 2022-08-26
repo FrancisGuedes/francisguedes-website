@@ -16,6 +16,9 @@ export type NavigationMobile = {
   to: string,
   onClick: () => void,
   label: string
+  state: { 
+    previousPath: string 
+  }
 };
 
 export interface NavbarProps {
@@ -122,10 +125,10 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
   };
 
   const navigationObject: ReadonlyArray<NavigationMobile> = [
-    {liClassName: 'intro-title navbar-title', rel: 'canonical', linkClassName: 'intro-title-link', to: urlHome, onClick: menuToggle, label: labelText.intro},
-    {liClassName: 'cv-title navbar-title', rel: 'canonical', linkClassName: 'cv-title-link', to: urlWho, onClick: menuToggle, label: labelText.cv},
-    {liClassName: 'work-title navbar-title', rel: 'canonical', linkClassName: 'work-title-link', to: urlWork, onClick: menuToggle, label: labelText.work},
-    {liClassName: 'playground-title navbar-title', rel: 'canonical', linkClassName: 'playground-title-link', to: urlPlaying, onClick: menuToggle, label: labelText.playground},
+    {liClassName: 'intro-title navbar-title', rel: 'canonical', linkClassName: 'intro-title-link', to: urlHome, onClick: menuToggle, label: labelText.intro, state: {previousPath: location.pathname}},
+    {liClassName: 'cv-title navbar-title', rel: 'canonical', linkClassName: 'cv-title-link', to: urlWho, onClick: menuToggle, label: labelText.cv, state: {previousPath: location.pathname}},
+    {liClassName: 'work-title navbar-title', rel: 'canonical', linkClassName: 'work-title-link', to: urlWork, onClick: menuToggle, label: labelText.work, state: {previousPath: location.pathname}},
+    {liClassName: 'playground-title navbar-title', rel: 'canonical', linkClassName: 'playground-title-link', to: urlPlaying, onClick: menuToggle, label: labelText.playground, state: {previousPath: location.pathname}}, 
   ]; 
 
   const navigationMapperMobile: Array<JSX.Element> =
@@ -140,6 +143,7 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
               className={navItem.linkClassName} 
               to={navItem.to}
               onClick={navItem.onClick}
+              state={navItem.state}
               >
               {navItem.label}
             </Link>
@@ -199,9 +203,8 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
               <Link
                 style={{ color: fontColor }}
                 rel="canonical" 
-                data-new-state="intro" 
                 className='intro-title-link wiggle-link' 
-                to="/"
+                to={urlHome}
                 onClick={homeUrlClicked}
                 state={{ previousPath: location.pathname }}
               >
@@ -215,9 +218,8 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
               <Link 
                 style={{ color: fontColor }}
                 rel="canonical" 
-                data-new-state="cv" 
                 className='cv-title-link wiggle-link' 
-                to="/who"
+                to={urlWho}
                 onClick={whoUrlClicked}
                 state={{ previousPath: location.pathname }}
                 >
@@ -231,9 +233,8 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
               <Link 
                 style={{ color: fontColor }}
                 rel="canonical" 
-                data-new-state="work" 
                 className='work-title-link wiggle-link' 
-                to="/work"
+                to={urlWork}
                 onClick={workUrlClicked}
                 state={{ previousPath: location.pathname }}
                 >
@@ -246,9 +247,8 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
             <li className='playground-title navbar-title'>
               <Link
                 style={{ color: fontColor }}
-                data-new-state="playground" 
                 className='playground-title-link wiggle-link' 
-                to="/playground" 
+                to={urlPlaying} 
                 rel="canonical"
                 onClick={playgroundUrlClicked}
                 state={{ previousPath: location.pathname }}
