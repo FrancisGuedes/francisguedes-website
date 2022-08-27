@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y, EffectCards, FreeMode } from 'swiper';
+import { Navigation, Pagination, Mousewheel, Keyboard, Lazy } from 'swiper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { strings } from '../../util/strings';
@@ -102,6 +102,12 @@ const Carousel = ({ isArrowClicked }: any) => {
       <>
       <h2 
         className={toggleArrowStatus[index] ? 'playground-category-title-clicked' : 'playground-category-title'}
+        onClick={() => {
+          toggleArrow(index);
+          toggleCarousel(index);
+          arrowOnHandleClick();
+          toggleRotationArrow(index)
+        }}
         >
           <span 
             className={toggleArrowStatus[index] ? 'playground-category-subtitle-clicked' : 'playground-category-subtitle'}
@@ -137,19 +143,17 @@ const Carousel = ({ isArrowClicked }: any) => {
             slidesPerView={5}
             spaceBetween={10}
             loop={true}
+            pagination={true}
             loopFillGroupWithBlank={true}
-            pagination={{
-              clickable: true,
-            }}
             navigation={true}
-            modules={[Pagination, Navigation]}
+            modules={[Lazy, Pagination, Navigation, Mousewheel, Keyboard]}
             breakpoints={{
               "@0.00": {
-                slidesPerView: 1.5,
+                slidesPerView: 1,
                 spaceBetween: 25,
               },
               "@0.75": {
-                slidesPerView: 2.5,
+                slidesPerView: 2,
                 spaceBetween: 40,
               },
               "@0.90": {

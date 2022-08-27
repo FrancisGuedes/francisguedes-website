@@ -19,9 +19,9 @@
     }
   ],
   "start_url": "/?source=pwa",
-  "background_color": "#ffd42d",
+  "background_color": "#ffda43",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#ffd42d",
+  "theme_color": "#ffda43",
   "description": "Francis Website provides a great idea of what kind of services his skills can provide you. From Front-End to Back-End web apps to apps, to descentralized applications. Also he's a little box of surprises, check out what a human being is possible of."
 }

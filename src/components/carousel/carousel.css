@@ -11,6 +11,7 @@ h2.playground-category-title-clicked {
   color: #fff55a;
   font-size: 5vw;
   font-weight: 700;
+  cursor: pointer;
 }
 
 h2.playground-category-title {
@@ -18,6 +19,7 @@ h2.playground-category-title {
   padding: 50px 0;
   font-size: 5vw;
   font-weight: 700;
+  cursor: pointer;
 }
 
 span.playground-category-subtitle-clicked {
@@ -51,11 +53,6 @@ span.playground-category-subtitle {
 .swiper {
   width: 100%;
   height: 100%;
-}
-
-.swiper-wrapper {
-  transition-duration: 0.5s!important;
-  transition: 0.2s cubic-bezier(0.52, 0.01, 0.16, 1) 0.3s;
 }
 
 .swiper-slide {
@@ -96,12 +93,8 @@ span.playground-category-subtitle {
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
-  font-size: 18px;
-  font-weight: bolder;
-}
-
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
-
+  font-size: 25px;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 591px) {
@@ -126,9 +119,7 @@ span.playground-category-subtitle {
 
   h2.playground-category-title, h2.playground-category-title-clicked {
     font-size: 7vw;
-  }
-
-  span.playground-category-subtitle, span.playground-category-subtitle-clicked {
-    font-size: 60%;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
