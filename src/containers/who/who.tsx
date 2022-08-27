@@ -15,7 +15,7 @@ const Who = ({ isVariantsRight }: WhoProps) => {
   let isNavbarClickFromLeftToRight = isVariantsRight;
 
   return ( 
-    <>
+    <div className="who-wrapper">
     {/* <motion.main 
         layout
         className="who-wrapper" 
@@ -28,7 +28,7 @@ const Who = ({ isVariantsRight }: WhoProps) => {
       >
         
     </motion.main>  */}
-  </>
+  </div>
   );
 }
 
