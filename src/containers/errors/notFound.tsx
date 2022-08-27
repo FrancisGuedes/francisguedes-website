@@ -9,7 +9,11 @@ import EndlessText from '../../components/endless-text/endlessText';
 import './notFound.css';
 import Button from '../../components/button/button';
 
-const NotFound = () => {
+export interface NotFoundProps {
+  isNavbarActive: boolean;
+}
+
+const NotFound = ({ isNavbarActive }: NotFoundProps) => {
   const [isClicked, setIsClicked] = useState(false);
   const [endX, setEndX] = useState(0);
   
@@ -28,12 +32,11 @@ const NotFound = () => {
     });
   }, [endX]);
 
-  
   return ( 
     <>
     <motion.main 
         layout
-        className='not-found-wrapper'
+        className={isNavbarActive ? 'not-found-wrapper' : 'not-found-wrapper navigation'}
         initial='initial'
         animate='in'
         exit='out'
@@ -67,7 +70,3 @@ const NotFound = () => {
 }
 
 export default NotFound;
-
-function useRouter() {
-  throw new Error('Function not implemented.');
-}

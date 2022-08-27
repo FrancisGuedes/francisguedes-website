@@ -145,7 +145,7 @@ function App() {
           <Route path="/who" element={<Who isVariantsRight={isVariantsRight}/>}/>
           <Route path="/work" element={<Work isVariantsRight={isVariantsRight}/>}/>
           <Route path="/playground" element={<Playground isVariantsRight={isVariantsRight}/>}/>
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound isNavbarActive={false}/>} />
         </Routes>
       </AnimatePresence>
     </>

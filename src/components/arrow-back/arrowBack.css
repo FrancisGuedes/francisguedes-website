@@ -103,18 +103,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .project-back, .lone-arrow, .corner-project-back {
-    display: none;
+  /*.project-back, .lone-arrow, .corner-project-back {
+    display: none; 
   }
-
-  /* .corner-project-back {
+*/
+  .corner-project-back {
     top: 2.5%;
-    right: 3%;
+    right: 4%;
   }
-
-  .lone-arrow span.text-back {
-    right: 140%;
-  } */
 }
 /* 
 @media screen and (max-width: 468px) {
