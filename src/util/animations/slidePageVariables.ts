@@ -1,4 +1,4 @@
-export const VariantsHero = {
+export const VariantsNotFound = {
   initial: {
     x: "-100%"
   },
@@ -12,9 +12,22 @@ export const VariantsHero = {
   }
 };
 
-export const Variants = {
+export const VariantsRight = {
   initial: {
     x: "100%"
+  },
+  in: {
+    x: 0,
+    transition: { duration: 1}
+  },
+  out: {
+    x: "-100%",
+    transition: { duration: 1.05 }
+  }
+};
+export const VariantsLeft = {
+  initial: {
+    x: "-100%"
   },
   in: {
     x: 0,

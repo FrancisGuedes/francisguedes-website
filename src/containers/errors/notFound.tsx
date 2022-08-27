@@ -2,14 +2,18 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from "gsap";
 import { http_errors, strings } from '../../util/strings';
-import { Transition, Variants } from '../../util/animations/slidePageVariables';
+import { Transition, VariantsNotFound } from '../../util/animations/slidePageVariables';
 import ArrowBack from '../../components/arrow-back/arrowBack';
 import EndlessText from '../../components/endless-text/endlessText';
 
 import './notFound.css';
 import Button from '../../components/button/button';
 
-const NotFound = () => {
+export interface NotFoundProps {
+  isNavbarActive: boolean;
+}
+
+const NotFound = ({ isNavbarActive }: NotFoundProps) => {
   const [isClicked, setIsClicked] = useState(false);
   const [endX, setEndX] = useState(0);
   
@@ -28,17 +32,16 @@ const NotFound = () => {
     });
   }, [endX]);
 
-  
   return ( 
     <>
     <motion.main 
         layout
-        className='not-found-wrapper'
+        className={isNavbarActive ? 'not-found-wrapper' : 'not-found-wrapper navigation'}
         initial='initial'
         animate='in'
         exit='out'
         transition={Transition}
-        variants={Variants}
+        variants={VariantsNotFound}
       >
         <ArrowBack/>
           <div className='not-found-wrapper-padding'>
@@ -67,7 +70,3 @@ const NotFound = () => {
 }
 
 export default NotFound;
-
-function useRouter() {
-  throw new Error('Function not implemented.');
-}
