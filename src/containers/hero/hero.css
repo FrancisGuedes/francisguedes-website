@@ -62,7 +62,7 @@ h2 {
   color: black;
 }
 
-h1, h2, a, span {
+h1, h2, span {
   -webkit-transition: 0.2s cubic-bezier(0.52, 0.01, 0.16, 1) 0.3s;
   -moz-transition: 0.2s cubic-bezier(0.52, 0.01, 0.16, 1) 0.3s;
   transition: 0.2s cubic-bezier(0.52, 0.01, 0.16, 1) 0.3s;

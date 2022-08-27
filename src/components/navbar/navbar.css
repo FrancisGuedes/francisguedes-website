@@ -109,10 +109,18 @@
     transform: rotate(0deg) translateY(5px);
   }
 
+.navigation .navigation-padding .toggle-menu-wrapper .mobile-menu-button:first-child(1) div, .navigation .navigation-padding .toggle-menu-wrapper .mobile-menu-button:first-child(2) div {
+  -webkit-transition: 0.29s cubic-bezier(0.52, 0.01, 0.16, 1);
+  -moz-transition: 0.29s cubic-bezier(0.52, 0.01, 0.16, 1);
+  transition: 0.29s cubic-bezier(0.52, 0.01, 0.16, 1);
+}
+
 .bar-one-open, .bar-two-open {
   background: #212121;
   width: 75%;
   height: 2px;
+  -webkit-transition: 0.29s cubic-bezier(0.52, 0.01, 0.16, 1);
+  -moz-transition: 0.29s cubic-bezier(0.52, 0.01, 0.16, 1);
   transition: 0.29s cubic-bezier(0.52, 0.01, 0.16, 1);
   z-index: 300;
 }
@@ -400,6 +408,36 @@ nav .main-navbar-content .navbar-title:nth-child(4) .wiggle::before {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   overflow: hidden;
+}
+
+nav .main-navbar-content .navbar-title:nth-child(1) a {
+  -webkit-transition: 0.39s cubic-bezier(0.52, 0.01, 0.16, 1) 0.48s;
+  -moz-transition: 0.39s cubic-bezier(0.52, 0.01, 0.16, 1) 0.48s;
+  transition: 0.39s cubic-bezier(0.52, 0.01, 0.16, 1) 0.48s;
+}
+
+nav .main-navbar-content .navbar-title:nth-child(2) a {
+  -webkit-transition: 0.57s cubic-bezier(0.52, 0.01, 0.16, 1) 0.61s;
+  -moz-transition: 0.57s cubic-bezier(0.52, 0.01, 0.16, 1) 0.61s;
+  transition: 0.57s cubic-bezier(0.52, 0.01, 0.16, 1) 0.61s;
+}
+
+nav .main-navbar-content .navbar-title:nth-child(3) a {
+  -webkit-transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.74s;
+  -moz-transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.74s;
+  transition: 0.75s cubic-bezier(0.52, 0.01, 0.16, 1) 0.74s;
+}
+
+nav .main-navbar-content .navbar-title:nth-child(4) a {
+  -webkit-transition: 0.93s cubic-bezier(0.52, 0.01, 0.16, 1) 0.87s;
+  -moz-transition: 0.93s cubic-bezier(0.52, 0.01, 0.16, 1) 0.87s;
+  transition: 0.93s cubic-bezier(0.52, 0.01, 0.16, 1) 0.87s;
+}
+
+.navigation .navigation-padding .logo-home-wrapper .logo-home {
+  -webkit-transition: 0.57s cubic-bezier(0.52, 0.01, 0.16, 1) 0.61s;
+  -moz-transition: 0.57s cubic-bezier(0.52, 0.01, 0.16, 1) 0.61s;
+  transition: 0.57s cubic-bezier(0.52, 0.01, 0.16, 1) 0.61s;
 }
 
 @media screen and (min-width: 1801px) {
