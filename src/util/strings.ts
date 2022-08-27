@@ -40,7 +40,7 @@ export const strings = {
   workPage: {
     titleHide: "My Work Page",
     title:"My Work.",
-    subTitle: "Finished projects, ongoing projects and personal projects.",
+    subTitle: "Finished, ongoing and personal projects.",
     footerTitle: "Work always in progress.",
     projects: 
     [
@@ -197,20 +197,20 @@ export const strings = {
           {
             description: "UNDA", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/unda/unda-2.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/fs-2021-1.jpg'),
             alt: "UNDA. Is the name of the NPO that I helped co-funded and grow through time."
 
           },
           {
             description: "UNDA", 
             href: "UNDA",
-            imagePath: require('../assets/images/playground/carousel/unda/fs-2021-2.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/unda-2.jpg'),
             alt: "Part of team UNDA that helped execute and produce the First Steps 2021 event in Lisbon."
           },
           {
             description: "UNDA", 
             href: "",
-            imagePath: require('../assets/images/playground/carousel/unda/fs-2021-1.jpg'),
+            imagePath: require('../assets/images/playground/carousel/unda/fs-2021-2.jpg'),
             alt: "The almost full team of UNDA that helped execute and produce the First Steps 2021 event in Lisbon."
           },
           {

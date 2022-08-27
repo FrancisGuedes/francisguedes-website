@@ -27,13 +27,14 @@ const Playground = ({ isVariantsRight }: PlaygroundProps) => {
     <>
     <motion.main 
         layout
-        className={isClicked ? "playground-wrapper-clicked" : "playground-wrapper"} 
+        className='playground-bg'
         initial='initial'
         animate='in'
         exit='out'
         transition={Transition}
         variants={isNavbarClickFromLeftToRight ? VariantsLeft : VariantsRight}
       >
+      <section className={isClicked ? "playground-wrapper-clicked" : "playground-wrapper"}>
           <div className="playground-wrapper-padding">
               <div className="project_title">
                 {text.titleHide}
@@ -64,6 +65,7 @@ const Playground = ({ isVariantsRight }: PlaygroundProps) => {
                   </div>
                   <SocialMedia isBackGroundYellow={false}/>
             </div>
+      </section>
       </motion.main>
       
     </>

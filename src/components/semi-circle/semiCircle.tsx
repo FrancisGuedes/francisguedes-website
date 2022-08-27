@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Animate, Transition } from '../../util/animations/semiCircleVariables';
 import './semiCircle.css';
 
 interface semiCircleProps {
@@ -17,6 +18,8 @@ const SemiCircle = ({ colorSemiCircle }: semiCircleProps) => {
   return ( 
     <>
       <motion.div
+        animate={Animate}
+        transition={Transition}
         className="semi-circle-wrapper"
       >
         <div className="semi-circle">

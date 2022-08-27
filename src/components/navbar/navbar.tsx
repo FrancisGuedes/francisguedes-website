@@ -151,10 +151,12 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
         )
       });
   
+
   return ( 
     <section className='navigation'>
       <div className='navigation-padding'>
-        <Link 
+        <Link
+          aria-label="francisgedes logo"
           to='/'
           rel="canonical"
           className='logo-home-wrapper'
@@ -165,6 +167,7 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
           <button
             className="mobile-menu-button"
             onClick={menuToggle}
+            aria-label="navigation menu for mobile"
           >
             <div
               style={{ background: mobileNavOpen ? '' : mobileMenuColor}}
