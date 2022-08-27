@@ -1,11 +1,9 @@
-import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { strings } from '../../util/strings';
-import ArrowBack from '../../components/arrow-back/arrowBack';
 import SocialMedia from '../../components/social-media/socialMedia';
 
 import { colors } from '../../util/colors';
-import { Transition, Variants } from '../../util/animations/slidePageVariables';
+import { Transition, VariantsLeft, VariantsRight } from '../../util/animations/slidePageVariables';
 import './work.css';
 
 const projectsObj = [...strings.workPage.projects];
@@ -34,13 +32,17 @@ const projectsMapper = projectsObj.map( (element, index) => {
   )
 })
 
-//console.log(projectsMapper)
+export interface WorkProps {
+  isVariantsRight: boolean;
+}
 
-const Work = () => {
+const Work = ({ isVariantsRight }: WorkProps) => {
 
   /* useEffect(() => {
     document.body.style.background = colors.background.yellow;
   }); */
+
+  let isNavbarClickFromLeftToRight = isVariantsRight;
 
   return ( 
     <>
@@ -52,12 +54,9 @@ const Work = () => {
         animate='in'
         exit='out'
         transition={Transition}
-        variants={Variants}
+        variants={isNavbarClickFromLeftToRight ? VariantsLeft : VariantsRight}
       >
-        <ArrowBack/>
-        <div className="work-wrapper-padding">
-          <div className="content_padded">
-                <div id="content" className="padded" data-id="392958">
+        <div className="work-wrapper-padding">                
                   <div className="project_title">
                     {text.titleHide}
                   </div>
@@ -91,11 +90,10 @@ const Work = () => {
                     </h1>
                     <br/>
                     <br/>
-                    <SocialMedia isBackGroundYellow={false}/>
+                    
                     <br/>
                   </div>
-            </div>
-          </div>
+                  <SocialMedia isBackGroundYellow={false}/>
         </div>
       
     </motion.main> 

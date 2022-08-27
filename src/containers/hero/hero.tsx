@@ -1,22 +1,24 @@
 import { useState, useEffect } from "react";
 import { strings } from '../../util/strings'
 import { motion } from 'framer-motion';
-import { VariantsHero, Transition } from '../../util/animations/slidePageVariables'
+import { Transition, VariantsRight, VariantsLeft } from '../../util/animations/slidePageVariables'
 import './hero.css';
 
 import useWhiteColor from '../../util/hooks/useWhiteColor';
 import SocialMedia from '../../components/social-media/socialMedia';
-import Navbar from '../../components/navbar/navbar';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
-import { Link } from "react-router-dom";
 import SemiCircle from "../../components/semi-circle/semiCircle";
 import { colors } from "../../util/colors";
-import { getWindowSize } from "../../util/utility";
+import { WindowSizeSpace } from "../../util/utility";
 
-const Hero = () => {
-  const [index, setIndex] = useState(0);
-  const [windowSize, setWindowSize] = useState(getWindowSize());
+export interface HeroProps {
+  isVariantsRight: boolean;
+}
+
+const Hero = ({ isVariantsRight }: HeroProps) => {
+  const [index, setIndex] = useState<number>(0);
+  const [windowSize, setWindowSize] = useState<WindowSizeSpace.IWindowSize>(WindowSizeSpace.getWindowSize());
   //const isMobile = useMediaQuery('(min-width: 768px)');
 
   const dynamicWordsObj = {...strings.heroPage.introText.dynamicWords};
@@ -28,6 +30,8 @@ const Hero = () => {
   let dynamicWordsValues: string[] = Object.values(dynamicWordsObj);
 
   const windowWidth: number = windowSize.innerWidth;
+
+  let isNavbarClickFromLeftToRight = isVariantsRight;
 
   useEffect(() => {
     const intervalDelayMilliseconds = dynamicWordsValues[index].length * 105;
@@ -47,7 +51,7 @@ const Hero = () => {
 
   useEffect(() => {
     function handleWindowResize() {
-      setWindowSize(getWindowSize());
+      setWindowSize(WindowSizeSpace.getWindowSize());
     }
     window.addEventListener('resize', handleWindowResize);
     return () => {
@@ -100,9 +104,8 @@ const Hero = () => {
         animate='in'
         exit='out'
         transition={Transition}
-        variants={VariantsHero}
+        variants={isNavbarClickFromLeftToRight ? VariantsLeft : VariantsRight}
       >
-        <Navbar/> 
         <div className="hero-container-padding">
           <div className="content clearfix" data-elementresizer data-resize-parent>
             <h1 className='intro-text-first-line'>
@@ -123,26 +126,22 @@ const Hero = () => {
                 </>
               )
             }
-          <div className='intro-text-sub-title'>
-            <h2 className='intro-text-fourth-line'>
-              {introText.fourthLine}
-            </h2>
-            <h2 className='intro-text-contact-talk'>
-              {contact.talk} 
-              <a
-                aria-label="email me"
-                className="email-link" 
-                href={contact.emailLink}
-              >
+            <div className='intro-text-sub-title'>
+              <h2 className='intro-text-fourth-line'>
+                {introText.fourthLine}
+              </h2>
+              <h2 className='intro-text-contact-talk'>
+                {contact.talk} 
+                <a className="email-link" href={contact.emailLink}>
                 <FontAwesomeIcon 
                   icon={faArrowCircleRight}
                   className="go-to-email-icon"
                   title="Email"
                   color="black"
                 />
-              </a>
-            </h2>
-          </div>
+                </a>
+              </h2>
+            </div>
             {/* <button
               style={{
                 padding: "20px",
@@ -156,9 +155,9 @@ const Hero = () => {
               Generate random color
             </button> */}
             <br/>
+            <SemiCircle colorSemiCircle={backgroundColor.purple}/>
           </div>
         </div>
-        <SemiCircle colorSemiCircle={backgroundColor.purple}/>
         <SocialMedia 
               isBackGroundYellow 
               isForMobile={false}

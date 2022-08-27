@@ -1,9 +1,9 @@
 .semi-circle-wrapper {
   height: 100px;
   width: 100px;
-  position: relative;
-  float: right;
-  top: -50%;
+  position: absolute;
+  right: 0;
+  top: 40%;
 }
 
 .semi-circle {
