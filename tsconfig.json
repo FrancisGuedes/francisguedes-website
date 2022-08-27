@@ -21,8 +21,10 @@
     "jsx": "react-jsx",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "sourceMap": true
   },
   "include": [
-    "src"
+    "src",
+    "types.d.ts"
   ]
 }
