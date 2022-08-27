@@ -21,3 +21,9 @@
 .email-not-visible {
   display: none;
 }
+
+@media screen and (min-width: 1801px) {
+  .wrapper {
+    padding: 2% 14% 2% 0;
+  }
+}

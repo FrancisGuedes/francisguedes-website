@@ -1,9 +1,7 @@
 
-.work-wrapper{
-  display: block;
-  min-height: 100%;
+.work-wrapper {
   width: 100%;
-  height: auto;
+  min-height: 100%;
   position: absolute;
 	/* background-image: url(./../../assets/images/desktop/work-background.jpg);
   background-size: cover; */
@@ -11,7 +9,8 @@
 }
 
 .work-wrapper-padding{
-  padding: 5vw;
+  padding: 18vh 5vw 5vh 4.5vw;
+  /* height: 70%; */
 }
 
 .work-container {
@@ -125,8 +124,17 @@
 
 @media screen and (min-width: 1801px) {
   .work-wrapper-padding {
-    padding: 5% 15% 5% 15%;
-  } 
+    padding: 14vw 15% 5vh 15%;
+  }
+  
+  .work-project:first-child {
+    margin-top: 5vw;
+  }
+  
+  .work-project-content:last-child {
+    margin-bottom: 5vw;
+  }
+  
 }
 
 @media (max-width: 1024px){
@@ -136,6 +144,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  .work-wrapper-padding {
+    padding: 16vh 5vw 5vh 6.5vw;
+    /* height: 70%; */
+  }
+
   .work-project-content:first-child {
     margin-top: -7%;
   }
