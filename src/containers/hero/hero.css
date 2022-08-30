@@ -10,6 +10,24 @@
   overflow: hidden;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-container-padding, .content.clearfix, .hero-container {
+  -webkit-animation: fadeIn 0.9s ease-in forwards;
+  -moz-animation: fadeIn 0.9s ease-in forwards;
+  -ms-animation: fadeIn 0.9s ease-in forwards;
+  -o-animation: fadeIn 0.9s ease-in forwards;
+  animation: fadeIn 0.9s ease-in forwards;
+}
+
 .hero-container-padding {
   padding: 5rem;
   height: 70%;
