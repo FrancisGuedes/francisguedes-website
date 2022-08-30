@@ -497,6 +497,19 @@ nav .main-navbar-content .navbar-title:nth-child(4) a {
 }
 
 @media screen and (max-width: 768px) {
+  .navigation {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    -o-animation: none;
+    animation: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+
   .navigation-padding {
     padding: 4% 6.5%;
   }
