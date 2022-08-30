@@ -1,11 +1,11 @@
 .loading-gif-wrapper {
   width: 100%;
   height: 100vh;
-  background: #ffda43;
+  background: var(--background);
   z-index: 1;
   transition: opacity 0.5s ease-out;
 }
 
 html {
-  background: #ffda43;
+  background: var(--background);
 }
