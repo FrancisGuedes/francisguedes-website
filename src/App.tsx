@@ -8,6 +8,7 @@ import NotFound from './containers/errors/notFound';
 import Navbar from './components/navbar/navbar';
 import Who from './containers/who/who';
 import { urlHome, urlPlaying, urlWho, urlWork } from './api/endpoints';
+import LoadingScreen from './components/loading-screen/loadingScreen';
 
 function App() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function App() {
   const [isPlayingUrlClicked, setPlaygroundUrlClicked] = useState<boolean>(false);
   const [isVariantsRight, setVariantsRight] = useState<boolean>(false);
   const [isVariantsLeft, setVariantsLeft] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const currentLocationUrl = window.location.pathname;
   const urlHomeLocation = urlHome;
@@ -30,8 +32,9 @@ function App() {
   useEffect(() => {
     let validRoute: string = validateRouteObject(previousRouteObject, previousRoute);
     isVariantsMovingRight(validRoute);
+    const timer = setTimeout(() => setIsLoading(false), 1500);
+    return () => clearTimeout(timer);
   }, [location, previousRouteObject]);
-
   
   function validateRouteObject(previousRouteObject: string, previousRoute: string): string {
     // this function validate the previous route.
@@ -133,21 +136,29 @@ function App() {
 
   return (
     <>
-      <AnimatePresence initial={false}>
-        <Navbar 
-          homeUrlClicked={handlingIntroActiveOnClick} 
-          whoUrlClicked={handlingWhoActiveOnClick} 
-          workUrlClicked={handlingWorkActiveOnClick} 
-          playgroundUrlClicked={handlingPlaygroundActiveOnClick}
+      { 
+        isLoading 
+        ? 
+        <LoadingScreen/> 
+        :
+        (
+        <AnimatePresence initial={false}>
+          <Navbar 
+            homeUrlClicked={handlingIntroActiveOnClick} 
+            whoUrlClicked={handlingWhoActiveOnClick} 
+            workUrlClicked={handlingWorkActiveOnClick} 
+            playgroundUrlClicked={handlingPlaygroundActiveOnClick}
           />
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Hero isVariantsRight={isVariantsRight}/>}/>
-          <Route path="/who" element={<Who isVariantsRight={isVariantsRight}/>}/>
-          <Route path="/work" element={<Work isVariantsRight={isVariantsRight}/>}/>
-          <Route path="/playground" element={<Playground isVariantsRight={isVariantsRight}/>}/>
-          <Route path="*" element={<NotFound isNavbarActive={false}/>} />
-        </Routes>
-      </AnimatePresence>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Hero isVariantsRight={isVariantsRight}/>}/>
+            <Route path="/who" element={<Who isVariantsRight={isVariantsRight}/>}/>
+            <Route path="/work" element={<Work isVariantsRight={isVariantsRight}/>}/>
+            <Route path="/playground" element={<Playground isVariantsRight={isVariantsRight}/>}/>
+            <Route path="*" element={<NotFound isNavbarActive={false}/>} />
+          </Routes>
+        </AnimatePresence>
+        )
+      }
     </>
   );
 }

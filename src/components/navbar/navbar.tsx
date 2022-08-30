@@ -149,7 +149,7 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
             </Link>
           </li>
         )
-      });
+  });
   
 
   return ( 
