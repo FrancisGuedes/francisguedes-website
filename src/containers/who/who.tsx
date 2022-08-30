@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-// import { Transition, VariantsLeft, VariantsRight } from '../../util/animations/slidePageVariables';
+import { Transition, VariantsLeft, VariantsRight } from '../../util/animations/slidePageVariables';
 import './who.css';
 
 export interface WhoProps {
@@ -14,9 +14,18 @@ const Who = ({ isVariantsRight }: WhoProps) => {
 
   let isNavbarClickFromLeftToRight = isVariantsRight;
 
+  const styleDiv: any = {
+    color: 'white',
+    textAlign: 'center',
+    position: 'absolute',
+    top: '50%',
+    right: '50%',
+    transform: 'translate(50%,-50%)'
+  }
+
   return ( 
-    <div className="who-wrapper">
-    {/* <motion.main 
+    <>
+    <motion.main 
         layout
         className="who-wrapper" 
         data-container="content"
@@ -26,9 +35,11 @@ const Who = ({ isVariantsRight }: WhoProps) => {
         transition={Transition}
         variants={isNavbarClickFromLeftToRight ? VariantsLeft : VariantsRight}
       >
-        
-    </motion.main>  */}
-  </div>
+        <h1 style={styleDiv} className='intro-text-first-line'>
+          Coming soon...
+        </h1>
+    </motion.main> 
+  </>
   );
 }
 

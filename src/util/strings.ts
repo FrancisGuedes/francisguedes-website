@@ -423,6 +423,10 @@ export const strings = {
   },
   notFoundPage: {
     button_name: "Toggle me!",
+  },
+  gif: {
+    text: 'waiting',
+    dots: '...'
   }
 }
 
