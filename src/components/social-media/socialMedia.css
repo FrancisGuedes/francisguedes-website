@@ -4,6 +4,9 @@
   right: 0;
   padding: 5% 3.5%;
   margin: 0;
+  -webkit-transition: 0.5s cubic-bezier(0.52, 0.01, 0.16, 1) 0.3s;
+  -moz-transition: 0.5s cubic-bezier(0.52, 0.01, 0.16, 1) 0.3s;
+  transition: 0.5s cubic-bezier(0.52, 0.01, 0.16, 1) 0.3s;
 }
 
 .social-media {
