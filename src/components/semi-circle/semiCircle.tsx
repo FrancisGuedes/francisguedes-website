@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Animate, Transition } from '../../util/animations/semiCircleVariables';
+import { VariantsLeft } from '../../util/animations/slidePageVariables';
 import './semiCircle.css';
 
 interface semiCircleProps {
@@ -21,6 +22,7 @@ const SemiCircle = ({ colorSemiCircle }: semiCircleProps) => {
         animate={Animate}
         transition={Transition}
         className="semi-circle-wrapper"
+        variants={VariantsLeft}
       >
         <div className="semi-circle">
           <Link
