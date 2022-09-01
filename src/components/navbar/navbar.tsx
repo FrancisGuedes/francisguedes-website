@@ -8,6 +8,7 @@ import Wiggle from '../wiggle/wiggle';
 
 import './navbar.css';
 import { urlHome, urlPlaying, urlWho, urlWork } from '../../api/endpoints';
+import { changingCssVariableBasedOnNavbarUrl, INavbar } from '../../util/utility';
 
 export type NavigationMobile = {
   liClassName: string,
@@ -39,12 +40,21 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
   const urlWhoLocation = urlWho;
   const urlWorkLocation = urlWork;
   const urlPlayingLocation = urlPlaying;
+  const menuBackgroundColor = {...colors.mobile_menu_background};
+  const backgroundColor: string = "backgroundColor";
+
+  const menuColor: INavbar = {
+    hero: menuBackgroundColor.yellow,
+    who: menuBackgroundColor.blue,
+    work: menuBackgroundColor.purple,
+    play: menuBackgroundColor.orange,
+  };
 
   useEffect(() => {
     activateFontColor();
     activateMobileMenuColor();
     activateWiggleForNavbar();
-    activateBackgroundColorMobileMenu();
+    changingCssVariableBasedOnNavbarUrl(backgroundColor, menuColor);
   }, [location]);
 
   const labelText = {...functionalitiesAlias.navbar};
@@ -96,27 +106,6 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
     } else {
       document.documentElement.style.setProperty('--tranformTranslatePlaying1', translateXNegative105);
       document.documentElement.style.setProperty('--tranformTranslatePlaying2', translateX105);
-    }
-  };
-
-  function activateBackgroundColorMobileMenu(): void {
-    const colorMenu = {...colors.mobile_menu_background};
-    switch(currentLocationUrl) {
-      case urlHomeLocation:
-        document.documentElement.style.setProperty('--backgroundColor', colorMenu.yellow);
-        break;
-      case urlWhoLocation:
-        document.documentElement.style.setProperty('--backgroundColor', colorMenu.blue);
-        break;
-      case urlWorkLocation:
-        document.documentElement.style.setProperty('--backgroundColor', colorMenu.purple);
-        break;
-      case urlPlayingLocation:
-        document.documentElement.style.setProperty('--backgroundColor', colorMenu.orange);
-        break;
-      default:
-        document.documentElement.style.setProperty('--backgroundColor', colorMenu.pink);
-        break;
     }
   };
 
