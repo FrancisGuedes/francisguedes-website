@@ -1,20 +1,40 @@
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 import { strings } from '../../../util/strings';
 import './sectionTwo.css';
 
 const SectionTwo = () => {
+  const [displayModal, setDisplayModal] = useState(false);
   const labelSectionTwo = {...strings.whoPage.section_two};
   const labelSkills = {...labelSectionTwo.skills};
 
   const renderSkills = Object.values(labelSkills).map((skill, index) => {
       return (
-        <a
-          aria-label="skill link"
-          className="skill-link"
-          href='#'
-          key={index}
-        >
-          <p className="skill-title">{skill}.&nbsp;</p>
-        </a>
+        <>
+          <div className={`modal ${displayModal ? "show" : ""}`}>
+            <h1 className='modal-skill-title'>skill_name</h1>
+            <FontAwesomeIcon
+                key={index}
+                className="close"
+                title="ArrowUp" 
+                icon={faArrowDown}
+                onClick={() => setDisplayModal(!displayModal)}
+              />
+            <p className="modal-skill-description">
+              Note: these settings are saved in the browser only and can be lost
+            </p>
+          </div>
+
+          <a
+            aria-label="skill link"
+            className={`skill-link ${displayModal ? "show" : ""}`}
+            onClick={() => setDisplayModal(!displayModal)}
+            key={index}
+          >
+            <p className="skill-title">{skill}.&nbsp;</p>
+          </a>
+        </>
       )
   });
   
