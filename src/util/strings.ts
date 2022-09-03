@@ -443,6 +443,39 @@ export const strings = {
         third_word: 'something',
         fourth_word: 'together.'
       },
+    },
+    section_two: {
+      title: "My Skills.",
+      sub_title: "It's a mix of words, try to find the right ones.",
+      skills: {
+        amir: 'Amir',
+        java: 'Java',
+        react_native: 'React Native',
+        html: 'Html',
+        typescript: 'Typescript',
+        front_office: 'Front Office',
+        python: 'Python',
+        angular: 'Angular',
+        lagaet: 'Lagaet',
+        link: 'Link',
+        sonic: 'Sonic The Hedgehog',
+        airflare: 'Airflare',
+        spring: 'Spring Boot',
+        my_sql: 'MySql',
+        react: 'ReactJs',
+        back_office: 'Back Office',
+        scrum: 'Scrum',
+        css: 'Css',
+        scss:'Scss',
+        bulbasaur: 'Bulbasaur',
+        flask: 'Flask',
+        windmill: 'Windmill',
+        git: 'Git',
+        tibco: 'Tibco',
+        knuckles: 'Knuckles The Echidna',
+        padawan:'Padawan',
+        ci_cd: 'CI CD'
+      }
     }
   }
 }
