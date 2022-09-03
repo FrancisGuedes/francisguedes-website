@@ -427,6 +427,23 @@ export const strings = {
   gif: {
     text: 'waiting',
     dots: '...'
+  },
+  whoPage: {
+    section_one: {
+      title: 'My story',
+      composing: {
+        first_line: "First things first. How are you? Good? Great, let's start!",
+        second_paragraph: "I'm a portuguese tripeiro Full Stack Software Developer based in Lisbon. Currently working for an IT consulting company but always ready for a new challenge after hours.",
+      },
+      pro_bono: "I do pro bono work, so don't be shy, say hello and tell me your story.",
+      dont_care_social: "On my free time you can find me blá blá who cares, check my social if you are into it, if not, let's cary on.",
+      engagement: {
+        first_word: "Let's",
+        second_word: 'create',
+        third_word: 'something',
+        fourth_word: 'together.'
+      },
+    }
   }
 }
 
