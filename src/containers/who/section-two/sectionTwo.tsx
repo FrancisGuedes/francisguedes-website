@@ -63,7 +63,7 @@ const SectionTwo = () => {
   
   return ( 
     <>
-      <section className='second-section-container'>
+      <section id='skills' className='second-section-container'>
         <div className='second-section-wrapper'>
           <div className='second-section-head-title'>
             <h1 className='second-section-title'>

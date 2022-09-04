@@ -16,7 +16,7 @@
 }
 
 .skills-body {
-  font-size: 52px;
+  font-size: 3.5vw;
   line-height: 1.4;
   font-weight: 500;
   display: flex;
@@ -36,6 +36,7 @@
 
 .skill-link:hover, .skill-title:hover {
   color: #fffade;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .skill-title {
@@ -66,17 +67,22 @@
 .close {
   cursor: pointer;
   position: absolute;
-  top: 60px;
-  right: 60px;
+  top: 2vw;
+  right: 7vw;
   border: 0;
   transform: rotate(90deg);
   color: #ffd42d;
+  padding-bottom: 2vw;
+  max-width: 100%;
+  display: inline-block;
 }
 
 .close:hover {
-  right: 80px;
+  padding-top: 2vw;
+  padding-bottom: 0;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
+  max-width: 100%;
+  display: inline-block;
 }
 
 .modal-skill-title {

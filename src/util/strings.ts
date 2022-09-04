@@ -489,7 +489,7 @@ export const strings = {
           description: "My favorite persona from Zelda, yes I'm a 90's kid"
         },
         sonic: {
-          name: 'Sonic The Hedgehog',
+          name: 'Sonic',
           description: 'One of my favorite games of all time since I was a kid'
         },
         airflare: {
@@ -503,14 +503,6 @@ export const strings = {
         my_sql: {
           name: 'MySql',
           description: "Oh yeah! Relation databases it's all I can think of"
-        },
-        react: {
-          name: 'ReactJs',
-          description: "Love love love! Much love for this baby right now. It's not perfect (who is?) but I love working with it"
-        },
-        back_office: {
-          name: 'Back Office',
-          description: 'Not in a million years! Well in the past yes, not anymore'
         },
         scrum: {
           name: 'Scrum',
@@ -536,21 +528,29 @@ export const strings = {
           name: 'Windmill',
           description: 'Once again, amazing thing to do with your body, the iconic movemnt of breaking. If know how to do it you must have an amazing skill set'
         },
-        git: {
-          name: 'Git',
-          description: 'Fundamental! Work with it on a daily basis. Gosh you must hate resolving conflicts as much as I do'
-        },
         tibco: {
           name: 'Tibco',
           description: 'Very interesting tool for development but no thank you'
         },
+        back_office: {
+          name: 'Back Office',
+          description: 'Not in a million years! Well in the past yes, not anymore'
+        },
         knuckles: {
-          name: 'Knuckles The Echidna',
+          name: 'Knuckles',
           description: 'Sometimes I just want to play with this red devil persona over sonic, well it happens'
+        },
+        git: {
+          name: 'Git',
+          description: 'Fundamental! Work with it on a daily basis. Gosh you must hate resolving conflicts as much as I do'
         },
         padawan: {
           name: 'Padawan',
           description: 'The more I learn, the more I understand I know nothing at all'
+        },
+        react: {
+          name: 'ReactJs',
+          description: "Love love love! Much love for this baby right now. It's not perfect (who is?) but I love working with it"
         },
         ci_cd: {
           name: 'CI CD',

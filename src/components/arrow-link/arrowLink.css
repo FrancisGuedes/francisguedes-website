@@ -1,10 +1,10 @@
 .who-link {
-  padding-bottom: 40px;
-  -webkit-transition: all 250ms ease-in-out;
+  padding-bottom: 2vw;
   transition: all 250ms ease-in-out;
-
   max-width: 100%;
   display: inline-block;
+  position: absolute;
+  right: 5vw;
 }
 
 .who-link:hover {
@@ -15,8 +15,4 @@
 .who-arrow {
   height: 7vw;
   max-width: 100%;
-  vertical-align: middle;
-  display: inline-block;
-  right: 5vw;
-  position: absolute;
 }
