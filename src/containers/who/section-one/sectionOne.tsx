@@ -1,5 +1,6 @@
-import { strings } from '../../../util/strings';
 import './sectionOne.css';
+import { strings } from '../../../util/strings';
+import ArrowLink from '../../../components/arrow-link/arrowLink';
 
 const SectionOne = () => {
   const labelSectionOne = {...strings.whoPage.section_one};
@@ -50,6 +51,7 @@ const SectionOne = () => {
             alt="gif of me moving" 
           />
         </picture>
+        <ArrowLink/>
       </section>
     </>
   );

@@ -1,0 +1,22 @@
+.who-link {
+  padding-bottom: 40px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+
+  max-width: 100%;
+  display: inline-block;
+}
+
+.who-link:hover {
+  padding-top: 2vw;
+  padding-bottom: 0;
+}
+
+.who-arrow {
+  height: 7vw;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  right: 5vw;
+  position: absolute;
+}
