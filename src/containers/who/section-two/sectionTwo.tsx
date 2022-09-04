@@ -4,35 +4,58 @@ import { useState } from 'react';
 import { strings } from '../../../util/strings';
 import './sectionTwo.css';
 
+export type Skill = {
+  [key: string]: string; 
+  name: string;
+  description: string;
+}
+
 const SectionTwo = () => {
-  const [displayModal, setDisplayModal] = useState(false);
+  let skillProps: Skill = {
+    name: '',
+    description: ''
+  }
+  const [displayModal, setDisplayModal] = useState<boolean>(false);
+  const [dataModel, setDataModal] = useState<Skill>(skillProps);
+
   const labelSectionTwo = {...strings.whoPage.section_two};
   const labelSkills = {...labelSectionTwo.skills};
 
   const renderSkills = Object.values(labelSkills).map((skill, index) => {
+      function toggleModal(): void {
+        setDisplayModal(!displayModal);
+      }
+
+      function openModalWithData(skillData: Skill): void {
+        setDataModal(skillData);
+      }
+
       return (
         <>
           <div className={`modal ${displayModal ? "show" : ""}`}>
-            <h1 className='modal-skill-title'>skill_name</h1>
+            <h1 className='modal-skill-title'>{dataModel.name}</h1>
             <FontAwesomeIcon
                 key={index}
                 className="close"
-                title="ArrowUp" 
+                title="ArrowLeft" 
                 icon={faArrowDown}
-                onClick={() => setDisplayModal(!displayModal)}
+                onClick={toggleModal}
               />
             <p className="modal-skill-description">
-              Note: these settings are saved in the browser only and can be lost
+              {dataModel.description}.
             </p>
           </div>
 
           <a
             aria-label="skill link"
             className={`skill-link ${displayModal ? "show" : ""}`}
-            onClick={() => setDisplayModal(!displayModal)}
+            onClick={() => {
+              toggleModal();
+              openModalWithData(skill);
+            }}
             key={index}
           >
-            <p className="skill-title">{skill}.&nbsp;</p>
+            <p className="skill-title">{skill.name}.&nbsp;</p>
           </a>
         </>
       )

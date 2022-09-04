@@ -448,33 +448,114 @@ export const strings = {
       title: "My Skills.",
       sub_title: "It's a mix of words, try to find the right ones.",
       skills: {
-        amir: 'Amir',
-        java: 'Java',
-        react_native: 'React Native',
-        html: 'Html',
-        typescript: 'Typescript',
-        front_office: 'Front Office',
-        python: 'Python',
-        angular: 'Angular',
-        lagaet: 'Lagaet',
-        link: 'Link',
-        sonic: 'Sonic The Hedgehog',
-        airflare: 'Airflare',
-        spring: 'Spring Boot',
-        my_sql: 'MySql',
-        react: 'ReactJs',
-        back_office: 'Back Office',
-        scrum: 'Scrum',
-        css: 'Css',
-        scss:'Scss',
-        bulbasaur: 'Bulbasaur',
-        flask: 'Flask',
-        windmill: 'Windmill',
-        git: 'Git',
-        tibco: 'Tibco',
-        knuckles: 'Knuckles The Echidna',
-        padawan:'Padawan',
-        ci_cd: 'CI CD'
+        amir: {
+          name:'Amir',
+          description: 'Amazing bboy skills, but no'
+        },
+        java: {
+          name: 'Java',
+          description: "You gotta! Main technology for backend development. Didn't like at the begining but now I really enjoy it"
+        },
+        react_native: {
+          name: 'React Native',
+          description: "Yeeeees! Even though I'm not profficient I'm getting used to work with it"
+        },
+        html: {
+          name: 'Html',
+          description: "I'm a rocka and rolla expert, I can even hack your phone with it! No I can't, just kidding"
+        },
+        typescript: {
+          name: 'Typescript',
+          description: "Felt in love at first sight. It's my preffered programming language nowadays"
+        },
+        front_office: {
+          name: 'Front Office',
+          description: "You wish! Once upon a time yes, not anymore"
+        },
+        python: {
+          name: 'Python',
+          description: 'A little rusty, but I still remember the beautiful sintax this baby has'
+        },
+        angular: {
+          name: 'Angular',
+          description: "Love it and hate it, mixed feelings though, can't decide"
+        },
+        lagaet: {
+          name: 'Lagaet',
+          description: 'One of the best out there, he does it all but not the one you are looking for'
+        },
+        link: {
+          name: 'Link',
+          description: "My favorite persona from Zelda, yes I'm a 90's kid"
+        },
+        sonic: {
+          name: 'Sonic The Hedgehog',
+          description: 'One of my favorite games of all time since I was a kid'
+        },
+        airflare: {
+          name: 'Airflare',
+          description: "Love it and hate it. It's amazing what you can do with your body, for a second I feel I'm flying, therefore a person who can do it must have amazing skills"
+        },
+        spring: {
+          name: 'Spring Boot',
+          description: 'Yes yes yes. Favorite framework for backend mainly, not really a fan for doing views'
+        },
+        my_sql: {
+          name: 'MySql',
+          description: "Oh yeah! Relation databases it's all I can think of"
+        },
+        react: {
+          name: 'ReactJs',
+          description: "Love love love! Much love for this baby right now. It's not perfect (who is?) but I love working with it"
+        },
+        back_office: {
+          name: 'Back Office',
+          description: 'Not in a million years! Well in the past yes, not anymore'
+        },
+        scrum: {
+          name: 'Scrum',
+          description: 'Daily Agile method that I use, and we use at the compoany I work for. Like it and I think you know what I talking about'
+        },
+        css: {
+          name: 'Css',
+          description: 'Well if you know Front End development you gotta know this one. I have no idea what it is and how it works but I can say I know a thing or two'
+        },
+        scss:{
+          name: 'Scss',
+          description: 'Same as Css, but better'
+        },
+        squirtle: {
+          name: 'Squirtle',
+          description: 'Congrats, you just found my favorite Pokémon'
+        },
+        flask: {
+          name: 'Flask',
+          description: "Not the superhero - Flash - but I really enjoy making small projects with it. A framework that I like to use with python and funny thing is I have an anology dor it, is smilar to my girlfriend in a way that is small but powerfull"
+        },
+        windmill: {
+          name: 'Windmill',
+          description: 'Once again, amazing thing to do with your body, the iconic movemnt of breaking. If know how to do it you must have an amazing skill set'
+        },
+        git: {
+          name: 'Git',
+          description: 'Fundamental! Work with it on a daily basis. Gosh you must hate resolving conflicts as much as I do'
+        },
+        tibco: {
+          name: 'Tibco',
+          description: 'Very interesting tool for development but no thank you'
+        },
+        knuckles: {
+          name: 'Knuckles The Echidna',
+          description: 'Sometimes I just want to play with this red devil persona over sonic, well it happens'
+        },
+        padawan: {
+          name: 'Padawan',
+          description: 'The more I learn, the more I understand I know nothing at all'
+        },
+        ci_cd: {
+          name: 'CI CD',
+          description: 'Always continue integration and continue development. Daily basis baby'
+        }
       }
     }
   }

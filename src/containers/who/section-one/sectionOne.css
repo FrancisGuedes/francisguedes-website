@@ -20,6 +20,7 @@
 .first-section-first-word-parenthesis {
   margin: 0;
   font-size: 8vw;
+  color: #ffd42d;
 }
 
 .first-section-first-word-parenthesis-text {
@@ -88,10 +89,10 @@
 }
 
 .first-section-gif-wrapper {
-  height: 14vw;
+  height: 10vw;
   position: absolute;
-  right: 20%;
-  top: 30%;
+  left: 37%;
+  top: 38%;
   transform: translate(50%, 10%);
 }
 

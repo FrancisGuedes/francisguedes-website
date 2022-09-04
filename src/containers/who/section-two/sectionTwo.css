@@ -8,7 +8,7 @@
 }
 
 .second-section-title {
-  color: #4bdcd7;
+  color: #ffd42d;
 }
 
 .second-section-sub-title {
@@ -70,6 +70,7 @@
   right: 60px;
   border: 0;
   transform: rotate(90deg);
+  color: #ffd42d;
 }
 
 .close:hover {
@@ -80,9 +81,10 @@
 
 .modal-skill-title {
   color: #fffade;
-  padding-left: 6vw;
+  padding: 0 6vw 0 6vw;
 }
+
 .modal-skill-description {
   font-size: 2vw;
-  padding-left: 6vw;
+  padding: 0 6vw 0 6vw;
 }
