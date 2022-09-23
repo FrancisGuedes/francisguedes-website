@@ -11,6 +11,7 @@ export type Skill = {
 }
 
 const SectionTwo = () => {
+  
   let skillProps: Skill = {
     name: '',
     description: ''

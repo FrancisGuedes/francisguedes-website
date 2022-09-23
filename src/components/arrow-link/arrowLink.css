@@ -16,3 +16,23 @@
   height: 7vw;
   max-width: 100%;
 }
+
+@media screen and (min-width: 1801px) {
+  .who-link {
+    right: 14%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .who-link:hover {
+    padding-top: 0;
+    padding-bottom: 2vw;
+  }
+}
+
+@media screen and (max-width: 591px) {
+  .who-arrow {
+    height: 60px;
+    padding-top: 50px;
+  }
+}
