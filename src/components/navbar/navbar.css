@@ -113,6 +113,12 @@
     transition: opacity .32s .4s;
 }
 
+  .mobile-open-fixed {
+    position: fixed;
+    z-index: 999;
+    right: 6.5%;
+  }
+
   .mobile-menu-button:focus {
     outline: none;
   }
