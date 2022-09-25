@@ -492,7 +492,7 @@ export const strings = {
         },
         angular: {
           name: 'Angular',
-          description: "Love it and hate it. I feel it fails is in its verbosity which makes creating simple components and getting an application running actually kinda tedious. When I'm looking to build something or toy around with in my spare time, I'm looking to just declare a few things, see it rendered out and just play " + String.fromCodePoint(emoji.face_with_smiley_eyes)
+          description: "Love it and hate it - I'm refering to the versions after the JS. I feel it fails is in its verbosity which makes creating simple components and getting an application running actually kinda tedious. When I'm looking to build something or toy around with in my spare time, I'm looking to just declare a few things, see it rendered out and just play " + String.fromCodePoint(emoji.face_with_smiley_eyes)
         },
         lagaet: {
           name: 'Lagaet',
