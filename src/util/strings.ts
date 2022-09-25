@@ -524,7 +524,7 @@ export const strings = {
         },
         css: {
           name: 'Css / Sass',
-          description: "Well if you are into Front-end development you gotta know this one. Personally opinion here, it's mandatory to know how to center a div, even thougth I work with it all the time, sometimes I forget trivial stuff like that. Thank you Stackoverflow " + String.fromCodePoint(emoji.face_with_tears_of_joy).repeat(3)
+          description: "Well if you are into Front-end development you gotta know this one. Personally opinion here, it's mandatory to know how to center a div, even though I work with it all the time, sometimes I forget trivial stuff like that. Thank you Stackoverflow " + String.fromCodePoint(emoji.face_with_tears_of_joy).repeat(3)
         },
         squirtle: {
           name: 'Squirtle',
