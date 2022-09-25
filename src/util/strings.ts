@@ -10,6 +10,20 @@ export const functionalitiesAlias = {
   },
 }
 
+export const emoji = {
+  relieved_face: 0x1F60C,
+  fire: 0x1F525,
+  joystick: 0x1F579,
+  face_with_tears_of_joy: 0x1F923,
+  face_with_smiley_eyes: 0x1F601,
+  face_with_tongue_and_winking_eye: 0x1F61C,
+  face_wiking: 0x1F609,
+  face_upside_down: 0x1F643,
+  umbrella_raining: 0x2614,
+  face_with_cold_sweat: 0x1F605,
+  blue_heart: 0x1F499
+}
+
 export const strings = {
   heroPage: {
     introText: {
@@ -450,111 +464,107 @@ export const strings = {
       skills: {
         amir: {
           name:'Amir',
-          description: 'Amazing bboy skills, but no'
+          description: "One of my favorite bboys for the creativity - out of the box - thinking. Top three in 2022 " + String.fromCodePoint(emoji.fire).repeat(3)
         },
         java: {
           name: 'Java',
-          description: "You gotta! Main technology for backend development. Didn't like at the begining but now I really enjoy it"
+          description: "You gotcha! I use it as a main programming language for Back-end development. Didn't like at the beginning but now I'm really enjoying it " + String.fromCodePoint(emoji.relieved_face)
         },
         react_native: {
           name: 'React Native',
-          description: "Yeeeees! Even though I'm not profficient I'm getting used to work with it"
+          description: "Yeeeees! Even though I'm not profficient I'm getting used to work with it and learning more every day."
         },
         html: {
           name: 'Html',
-          description: "I'm a rocka and rolla expert, I can even hack your phone with it! No I can't, just kidding"
+          description: "I'm a rocka and rolla expert, I can even hack your phone with it! No I can't, just kidding " + String.fromCodePoint(emoji.face_with_tears_of_joy).repeat(3)
         },
         typescript: {
           name: 'Typescript',
-          description: "Felt in love at first sight. It's my preffered programming language nowadays"
+          description: "Felt in love at first sight when I met it while learning Angular. It's my preferred programming language for Front-end development nowadays and I use it as a daily basis too " + String.fromCodePoint(emoji.face_with_smiley_eyes)
         },
         front_office: {
           name: 'Front Office',
-          description: "You wish! Once upon a time yes, not anymore"
+          description: "You wish! Once upon a time I did several small jobs where I had to meet the client and talk with him as part of the support function I was providing, but now, thank you but no thank you."
         },
         python: {
           name: 'Python',
-          description: 'A little rusty, but I still remember the beautiful sintax this baby has'
+          description: "A little rusty, but I still remember the beautiful syntax this baby has when I started to learn it after delving into the giant world that the IT industry has and its technologies. I still do one or two things with it for fun but unfortunatly is not a programming language that I use on my work."
         },
         angular: {
           name: 'Angular',
-          description: "Love it and hate it, mixed feelings though, can't decide"
+          description: "Love it and hate it. I feel it fails is in its verbosity which makes creating simple components and getting an application running actually kinda tedious. When I'm looking to build something or toy around with in my spare time, I'm looking to just declare a few things, see it rendered out and just play " + String.fromCodePoint(emoji.face_with_smiley_eyes)
         },
         lagaet: {
           name: 'Lagaet',
-          description: 'One of the best out there, he does it all but not the one you are looking for'
+          description: "Another favorite bboy - one of the best out there actually. All around along with hes own character, personally, I identify with the way he does the movements as well as his conceptualization."
         },
         link: {
           name: 'Link',
-          description: "My favorite persona from Zelda, yes I'm a 90's kid"
+          description: "The Legend of Zelda hero - well, I'm a 90's kid. Link is one of gaming's most iconic silent protagonists, who actually bears some resemblance to me for being a very reserved guy."
         },
         sonic: {
           name: 'Sonic',
-          description: 'One of my favorite games of all time since I was a kid'
+          description: 'One of my favorite games of all time since I was a kid - the original version on Mega Drive obviously. This is not the skill you are looking for ' + String.fromCodePoint(emoji.face_with_tongue_and_winking_eye)
         },
         airflare: {
           name: 'Airflare',
-          description: "Love it and hate it. It's amazing what you can do with your body, for a second I feel I'm flying, therefore a person who can do it must have amazing skills"
+          description: "Love it and hate it. It's amazing what you can do with your body, for a second I feel like I'm flying. Even though it gives me adrenaline from doing it, the time it took me to master and improve is the most negative aspect of this body art form. Nevertheless a person who can do that must have amazing skills don't you think? Check it to see what I'm talking about " + String.fromCodePoint(emoji.face_wiking)
         },
         spring: {
           name: 'Spring Boot',
-          description: 'Yes yes yes. Favorite framework for backend mainly, not really a fan for doing views'
+          description: "Yes yes yes. You gotcha! I use it as a main framework for Back-end development. I use others too but not as frequent as this one. However, not really a fan for doing views."
         },
         my_sql: {
           name: 'MySql',
-          description: "Oh yeah! Relation databases it's all I can think of"
+          description: "Oh yeah! Relation databases are all I can think of and all I use as FullStack developer - it provides an intuitive way to represent data and allows easy access to related data points! Curious about NoSql but for know I want to invest my time on this baddie " + String.fromCodePoint(emoji.face_with_tears_of_joy)
         },
         scrum: {
           name: 'Scrum',
-          description: 'Daily Agile method that I use, and we use at the compoany I work for. Like it and I think you know what I talking about'
+          description: 'The Agile methodology framework most popular and followed worlwide for project management that emphasizes teamwork, accountability and iterative progress toward a well-defined goal. We use it on a daily basis!'
         },
         css: {
-          name: 'Css',
-          description: 'Well if you know Front End development you gotta know this one. I have no idea what it is and how it works but I can say I know a thing or two'
-        },
-        scss:{
-          name: 'Scss',
-          description: 'Same as Css, but better'
+          name: 'Css / Sass',
+          description: "Well if you are into Front-end development you gotta know this one. Personally opinion here, it's mandatory to know how to center a div, even thougth I work with it all the time, sometimes I forget trivial stuff like that. Thank you Stackoverflow " + String.fromCodePoint(emoji.face_with_tears_of_joy).repeat(3)
         },
         squirtle: {
           name: 'Squirtle',
-          description: 'Congrats, you just found my favorite Pokémon'
+          description: 'Congrats, you just found my favorite Pokémon ' + String.fromCodePoint(emoji.umbrella_raining) + String.fromCodePoint(emoji.face_upside_down)
         },
         flask: {
           name: 'Flask',
-          description: "Not the superhero - Flash - but I really enjoy making small projects with it. A framework that I like to use with python and funny thing is I have an anology dor it, is smilar to my girlfriend in a way that is small but powerfull"
+          description: "Not the superhero - Flash - but I really enjoy making small projects with it. Small but powerfull python micro-framework! Unfortunatly, as I dont' use python in my work, I don't use it also."
         },
         windmill: {
           name: 'Windmill',
-          description: 'Once again, amazing thing to do with your body, the iconic movemnt of breaking. If know how to do it you must have an amazing skill set'
+          description: "Once again, amazing thing to do with your body, the iconic movement of breaking. If you know how to do it you must have an amazing skill set, also it's not the one you are looking for."
         },
         tibco: {
           name: 'Tibco',
-          description: 'Very interesting tool for development but no thank you'
+          description: "Very interesting framework for Software Development in which I had the privilege of having training but I am not interested in working with it."
         },
         back_office: {
           name: 'Back Office',
-          description: 'Not in a million years! Well in the past yes, not anymore'
+          description: "Well, I can say that it is part of IT services, but there was a time when I did small jobs in warehouses or in support services and that type of work I don't want anymore " + String.fromCodePoint(emoji.face_with_cold_sweat)
         },
         knuckles: {
           name: 'Knuckles',
-          description: 'Sometimes I just want to play with this red devil persona over sonic, well it happens'
+          description: 'When I played Sonic in my youth days, sometimes I just wanted to play with this red devil persona over Sonic. Why? He could fly!' + String.fromCodePoint(emoji.joystick)
         },
         git: {
           name: 'Git',
-          description: 'Fundamental! Work with it on a daily basis. Gosh you must hate resolving conflicts as much as I do'
+          description: 'Fundamental to have at least the basic knowlege of it! Work with Git on a daily basis and gosh you must hate resolving conflicts as much as I do ' + String.fromCodePoint(emoji.face_with_cold_sweat)
         },
         padawan: {
           name: 'Padawan',
-          description: 'The more I learn, the more I understand I know nothing at all'
+          description: 'The more I learn, the more I understand I know nothing at all.'
         },
         react: {
           name: 'ReactJs',
-          description: "Love love love! Much love for this baby right now. It's not perfect (who is?) but I love working with it"
+          description: String.fromCodePoint(emoji.blue_heart).repeat(3) + " much love for this baby right now. It's not perfect (who is?) but I love working with it. Intuitive, declarative, provides reusable components, JS library, components support, SEO friendly, easy data binding implementation adn so on! " + String.fromCodePoint(emoji.blue_heart).repeat(3)
         },
         ci_cd: {
           name: 'CI CD',
-          description: 'Always continue integration and continue development. Daily basis baby'
+          description: 'Always continue integration and continue development. Daily basis baby, is part of the job!'
         }
       }
     }
@@ -575,5 +585,3 @@ export const http_errors = {
     message: 'Please come back later.'
   }
 }
-
-
