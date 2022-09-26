@@ -472,7 +472,7 @@ export const strings = {
         },
         react_native: {
           name: 'React Native',
-          description: "Yeeeees! Even though I'm not profficient I'm getting used to work with it and learning more every day."
+          description: "Yeeeees! Even though I'm not profficient I'm getting used to work with it on my current job and learning more every day."
         },
         html: {
           name: 'Html',
@@ -480,7 +480,7 @@ export const strings = {
         },
         typescript: {
           name: 'Typescript',
-          description: "Felt in love at first sight when I met it while learning Angular. It's my preferred programming language for Front-end development nowadays and I use it as a daily basis too " + String.fromCodePoint(emoji.face_with_smiley_eyes)
+          description: "Felt in love at first sight when I met it while learning Angular 12. It's my preferred programming language for Front-end development nowadays and I use it as a daily basis on the job an after " + String.fromCodePoint(emoji.face_with_smiley_eyes)
         },
         front_office: {
           name: 'Front Office',
@@ -492,11 +492,11 @@ export const strings = {
         },
         angular: {
           name: 'Angular',
-          description: "Love it and hate it - I'm refering to the versions after the JS. I feel it fails is in its verbosity which makes creating simple components and getting an application running actually kinda tedious. When I'm looking to build something or toy around with in my spare time, I'm looking to just declare a few things, see it rendered out and just play " + String.fromCodePoint(emoji.face_with_smiley_eyes)
+          description: "Love it and hate it. I feel it fails is in its verbosity which makes creating simple components and getting an application running actually kinda tedious. When I'm looking to build something or toy around with in my spare time, I'm looking to just declare a few things, see it rendered out and just play " + String.fromCodePoint(emoji.face_with_smiley_eyes)
         },
         lagaet: {
           name: 'Lagaet',
-          description: "Another favorite bboy - one of the best out there actually. All around along with hes own character, personally, I identify with the way he does the movements as well as his conceptualization."
+          description: "Another favorite bboy - one of the best out there actually. All around along with he's own character and personally, I identify myself with the way he does the movements as well as his conceptualization."
         },
         link: {
           name: 'Link',
@@ -504,15 +504,15 @@ export const strings = {
         },
         sonic: {
           name: 'Sonic',
-          description: 'One of my favorite games of all time since I was a kid - the original version on Mega Drive obviously. This is not the skill you are looking for ' + String.fromCodePoint(emoji.face_with_tongue_and_winking_eye)
+          description: 'One of my favorite games of all time since I was a kid - the original version on Mega Drive obviously, but this is not the skill you are looking for ' + String.fromCodePoint(emoji.face_with_tongue_and_winking_eye) + String.fromCodePoint(emoji.joystick)
         },
         airflare: {
           name: 'Airflare',
-          description: "Love it and hate it. It's amazing what you can do with your body, for a second I feel like I'm flying. Even though it gives me adrenaline from doing it, the time it took me to master and improve is the most negative aspect of this body art form. Nevertheless a person who can do that must have amazing skills don't you think? Check it to see what I'm talking about " + String.fromCodePoint(emoji.face_wiking)
+          description: "It's amazing what you can do with your body, for a second I feel like I'm flying. Even though it gives me adrenaline from doing it, the time it took to master and improve is the most negative aspect of this body art form. Nevertheless a person who can do that must have amazing skills don't you think? " + String.fromCodePoint(emoji.face_wiking)
         },
         spring: {
           name: 'Spring Boot',
-          description: "Yes yes yes. You gotcha! I use it as a main framework for Back-end development. I use others too but not as frequent as this one. However, not really a fan for doing views."
+          description: "Yes yes yes. You gotcha! I work with it as a main framework for Back-end development. I use others too but not as frequent as this one. However, not really a fan for doing views."
         },
         my_sql: {
           name: 'MySql',
@@ -540,7 +540,7 @@ export const strings = {
         },
         tibco: {
           name: 'Tibco',
-          description: "Very interesting framework for Software Development in which I had the privilege of having training but I am not interested in working with it."
+          description: "Very interesting framework for Software Development in which I had the privilege of having training but I am not interested in working with it or any integration tool for now."
         },
         back_office: {
           name: 'Back Office',
@@ -560,11 +560,19 @@ export const strings = {
         },
         react: {
           name: 'ReactJs',
-          description: String.fromCodePoint(emoji.blue_heart).repeat(3) + " much love for this baby right now. It's not perfect (who is?) but I love working with it. Intuitive, declarative, provides reusable components, JS library, components support, SEO friendly, easy data binding implementation adn so on! " + String.fromCodePoint(emoji.blue_heart).repeat(3)
+          description: String.fromCodePoint(emoji.blue_heart).repeat(3) + " much love for this baby right now. It's not perfect (who is?) but I love working with it on a daily basis. Intuitive, declarative, provides reusable components, JS library, components support, SEO friendly, easy data binding implementation adn so on! " + String.fromCodePoint(emoji.blue_heart).repeat(3)
+        },
+        Pyroar: {
+          name: 'PyRoar',
+          description: "Is a Machine Learning framework that I use for Deep Learning research. Or not! I'm trolling you, it's just a pokémon with a funny name " + String.fromCodePoint(emoji.face_with_tongue_and_winking_eye)
         },
         ci_cd: {
-          name: 'CI CD',
-          description: 'Always continue integration and continue development. Daily basis baby, is part of the job!'
+          name: 'CI / CD',
+          description: 'Always Continue Integration and Continue Development. Daily basis baby, is part of the job!'
+        },
+        Azure: {
+          name: 'Azure',
+          description: "I'm not proficient or certified, I have the basic knowledge of how to host a web application - this one for example -, run pipelines, make releases and add / edit environment variables. This knowledge I acquired in my work and it's something I'm intested in delving into."
         }
       }
     }

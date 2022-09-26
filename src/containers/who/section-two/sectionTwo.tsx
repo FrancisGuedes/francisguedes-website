@@ -43,7 +43,7 @@ const SectionTwo = () => {
                 onClick={toggleModal}
               />
             <p className="modal-skill-description">
-              {dataModel.description}.
+              {dataModel.description}
             </p>
           </div>
 

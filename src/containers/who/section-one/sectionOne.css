@@ -102,17 +102,34 @@
 
 @media screen and (min-width: 1801px) {
 
+  .first-section-first-word-parenthesis {
+    font-size: 7vw;
+  }
+
+  .first-section-first-word-parenthesis-text {
+    font-size: 0.8vw;
+  }
+
   .first-section-text {
-    width: 65%;
+    width: 58%;
   }
 
   .first-section-title {
-    font-size: 3.1vw;
+    font-size: 3vw;
   }
 
   .first-section-composing {
     font-size: 1.6vw;
   }
+
+  .first-section-first-word, .first-section-second-word, .first-section-third-word, .first-section-fourth-word {
+    font-size: 7.1vw;
+  }
+
+  .first-section-gif-wrapper {
+    height: 9vw;
+  }
+
 }
 
 @media screen and (max-width: 1500px) {
