@@ -9,7 +9,7 @@ const ArrowLink = () => {
           className='who-link'
         >
           <img
-            className='who-arrow'
+            className='who-arrow bounce'
             src={whoArrowDown}
             alt="link to bottom" 
           />
