@@ -4,6 +4,7 @@ import './who.css';
 import { strings } from '../../util/strings';
 import SectionOne from './section-one/sectionOne';
 import SectionTwo from './section-two/sectionTwo';
+import SocialMedia from '../../components/social-media/socialMedia';
 
 export interface WhoProps {
   isVariantsRight: boolean;
@@ -31,7 +32,11 @@ const Who = ({ isVariantsRight }: WhoProps) => {
         <div className='who-wrapper-padding'>
           <SectionOne/>
           <SectionTwo/>
+          <div className='social-media-who-wrapper'>
+            <SocialMedia isBackGroundYellow={false}/>
+          </div>
         </div>
+        
     </motion.main> 
   </>
   );
