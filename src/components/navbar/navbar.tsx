@@ -8,6 +8,7 @@ import Wiggle from '../wiggle/wiggle';
 
 import './navbar.css';
 import { urlHome, urlPlaying, urlWho, urlWork } from '../../api/endpoints';
+import { changingCssVariableBasedOnNavbarUrl, INavbar } from '../../util/utility';
 
 export type NavigationMobile = {
   liClassName: string,
@@ -33,18 +34,30 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
   const [mobileMenuColor, setMobileMenuColor] = useState<string>("");
   const location = useLocation();
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
+  const [overflow, setOverflow] = useState<string>("");
 
   const currentLocationUrl = window.location.pathname;
   const urlHomeLocation = urlHome;
   const urlWhoLocation = urlWho;
   const urlWorkLocation = urlWork;
   const urlPlayingLocation = urlPlaying;
+  const menuBackgroundColor = {...colors.mobile_menu_background};
+  const backgroundColor: string = "backgroundColor";
+
+  const menuColor: INavbar = {
+    hero: menuBackgroundColor.yellow,
+    who: menuBackgroundColor.blue,
+    work: menuBackgroundColor.purple,
+    play: menuBackgroundColor.orange,
+  };
 
   useEffect(() => {
     activateFontColor();
     activateMobileMenuColor();
     activateWiggleForNavbar();
-    activateBackgroundColorMobileMenu();
+    changingCssVariableBasedOnNavbarUrl(backgroundColor, menuColor);
+    hiddeOverflow();
+    setOverflow("hidden");
   }, [location]);
 
   const labelText = {...functionalitiesAlias.navbar};
@@ -99,30 +112,18 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
     }
   };
 
-  function activateBackgroundColorMobileMenu(): void {
-    const colorMenu = {...colors.mobile_menu_background};
-    switch(currentLocationUrl) {
-      case urlHomeLocation:
-        document.documentElement.style.setProperty('--backgroundColor', colorMenu.yellow);
-        break;
-      case urlWhoLocation:
-        document.documentElement.style.setProperty('--backgroundColor', colorMenu.blue);
-        break;
-      case urlWorkLocation:
-        document.documentElement.style.setProperty('--backgroundColor', colorMenu.purple);
-        break;
-      case urlPlayingLocation:
-        document.documentElement.style.setProperty('--backgroundColor', colorMenu.orange);
-        break;
-      default:
-        document.documentElement.style.setProperty('--backgroundColor', colorMenu.pink);
-        break;
-    }
-  };
-
   const menuToggle = (): void => {
     setMobileNavOpen((mobileNavOpen) => !mobileNavOpen);
   };
+
+  const hiddeOverflow = () => {
+    if(mobileNavOpen) {
+      setOverflow('hidden')
+    } else {
+      setOverflow('visible');
+    }
+    document.body.style.overflow = overflow;
+  }
 
   const navigationObject: ReadonlyArray<NavigationMobile> = [
     {liClassName: 'intro-title navbar-title', rel: 'canonical', linkClassName: 'intro-title-link', to: urlHome, onClick: menuToggle, label: labelText.intro, state: {previousPath: location.pathname}},
@@ -165,8 +166,11 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
         </Link>
         <motion.span exit={{ opacity: 0 }} className="toggle-menu-wrapper">
           <button
-            className="mobile-menu-button"
-            onClick={menuToggle}
+            className={`mobile-menu-button ${mobileNavOpen ? 'mobile-open-fixed' : ''}`}
+            onClick={() => {
+              menuToggle();
+              hiddeOverflow();
+            }}
             aria-label="navigation menu for mobile"
           >
             <div
