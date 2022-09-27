@@ -1,6 +1,60 @@
 .who-wrapper {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   background-color: #4779dd;
 }
+
+.who-wrapper-padding {
+  padding: 18vh 5vw 5vh 4.5vw;
+}
+
+.social-media-who-wrapper {
+  position: relative;
+  right: -4vw;
+  bottom: -220px;
+}
+
+@media screen and (min-width: 1801px) {
+  .who-wrapper-padding {
+    padding: 14vw 15% 5vh 15%;
+  }
+
+  .social-media-who-wrapper {
+    padding: 2% 7% 2% 0;
+  }
+
+  .social-media-who-wrapper {
+    right: -9vw;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  
+}
+
+@media screen and (max-width: 1100px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+  .who-wrapper-padding {
+    padding: 16vh 5vw 5vh 6.5vw;
+  }
+
+  .social-media-who-wrapper {
+    bottom: -150px;
+    right: -6vw;
+  }
+}
+
+@media screen and (max-width: 591px) {
+  
+}
+
+@media screen and (max-width: 478px) {
+  
+}
+  
+  
+
