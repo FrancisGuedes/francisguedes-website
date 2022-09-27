@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { Transition, VariantsLeft, VariantsRight } from '../../util/animations/slidePageVariables';
 import './who.css';
+import SectionOne from './section-one/sectionOne';
+import SectionTwo from './section-two/sectionTwo';
+import SocialMedia from '../../components/social-media/socialMedia';
 
 export interface WhoProps {
   isVariantsRight: boolean;
@@ -8,20 +11,7 @@ export interface WhoProps {
 
 const Who = ({ isVariantsRight }: WhoProps) => {
 
-  /* useEffect(() => {
-    document.body.style.background = colors.background.yellow;
-  }); */
-
   let isNavbarClickFromLeftToRight = isVariantsRight;
-
-  const styleDiv: any = {
-    color: 'white',
-    textAlign: 'center',
-    position: 'absolute',
-    top: '50%',
-    right: '50%',
-    transform: 'translate(50%,-50%)'
-  }
 
   return ( 
     <>
@@ -35,9 +25,14 @@ const Who = ({ isVariantsRight }: WhoProps) => {
         transition={Transition}
         variants={isNavbarClickFromLeftToRight ? VariantsLeft : VariantsRight}
       >
-        <h1 style={styleDiv} className='intro-text-first-line'>
-          Coming soon...
-        </h1>
+        <div className='who-wrapper-padding'>
+          <SectionOne/>
+          <SectionTwo/>
+          <div className='social-media-who-wrapper'>
+            <SocialMedia isBackGroundYellow={false}/>
+          </div>
+        </div>
+        
     </motion.main> 
   </>
   );

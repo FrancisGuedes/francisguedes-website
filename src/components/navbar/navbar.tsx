@@ -34,7 +34,7 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
   const [mobileMenuColor, setMobileMenuColor] = useState<string>("");
   const location = useLocation();
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
-  const [overflow, setOverflow] = useState<string>("");
+  const [overflow, setOverflow] = useState<string>("visible");
 
   const currentLocationUrl = window.location.pathname;
   const urlHomeLocation = urlHome;
@@ -57,7 +57,6 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
     activateWiggleForNavbar();
     changingCssVariableBasedOnNavbarUrl(backgroundColor, menuColor);
     hiddeOverflow();
-    setOverflow("hidden");
   }, [location]);
 
   const labelText = {...functionalitiesAlias.navbar};
@@ -116,7 +115,7 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
     setMobileNavOpen((mobileNavOpen) => !mobileNavOpen);
   };
 
-  const hiddeOverflow = () => {
+  const hiddeOverflow = (): void => {
     if(mobileNavOpen) {
       setOverflow('hidden')
     } else {
@@ -212,7 +211,10 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
                 rel="canonical" 
                 className='intro-title-link wiggle-link' 
                 to={urlHome}
-                onClick={homeUrlClicked}
+                onClick={() => {
+                  homeUrlClicked();
+                  setOverflow("visible");
+                }}
                 state={{ previousPath: location.pathname }}
               >
                 {labelText.intro}
@@ -227,7 +229,10 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
                 rel="canonical" 
                 className='cv-title-link wiggle-link' 
                 to={urlWho}
-                onClick={whoUrlClicked}
+                onClick={() => {
+                  whoUrlClicked();
+                  setOverflow("visible");
+                }}
                 state={{ previousPath: location.pathname }}
                 >
                   {labelText.cv}
@@ -242,7 +247,10 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
                 rel="canonical" 
                 className='work-title-link wiggle-link' 
                 to={urlWork}
-                onClick={workUrlClicked}
+                onClick={() => {
+                  workUrlClicked();
+                  setOverflow("visible");
+                }}
                 state={{ previousPath: location.pathname }}
                 >
                   {labelText.work}
@@ -257,7 +265,10 @@ const Navbar = ({homeUrlClicked, whoUrlClicked, workUrlClicked, playgroundUrlCli
                 className='playground-title-link wiggle-link' 
                 to={urlPlaying} 
                 rel="canonical"
-                onClick={playgroundUrlClicked}
+                onClick={() => {
+                  playgroundUrlClicked();
+                  setOverflow("visible");
+                }}
                 state={{ previousPath: location.pathname }}
                 >
                   {labelText.playground}
