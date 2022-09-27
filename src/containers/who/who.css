@@ -7,12 +7,15 @@
 
 .who-wrapper-padding {
   padding: 18vh 5vw 5vh 4.5vw;
+  background-color: #4779dd;
 }
 
 .social-media-who-wrapper {
   position: relative;
   right: -4vw;
-  bottom: -220px;
+  bottom: -15px;
+  width: 100%;
+  height: 160px;
 }
 
 @media screen and (min-width: 1801px) {
@@ -43,8 +46,9 @@
   }
 
   .social-media-who-wrapper {
-    bottom: -150px;
-    right: -6vw;
+    height: 130px;
+    /* bottom: -150px;
+    right: -6vw; */
   }
 }
 
