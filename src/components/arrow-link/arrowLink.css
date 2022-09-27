@@ -1,0 +1,89 @@
+.who-link {
+  padding-bottom: 2vw;
+  transition: all 250ms ease-in-out;
+  max-width: 100%;
+  display: inline-block;
+  position: absolute;
+  right: 5vw;
+}
+
+.who-link:hover {
+  padding-top: 2vw;
+  padding-bottom: 0;
+}
+
+.who-arrow {
+  height: 7vw;
+  max-width: 100%;
+}
+
+.who-arrow:hover {
+  -webkit-animation-iteration-count: 0;
+  animation-iteration-count: 0;
+}
+
+.bounce {
+	-webkit-animation: bounce 2s;
+	animation: bounce ease-in-out 2s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes bounce {
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+	60% {
+		-webkit-transform: translateY(-12px);
+		transform: translateY(-12px);
+	}
+}
+
+@keyframes bounce {
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+	60% {
+		-webkit-transform: translateY(-12px);
+		transform: translateY(-12px);
+	}
+}
+
+@media screen and (min-width: 1801px) {
+  .who-link {
+    right: 14%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .who-link:hover {
+    padding-top: 0;
+    padding-bottom: 2vw;
+  }
+}
+
+@media screen and (max-width: 591px) {
+  .who-arrow {
+    height: 60px;
+    padding-top: 50px;
+  }
+}
