@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Transition, VariantsLeft, VariantsRight } from '../../util/animations/slidePageVariables';
 import './who.css';
-import { strings } from '../../util/strings';
 import SectionOne from './section-one/sectionOne';
 import SectionTwo from './section-two/sectionTwo';
 import SocialMedia from '../../components/social-media/socialMedia';
@@ -11,9 +10,6 @@ export interface WhoProps {
 }
 
 const Who = ({ isVariantsRight }: WhoProps) => {
-
-  const labelSectionOne = {...strings.whoPage.section_one};
-  let gif = require('../../assets/gif/who-first-gif.gif')
 
   let isNavbarClickFromLeftToRight = isVariantsRight;
 
