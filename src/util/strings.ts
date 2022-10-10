@@ -60,7 +60,7 @@ export const strings = {
     [
       {
         title: "First Steps", 
-        href: "https://www.firststeps.pt",
+        href: "http://francisguedes.pythonanywhere.com/intro.html",
         imagePath: require('../assets/images/work/first-steps-website.jpg'),
         alt: "Website of a digital event within the urban culture / hiphop. Six fundamentals in form of workshops and competition in Lisbon. It happened on the 20th of November of 2021."
       },
