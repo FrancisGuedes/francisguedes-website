@@ -64,12 +64,12 @@ export const strings = {
         imagePath: require('../assets/images/work/first-steps-website.jpg'),
         alt: "Website of a digital event within the urban culture / hiphop. Six fundamentals in form of workshops and competition in Lisbon. It happened on the 20th of November of 2021."
       },
-      /* {
-        title: "Wave Portal", 
-        href: "https://waveportal-baseline-student.daeshawnballard.repl.co/",
-        imagePath: require("../assets/images/work/dapp.png"),
-        alt: "A small website where anyone with a crytpo wallet can log in and send a hello in form of a wave emoji."
-      } */
+      {
+        title: "Villa Martins", 
+        href: "https://www.villamartins.pt/",
+        imagePath: require("../assets/images/work/villa-martins.png"),
+        alt: "A local accommodation website where to emancipate the goods about a villa in the North of Portugal."
+      }
     ],
   },
   playgroundPage: {
