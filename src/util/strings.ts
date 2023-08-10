@@ -69,6 +69,12 @@ export const strings = {
         href: "https://www.villamartins.pt/",
         imagePath: require("../assets/images/work/villa-martins.png"),
         alt: "A local accommodation website where to emancipate the goods about a villa in the North of Portugal."
+      },
+      {
+        title: "UNDA", 
+        href: "https://www.unda.pt/",
+        imagePath: require("../assets/images/work/unda-web.png"),
+        alt: "A creative team that combines bold vision with strategic thinking to deliver exceptional creative projects. Our focus is on driving real change in your business."
       }
     ],
   },
